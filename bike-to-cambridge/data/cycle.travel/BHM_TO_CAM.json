@@ -1,0 +1,11 @@
+{
+  "total_length": 211,
+  "total_time": "13:28",
+  "road_types": {
+    "busy_road": 2.4,
+    "paved_road": 155,
+    "paved_path": 48.3,
+    "unpaved_path": 5.3,
+    "pushing": 0.58
+  }
+}
