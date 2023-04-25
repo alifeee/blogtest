@@ -1,5 +1,16 @@
 {
     "recommendations": [
-        "jock.svg"
+        "jock.svg",
+        "usernamehw.errorlens",
+        "mhutchie.git-graph",
+        "eamodio.gitlens",
+        "ms-toolsai.jupyter",
+        "davidanson.vscode-markdownlint",
+        "esbenp.prettier-vscode",
+        "ms-python.python",
+        "ms-python.pylint",
+        "ms-python.vscode-pylance",
+        "tonybaloney.vscode-pets",
+        "ritwickdey.liveserver"
     ]
 }
