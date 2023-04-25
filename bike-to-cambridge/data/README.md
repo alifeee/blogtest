@@ -1,5 +1,9 @@
 # GPX data
 
+This file holds a lot of gpx data. For quick viewing of a file, you can import it into [gpx-studio].
+
+[gpx-studio]: https://gpx.studio/
+
 ## Short names
 
 Where names are briefened, the following short names are used:
