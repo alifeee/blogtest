@@ -5,7 +5,7 @@ Recently, I biked from Birmingham to Cambridge.
 More accurately, I half-biked, half-trained from Birmingham to Cambridge.
 If it sounds more impressive, I "biked the distance from Birmingham to Cambridge".
 
-![My bike in front of a millennium milepost.](./images/millenium-milestone.jpg)
+![Photo of my bike in front of a millennium milepost.](./images/millenium-milestone.jpg)
 
 <figcaption>
 
@@ -18,6 +18,14 @@ My bike in front of [millennium milepost 897X](https://www.sustrans.org.uk/natio
 
 ## A tribute to the National Cycle Network
 
-![A bike path going down to a canal towpath.](./images/canal-bike-path.jpg)
+![Photo of a bike path going down to a canal towpath.](./images/canal-bike-path.jpg)
 
 <figcaption>Ramp down to the Stratford canal, National Cycle Route 5.</figcaption>
+
+![Photo of large car half-submerged as it drives through a ford.](./images/ford.jpg)
+
+![Photo of my bike inside a train carriage.](./images/bike-on-train.jpg)
+
+![Photo of a car driving down a motorway, taken from a bridge.](./images/this-could-be-me.jpg)
+
+![Photo of a road in grey weather, with a pothole filled with water.](./images/wet-route.jpg)
