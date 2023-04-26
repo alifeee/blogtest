@@ -1,1 +1,2 @@
-{"rule":"UPPERCASE_SENTENCE_START","sentence":"^\\Qalifeee.*\\E$"}
+{"rule":"UPPERCASE_SENTENCE_START","sentence":"^\\Qalifeee's blog\\E$"}
+{"rule":"UPPERCASE_SENTENCE_START","sentence":"^\\Qalifeee - bike to Cambridge\\E$"}

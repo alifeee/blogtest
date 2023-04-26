@@ -8,6 +8,7 @@ body {
     flex-direction: column;
     min-height: 100vh;
     justify-content: start;
+    align-items: center;
 }
 
 header {
@@ -16,7 +17,7 @@ header {
 
 main {
     max-width: 650px;
-    margin: auto;
+    margin: auto 1rem;
 }
 
 footer {
@@ -25,4 +26,19 @@ footer {
     padding: 1em;
     flex-grow: 1;
     margin-top: auto;
+}
+
+header h1 {
+    font-style: italic;
+    font-family: Georgia, serif;
+    padding-bottom: 0.25rem;
+    border-bottom: 1px dashed #444;
+}
+
+header a {
+    text-decoration: none;
+}
+
+header a:visited {
+    color: inherit;
 }
