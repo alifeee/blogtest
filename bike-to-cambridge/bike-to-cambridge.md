@@ -5,6 +5,8 @@ Recently, I biked from Birmingham to Cambridge.
 More accurately, I half-biked, half-trained from Birmingham to Cambridge.
 If it sounds more impressive, I "biked the distance from Birmingham to Cambridge".
 
+![Sketch of the route that I took from Birmingham to Cambridge. Half of the image is shortcut via train.](./images/route_descriptive.svg)
+
 ![Photo of my bike in front of a millennium milepost.](./images/millenium-milestone.jpg)
 
 <figcaption>
