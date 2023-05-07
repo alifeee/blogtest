@@ -19,6 +19,10 @@
     />
 
   <link rel="stylesheet" href="./stylesheet.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Josefin+Sans"
+    />
 </head>
 
 <body>
@@ -31,7 +35,19 @@
   <main>
     <ul>
       <li>
-        <a href="./bike-to-cambridge">Bike to Cambridge</a>
+          <a href="./bike-to-cambridge" class="link">
+            <div class="imagebox">
+              <img src="bike-to-cambridge/images/directionality.svg" />
+            </div>
+            <hgroup class="info">
+              <h2 class="title">
+                I Biked to Cambridge (a tribute to national cycle routes)
+              </h2>
+              <h3 class="date">
+                <time datetime="2023-05-10">2023-05-10</time>
+              </h3>
+            </hgroup>
+          </a>
       </li>
     </ul>
   </main>
@@ -41,4 +57,9 @@
   </footer>
 </body>
 
+  <style>
+    main {
+      font-family: "Josefin Sans", sans-serif;
+    }
+  </style>
 </html>
