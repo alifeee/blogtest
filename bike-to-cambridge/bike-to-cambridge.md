@@ -33,7 +33,8 @@ If it sounds more impressive, I "biked the distance from Birmingham to Cambridge
 
 <figcaption>
 
-Look ma! I did most of it with my own legs! [Source](https://github.com/alifeee/blog/blob/main/bike-to-cambridge/src/route.ipynb).
+Look ma! I did most of it with my own legs!
+[Source](https://github.com/alifeee/blog/blob/main/bike-to-cambridge/src/route.ipynb).
 
 </figcaption>
 
@@ -43,7 +44,9 @@ Look ma! I did most of it with my own legs! [Source](https://github.com/alifeee/
 
 <figcaption>
 
-If I were a crow, it would be a nice life. I would also get to Cambridge in 148 km, with stopovers. From [Google Maps](https://maps.google.com/)
+If I were a crow, it would be a nice life.
+I would also get to Cambridge in 148 km, with stopovers.
+From [Google Maps](https://maps.google.com/)
 
 </figcaption>
 
@@ -55,7 +58,8 @@ If I were a crow, it would be a nice life. I would also get to Cambridge in 148 
 
 <figcaption>
 
-Spot the difference. From [gpx.studio](https://gpx.studio/).
+Spot the difference.
+From [gpx.studio](https://gpx.studio/).
 
 </figcaption>
 
@@ -63,7 +67,8 @@ Spot the difference. From [gpx.studio](https://gpx.studio/).
 
 <figcaption>
 
-Which of these would *you* rather bike on? [Source](https://github.com/alifeee/blog/blob/main/bike-to-cambridge/src/maps_vs_cycleroutes.ipynb).
+Which of these would *you* rather bike on?
+[Source](https://github.com/alifeee/blog/blob/main/bike-to-cambridge/src/maps_vs_cycleroutes.ipynb).
 
 </figcaption>
 
@@ -79,7 +84,9 @@ Which of these would *you* rather bike on? [Source](https://github.com/alifeee/b
 
 <figcaption>
 
-Whoosh! Picture from a bridge next to the ford. Would've been fun to try and get through on a bike though.
+Whoosh!
+Picture from a bridge next to the ford.
+Would've been fun to try and get through on a bike though.
 
 </figcaption>
 
@@ -97,7 +104,9 @@ Get to the end of this, but a thousand times, and you might end up in Cambridge.
 
 <figcaption>
 
-Here's a game. Why does everything go the wrong way? Sorry, that wasn't a game.
+Here's a game. Why does everything go the wrong way?
+Sorry, that wasn't a game.
+From [OS Maps](https://explore.osmaps.com/).
 
 </figcaption>
 
@@ -107,7 +116,8 @@ Here's a game. Why does everything go the wrong way? Sorry, that wasn't a game.
 
 <figcaption>
 
-Turns out the fastest way to get somewhere is to go that way. [Source](https://github.com/alifeee/blog/blob/bike-to-cambridge/bike-to-cambridge/src/directionality.ipynb).
+Turns out the fastest way to get somewhere is to go that way.
+[Source](https://github.com/alifeee/blog/blob/bike-to-cambridge/bike-to-cambridge/src/directionality.ipynb).
 
 </figcaption>
 
@@ -115,7 +125,8 @@ Turns out the fastest way to get somewhere is to go that way. [Source](https://g
 
 <figcaption>
 
-Going the right way is for nerds. [Source](https://github.com/alifeee/blog/blob/bike-to-cambridge/bike-to-cambridge/src/directionality.ipynb).
+Going the right way is for nerds.
+[Source](https://github.com/alifeee/blog/blob/bike-to-cambridge/bike-to-cambridge/src/directionality.ipynb).
 
 </figcaption>
 
@@ -125,7 +136,8 @@ Going the right way is for nerds. [Source](https://github.com/alifeee/blog/blob/
 
 <figcaption>
 
-I'm big. My bike is big. Sometimes we fit in a train.
+I'm big. My bike is big.
+Sometimes we fit in a train.
 
 </figcaption>
 
@@ -133,7 +145,9 @@ I'm big. My bike is big. Sometimes we fit in a train.
 
 <figcaption>
 
-An insight into my definitely organised mind: what I sketched to see which trains I could use on my journey if I needed to. Blue is the bike route, with green the trains that could be used as shortcuts.
+An insight into my definitely organised mind:
+what I sketched to see which trains I could use on my journey if I needed to.
+Blue is the bike route, with green the trains that could be used as shortcuts.
 Background from [National Rail](https://www.nationalrail.co.uk/stations_destinations/rail-maps.aspx) ([PDF](./data/Rail%20map%20v37%20orange%20Dec%2022.pdf)).
 
 </figcaption>
