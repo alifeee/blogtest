@@ -3,5 +3,8 @@
   "MD033": {
     "allowed_elements": ["figcaption", "div"]
   },
-  "MD013": false
+  "MD013": false,
+  "MD026": {
+    "punctuation": ".,;:。，；："
+  }
 }
