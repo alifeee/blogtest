@@ -1,4 +1,8 @@
-# Bike to Cambridge
+# I biked from Birmingham to Cambridge (a tribute to National Cycle Routes)
+
+- [The route](#the-route)
+
+  - [A tribute to the National Cycle Network](#a-tribute-to-the-national-cycle-network)
 
 Recently, I biked from Birmingham to Cambridge.
 
@@ -18,7 +22,7 @@ My bike in front of [millennium milepost 897X](https://www.sustrans.org.uk/natio
 
 ## The route
 
-## A tribute to the National Cycle Network
+### A tribute to the National Cycle Network
 
 ![Photo of a bike path going down to a canal towpath.](./images/canal-bike-path.jpg)
 
