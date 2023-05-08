@@ -28,12 +28,25 @@ More accurately, I half-biked, half-trained from Birmingham to Cambridge.
 If it sounds more impressive, I "biked the distance from Birmingham to Cambridge".
 
 ![Sketch of the route that I took from Birmingham to Cambridge. Half of the image is shortcut via train.](./images/route_descriptive.svg)
+<figcaption>
+Look ma! I did most of it with my own legs!
+</figcaption>
 
 ## Technicalities - how far *did* I bike?
+
+![Screenshot from Google Maps showing the crow flies distance from Birmingham to Leamington to Bedford to Cambridge: 148 km](./images/crow_flies_distance.png)
+<figcaption>
+If I were a crow, it would be a nice life. I would also get to Cambridge in 148 km, with stopovers.
+</figcaption>
 
 ## How to plan a bike route
 
 ### Google Maps hates bikes
+
+![Comparison of the route from Google Maps and cycle.travel. They look broadly similar.](./images/google_vs_cycle.travel_routes_with_legend.png)
+<figcaption>
+Spot the difference.
+</figcaption>
 
 ### National Cycle Routes - I love Sustrans
 
