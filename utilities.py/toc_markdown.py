@@ -3,20 +3,13 @@
 import re
 import sys
 
-CONTENTS_TITLE = "Contents"
-
 
 def toc_markdown(filename):
     with open(filename, "r") as f:
         lines = f.readlines()
     all_text = "".join(lines)
 
-    # if "## Contents" exists anywhere in the file
-    if f"## {CONTENTS_TITLE}" in all_text:
-        print("Table of contents already exists in file.")
-        sys.exit(1)
-
-    if lines[2][0] == "-":
+    if '<div class="toc">' in all_text:
         print("Table of contents already exists in file.")
         sys.exit(1)
 
@@ -27,21 +20,20 @@ def toc_markdown(filename):
         re.MULTILINE,
     )
 
-    # toc = f"\n## {CONTENTS_TITLE}\n\n"
-    toc = "\n"
+    # generate toc
+    table_of_contents = "\n"
+    table_of_contents += '<div class="toc">\n\n'
     for header in headers:
         depth = len(re.findall(r"^#+", header)[0])
         title = re.findall(r"^#+\s(.*)$", header)[0]
-        toc += (
-            f"{'  ' * (depth - 2)}- [{title}](#{title.lower().replace(' ', '-')})\n\n"
-        )
+        link = title.lower().replace(" ", "-")
+        link = re.sub(r"[^a-zA-Z0-9-]", "", link)
+        list_prefix = "    " * (depth - 2) + "1. "
+        table_of_contents += f"{list_prefix}[{title}](#{link})"
+        table_of_contents += "\n\n"
+    table_of_contents += "</div>\n"
 
-    # insert toc
-    del lines[1]
-    lines.insert(1, toc)
-
-    for line in lines:
-        print(line, end="")
+    lines.insert(1, table_of_contents)
 
     with open(filename, "w") as f:
         f.writelines(lines)

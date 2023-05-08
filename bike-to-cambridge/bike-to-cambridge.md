@@ -1,8 +1,26 @@
 # I biked from Birmingham to Cambridge (a tribute to National Cycle Routes)
 
-- [The route](#the-route)
+<div class="toc">
 
-  - [A tribute to the National Cycle Network](#a-tribute-to-the-national-cycle-network)
+1. [Technicalities - how far *did* I bike?](#technicalities---how-far-did-i-bike)
+
+1. [How to plan a bike route](#how-to-plan-a-bike-route)
+
+    1. [Google Maps hates bikes](#google-maps-hates-bikes)
+
+    1. [National Cycle Routes - I love Sustrans](#national-cycle-routes---i-love-sustrans)
+
+        1. [Why get lost when you can not get lost](#why-get-lost-when-you-can-not-get-lost)
+
+        1. [Why go the right way when you can go the wrong way](#why-go-the-right-way-when-you-can-go-the-wrong-way)
+
+        1. [How to fix the problem of going the wrong way](#how-to-fix-the-problem-of-going-the-wrong-way)
+
+1. [And what?](#and-what)
+
+1. [Appendix: Tools](#appendix-tools)
+
+</div>
 
 Recently, I biked from Birmingham to Cambridge.
 
