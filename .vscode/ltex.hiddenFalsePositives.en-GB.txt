@@ -2,3 +2,4 @@
 {"rule":"UPPERCASE_SENTENCE_START","sentence":"^\\Qalifeee - bike to Cambridge\\E$"}
 {"rule":"LC_AFTER_PERIOD","sentence":"^\\QRed is cycle.travel and blue is Google Maps\\E$"}
 {"rule":"LC_AFTER_PERIOD","sentence":"^\\QRoute comparison of Google Maps and cycle.routes\\E$"}
+{"rule":"MORFOLOGIK_RULE_EN_GB","sentence":"^\\QFrom gpx.studio\\E$"}
