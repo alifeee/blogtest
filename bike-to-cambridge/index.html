@@ -43,7 +43,7 @@
       <zero-md src="./bike-to-cambridge.md">
         <template data-merge="append">
           <style>
-            .markdown-body h1,
+            h1,
             h2,
             h3,
             h4,
@@ -62,6 +62,11 @@
               max-height: 30rem;
               margin: 0 auto;
               background-color: unset;
+            }
+
+            .markdown-body table {
+              width: max-content;
+              margin: 0 auto 1rem;
             }
 
             figcaption {
