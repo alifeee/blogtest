@@ -4,7 +4,7 @@ This holds any blog content I decide to write, as well as any code used to gener
 
 ## Markdown
 
-Markdown parsing is done clientside using [zero-md](https://github.com/zerodevx/zero-md). This is to avoid using a build step.
+Markdown parsing is done client side using [zero-md](https://github.com/zerodevx/zero-md). This is to avoid using a build step.
 
 ```html
 <head>
@@ -21,3 +21,11 @@ Markdown parsing is done clientside using [zero-md](https://github.com/zerodevx/
   ...
 </body>
 ```
+
+## Email Subscription
+
+<https://www.tinyletter.com/> is used for email subscriptions.
+
+Newsletter: <https://tinyletter.com/alifeee>
+
+App: <https://app.tinyletter.com/>
