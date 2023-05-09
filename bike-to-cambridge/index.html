@@ -1,44 +1,116 @@
 <!DOCTYPE html>
 <html>
+  <head>
+    <title>alifeee - bike to Cambridge</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<head>
-  <title>alifeee - bike to cambridge</title>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="../favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="../favicon-16x16.png"
+    />
 
-  <link rel="icon" type="image/png" sizes="32x32" href="../favicon-32x32.png" />
-  <link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png" />
+    <link rel="stylesheet" href="../stylesheet.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Josefin+Sans|Roboto"
+    />
 
-  <link rel="stylesheet" href="../stylesheet.css" />
+    <!-- zero-md: https://github.com/zerodevx/zero-md -->
+    <script
+      type="module"
+      src="https://cdn.jsdelivr.net/gh/zerodevx/zero-md@2/dist/zero-md.min.js"
+    ></script>
+  </head>
 
-  <!-- zero-md: https://github.com/zerodevx/zero-md -->
-  <script type="module" src="https://cdn.jsdelivr.net/gh/zerodevx/zero-md@2/dist/zero-md.min.js"></script>
-</head>
+  <body>
+    <header>
+      <a href="../">
+        <h1>alifeee's blog</h1>
+      </a>
+    </header>
 
-<body>
-  <header>
-    <h1>alifeee's blog</h1>
-  </header>
+    <img id="background" src="./images/route.svg" alt="route" width="100%" />
+    <main>
+      <zero-md src="./bike-to-cambridge.md">
+        <template data-merge="append">
+          <style>
+            h1,
+            h2,
+            h3,
+            h4,
+            h5,
+            h6 {
+              text-align: center;
+              font-family: "Josefin Sans", sans-serif;
+            }
 
-  <img src="./images/route.svg" alt="route" width="100%" />
-  <main>
-    <zero-md src="./index.md"></zero-md>
-  </main>
+            .markdown-body {
+              font-family: "Roboto", sans-serif;
+            }
 
-  <footer>
-    <p>alifeee's blog</p>
-  </footer>
-</body>
+            .markdown-body img {
+              display: block;
+              max-height: 30rem;
+              margin: 0 auto;
+              background-color: unset;
+            }
 
-<style>
-  img {
-    position: fixed;
-    top: 0;
-    bottom: 0;
-    margin: auto;
-    z-index: -1;
-    opacity: 0.1;
-  }
-</style>
+            .markdown-body table {
+              width: max-content;
+              margin: 0 auto 1rem;
+            }
 
+            figcaption {
+              text-align: center;
+              font-size: 0.8rem;
+              color: #666;
+            }
+
+            .toc li > p {
+              margin: 0.5rem 0;
+              padding: 0;
+            }
+          </style>
+        </template>
+      </zero-md>
+    </main>
+
+    <footer>
+      <div class="links">
+        <a href="https://twitter.com/alifeeeirenn" target="_blank">
+          <img alt="_Twitter_" src="../icons/twitter.svg" />
+          <span class="text">Twitter</span>
+        </a>
+        <a href="https://github.com/alifeee/blog" target="_blank">
+          <img alt="_GitHub_" src="../icons/github.svg" />
+          <span class="text">GitHub</span>
+        </a>
+        <a href="mailto:alifeee.web@outlook.com" target="_blank">
+          <img alt="_Email_" src="../icons/envelope-solid.svg" />
+          <span class="text">Email</span>
+        </a>
+      </div>
+      <a class="backlink" href="../">Back to main page</a>
+    </footer>
+  </body>
+
+  <style>
+    #background {
+      position: fixed;
+      top: 0;
+      bottom: 0;
+      margin: auto;
+      z-index: -1;
+      opacity: 0.1;
+    }
+  </style>
 </html>

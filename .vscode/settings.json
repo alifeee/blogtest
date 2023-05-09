@@ -1,4 +1,8 @@
 {
     "svg.preview.background": "dark-transparent",
-    "liveServer.settings.port": 5501
+    "liveServer.settings.port": 5501,
+    "ltex.language": "en-GB",
+    "[html]":{
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    }
 }

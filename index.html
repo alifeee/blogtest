@@ -1,33 +1,133 @@
 <!DOCTYPE html>
 <html>
+  <head>
+    <title>alifeee's blog</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<head>
-  <title>alifeee's blog</title>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="./favicon-16x16.png"
+    />
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./favicon-32x32.png" />
-  <link rel="icon" type="image/png" sizes="16x16" href="./favicon-16x16.png" />
+    <link rel="stylesheet" href="./stylesheet.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Josefin+Sans|Roboto"
+    />
+  </head>
 
-  <link rel="stylesheet" href="./stylesheet.css" />
-</head>
+  <body>
+    <header>
+      <a href="./">
+        <h1>alifeee's blog</h1>
+      </a>
+    </header>
 
-<body>
-  <header>
-    <h1>alifeee's blog</h1>
-  </header>
+    <main>
+      <ul>
+        <li>
+          <a href="./bike-to-cambridge" class="link">
+            <div class="imagebox">
+              <img
+                src="bike-to-cambridge/images/directionality.svg"
+                alt="Polar bar chart of direction travelled"
+                title="Which directions I biked the most. Red line is the bearing from Birmingham to Cambridge."
+              />
+            </div>
+            <hgroup class="info">
+              <h2 class="title">
+                I Biked to Cambridge (a tribute to national cycle routes)
+              </h2>
+              <p class="date">
+                <time datetime="2023-05-10">2023-05-10</time>
+              </p>
+            </hgroup>
+          </a>
+        </li>
+      </ul>
+    </main>
 
-  <main>
-    <ul>
-      <li>
-        <a href="./bike-to-cambridge">Bike to Cambridge</a>
-      </li>
-    </ul>
-  </main>
+    <footer>
+      <div class="links">
+        <a href="https://twitter.com/alifeeeirenn" target="_blank">
+          <img alt="_Twitter_" src="./icons/twitter.svg" />
+          <span class="text">Twitter</span>
+        </a>
+        <a href="https://github.com/alifeee/blog" target="_blank">
+          <img alt="_GitHub_" src="./icons/github.svg" />
+          <span class="text">GitHub</span>
+        </a>
+        <a href="mailto:alifeee.web@outlook.com" target="_blank">
+          <img alt="_Email_" src="./icons/envelope-solid.svg" />
+          <span class="text">Email</span>
+        </a>
+      </div>
+      <a class="backlink" href="/">Back to alifeee.co.uk</a>
+    </footer>
+  </body>
 
-  <footer>
-    <p>alifeee's blog</p>
-  </footer>
-</body>
-
+  <style>
+    h1,
+    h2,
+    h3 {
+      font-family: "Josefin Sans", sans-serif;
+    }
+    body {
+      font-family: "Roboto", sans-serif;
+    }
+    ul {
+      padding: 0;
+      margin: 0;
+    }
+    li {
+      list-style: none;
+      box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.2);
+      padding: 1rem;
+      pointer-events: none;
+    }
+    li:hover {
+      box-shadow: 0 0 1rem rgba(0, 0, 0, 0.2);
+    }
+    .link {
+      display: flex;
+      text-decoration: none;
+      color: black;
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      pointer-events: auto;
+    }
+    .imagebox {
+      aspect-ratio: 1;
+      flex: 1 1 auto;
+    }
+    .info {
+      flex: 2 1 auto;
+    }
+    .title {
+      text-align: center;
+      margin: 0;
+    }
+    .date {
+      text-align: center;
+      margin: 0;
+      margin-top: 0.5rem;
+      opacity: 0.6;
+      font-size: 0.8rem;
+    }
+    .imagebox > img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+  </style>
 </html>
