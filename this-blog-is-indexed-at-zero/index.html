@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>alifeee - bike to Cambridge</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="../favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="../favicon-16x16.png"
+    />
+
+    <link rel="stylesheet" href="../stylesheet.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Josefin+Sans|Roboto"
+    />
+
+    <!-- zero-md: https://github.com/zerodevx/zero-md -->
+    <script
+      type="module"
+      src="https://cdn.jsdelivr.net/gh/zerodevx/zero-md@2/dist/zero-md.min.js"
+    ></script>
+  </head>
+
+  <body>
+    <header>
+      <a href="../">
+        <h1>alifeee's blog</h1>
+      </a>
+    </header>
+
+    <main>
+      <zero-md src="./this-blog-is-indexed-at-zero.md">
+        <template data-merge="append">
+          <style>
+            h1,
+            h2,
+            h3 {
+              text-align: center;
+              font-family: "Josefin Sans", sans-serif;
+            }
+
+            .markdown-body {
+              font-family: "Roboto", sans-serif;
+            }
+          </style>
+        </template>
+      </zero-md>
+    </main>
+
+    <footer>
+      <div class="subscription">
+        <form
+          action="https://tinyletter.com/alifeee"
+          method="post"
+          target="popupwindow"
+          onsubmit="window.open('https://tinyletter.com/alifeee', 'popupwindow', 'scrollbars=yes,width=800,height=600');return true"
+        >
+          <label for="tlemail">Subscribe:</label>
+          <input type="text" name="email" id="tlemail" />
+          <input type="hidden" value="1" name="embed" /><input
+            type="submit"
+            value="Notify me!"
+          />
+        </form>
+      </div>
+      <div class="links">
+        <a href="https://twitter.com/alifeeeirenn" target="_blank">
+          <img alt="_Twitter_" src="../icons/twitter.svg" />
+          <span class="text">Twitter</span>
+        </a>
+        <a href="https://github.com/alifeee/blog" target="_blank">
+          <img alt="_GitHub_" src="../icons/github.svg" />
+          <span class="text">GitHub</span>
+        </a>
+        <a href="mailto:alifeee.web@outlook.com" target="_blank">
+          <img alt="_Email_" src="../icons/envelope-solid.svg" />
+          <span class="text">Email</span>
+        </a>
+      </div>
+      <a class="backlink" href="../">Back to main page</a>
+    </footer>
+  </body>
+</html>

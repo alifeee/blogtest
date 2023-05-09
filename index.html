@@ -33,10 +33,10 @@
     </header>
 
     <main>
-      <ul>
-        <li>
+      <ul class="blog posts">
+        <li class="post">
           <a href="./bike-to-cambridge" class="link">
-            <div class="imagebox">
+            <div class="preview-image">
               <img
                 src="bike-to-cambridge/images/directionality.svg"
                 alt="Polar bar chart of direction travelled"
@@ -49,6 +49,24 @@
               </h2>
               <p class="date">
                 <time datetime="2023-05-10">2023-05-10</time>
+              </p>
+            </hgroup>
+          </a>
+        </li>
+        <li class="post">
+          <a href="./this-blog-is-indexed-at-zero/" class="link">
+            <div class="preview-image">
+              <img
+                id="profile-image"
+                class="circular"
+                src="./this-blog-is-indexed-at-zero/profile_pic_3.png"
+                alt="Zero pic"
+              />
+            </div>
+            <hgroup class="info">
+              <h2 class="title">This blog is indexed at zero</h2>
+              <p class="date">
+                <time datetime="2023-05-09">2023-05-09</time>
               </p>
             </hgroup>
           </a>
@@ -91,58 +109,74 @@
   </body>
 
   <style>
-    h1,
-    h2,
-    h3 {
-      font-family: "Josefin Sans", sans-serif;
-    }
-    body {
-      font-family: "Roboto", sans-serif;
-    }
-    ul {
+    .posts {
       padding: 0;
       margin: 0;
     }
-    li {
+    .post {
       list-style: none;
       box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.2);
       padding: 1rem;
       pointer-events: none;
+      margin: 1rem 0;
     }
-    li:hover {
+    .post:hover {
       box-shadow: 0 0 1rem rgba(0, 0, 0, 0.2);
     }
+
     .link {
-      display: flex;
       text-decoration: none;
       color: black;
       display: flex;
       align-items: center;
-      gap: 1rem;
       pointer-events: auto;
+      min-height: 10rem;
     }
-    .imagebox {
-      aspect-ratio: 1;
+
+    .link > * {
+      margin: 0 0.5rem;
+    }
+    .link > .info {
+      flex: 2 1 10rem;
+      max-width: 66%;
+    }
+    .link > .preview-image {
       flex: 1 1 auto;
+      min-width: 0;
+      max-width: 33%;
+      min-height: 0;
+      max-height: 10rem;
+      display: flex;
+      justify-content: center;
     }
-    .info {
-      flex: 2 1 auto;
-    }
-    .title {
+    .info .title {
       text-align: center;
       margin: 0;
     }
-    .date {
+    .info .date {
       text-align: center;
       margin: 0;
       margin-top: 0.5rem;
       opacity: 0.6;
       font-size: 0.8rem;
     }
-    .imagebox > img {
-      width: 100%;
-      height: 100%;
+    .preview-image > img {
       object-fit: contain;
+      min-width: 0;
+      max-width: 100%;
+      min-height: 0;
+      max-height: 10rem;
+    }
+    .circular {
+      border-radius: 25%;
     }
   </style>
+
+  <script>
+    // randomise "#profile-pic" image src between 1, 2, or 3
+    const profilePic = document.getElementById("profile-image");
+    const randomInt = Math.floor(Math.random() * 3) + 1;
+    const fileExt = randomInt === 2 ? "jpeg" : "png";
+    profilePic.src = `./this-blog-is-indexed-at-zero/profile_pic_${randomInt}.${fileExt}`;
+  </script>
 </html>

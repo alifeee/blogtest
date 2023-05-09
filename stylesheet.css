@@ -13,6 +13,15 @@ body {
     box-sizing: border-box;
 }
 
+h1,
+h2,
+h3 {
+  font-family: "Josefin Sans", sans-serif;
+}
+body {
+  font-family: "Roboto", sans-serif;
+}
+
 header {
     text-align: center;
 }
