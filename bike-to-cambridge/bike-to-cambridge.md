@@ -58,7 +58,7 @@ So, what's the rest of this post about? Basically...
 As the crow flies, the distance from my house to where I ended up in Cambridge is 141.1 km.
 If said crow got tired and wanted to stop off at the same places I stopped off, the distance would be 148.4 km (thanks to my friend trigonometry for such a small change.)
 
-![Screenshot from Google Maps showing the crow flies distance from Birmingham to Leamington to Bedford to Cambridge: 148 km](./images/crow_flies_distance_annotated.png)
+![Screenshot from Google Maps showing the crow flies distance from Birmingham to Leamington to Bedford to Cambridge: 148 km](./images/crow_flies_distance_annotated.png#wider)
 
 <figcaption>
 
@@ -88,10 +88,6 @@ Since this seems to be the section with all the statistics, let's finish off wit
 | Total climb | 746 m |
 | Average speed | 12.6 km/h |
 
-<figcaption>
-
-</figcaption>
-
 ## How to plan a bike route
 
 Before this, I'd not planned a very long bike ride before. I had biked from Durham to Newcastle, but that's basically a straight shot up the A167 until you find a "Newcastle Road" that you can follow. The biggest gripe I remember from this and other long-ish rides was that the directions [Google Maps] gave me were: not great for biking; and took *way* longer than the estimate said. These are basically encapsulated in what I will call my "top 2 criteria for a perfect bike route":
@@ -107,7 +103,7 @@ Here are the routes that [Google Maps] and [cycle.travel] give me for the route:
 
 Birmingham → Leamington Spa → Wellingborough → Bedford → Cambridge
 
-![Comparison of the route from Google Maps and cycle.travel. They look broadly similar.](./images/google_vs_cycle.travel_routes_with_legend.png)
+![Comparison of the route from Google Maps and cycle.travel. They look broadly similar.](./images/google_vs_cycle.travel_routes_with_legend.png#wider)
 
 <figcaption>
 
@@ -181,7 +177,7 @@ No.
 
 The national cycles routes come with the problem that they might simply not align with where you want to go. That was certainly the case for me. You try and find a good way from Birmingham to Cambridge that doesn't end up in a huge detour of a winding mess.
 
-![Screenshot of OS Maps between Birmingham and Cambridge with all national cycle routes shown. There are none that really go in the right direction.](./images/national_cycle_routes_annotated.png)
+![Screenshot of OS Maps between Birmingham and Cambridge with all national cycle routes shown. There are none that really go in the right direction.](./images/national_cycle_routes_annotated.png#wider)
 
 <figcaption>
 
@@ -244,7 +240,7 @@ Always has been.
 
 This ended up meaning that some days I was biking not towards Cambridge at all, which - if I were only biking - would usually mean zero progress towards the end. But not so bad here! It's easily fixable with a train or two.
 
-![Polar bar chart, showing the proportion of each of the three actual bike routes which goes in which direction (North/East/South/etc)](./images/directionality_actual_routes.svg)
+![Polar bar chart, showing the proportion of each of the three actual bike routes which goes in which direction (North/East/South/etc)](./images/directionality_actual_routes.svg#wider)
 
 <figcaption>
 

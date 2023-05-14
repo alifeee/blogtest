@@ -103,6 +103,27 @@
               background-color: unset;
             }
 
+            /* from https://css-tricks.com/full-width-containers-limited-width-parents/ */
+            /* images with src="url.png#wider" are selected :) */
+            .markdown-body img[src$="wider"] {
+              max-height: unset;
+              max-width: unset;
+              --w-vw: 90vw;
+              --w-rem: 60rem;
+              --w: min(var(--w-vw), var(--w-rem));
+              /* min-width: 40rem; */
+              overflow-x: auto;
+              width: var(--w);
+              position: relative;
+              left: 50%;
+              right: 50%;
+              margin-left: calc(-1 * var(--w) / 2);
+              margin-right: calc(-1 * var(--w) / 2);
+            }
+            :host {
+              contain: unset;
+            }
+
             .markdown-body table {
               max-width: max-content;
               margin: 0 auto 1rem;
