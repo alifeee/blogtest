@@ -88,10 +88,6 @@ Since this seems to be the section with all the statistics, let's finish off wit
 | Total climb | 746 m |
 | Average speed | 12.6 km/h |
 
-<figcaption>
-
-</figcaption>
-
 ## How to plan a bike route
 
 Before this, I'd not planned a very long bike ride before. I had biked from Durham to Newcastle, but that's basically a straight shot up the A167 until you find a "Newcastle Road" that you can follow. The biggest gripe I remember from this and other long-ish rides was that the directions [Google Maps] gave me were: not great for biking; and took *way* longer than the estimate said. These are basically encapsulated in what I will call my "top 2 criteria for a perfect bike route":
