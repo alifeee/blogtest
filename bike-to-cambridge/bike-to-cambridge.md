@@ -296,5 +296,5 @@ You can open and play with these notebooks on [Binder][notebooks: binder].
 
 [notebook: route]: https://github.com/alifeee/blog/blob/main/bike-to-cambridge/src/route.ipynb
 [notebook: maps vs cycle.travel]: https://github.com/alifeee/blog/blob/main/bike-to-cambridge/src/maps_vs_cycleroutes.ipynb
-[notebook: directionality]: https://github.com/alifeee/blog/blob/bike-to-cambridge/bike-to-cambridge/src/directionality.ipynb
+[notebook: directionality]: https://github.com/alifeee/blog/blob/main/bike-to-cambridge/src/directionality.ipynb
 [notebooks: binder]: https://mybinder.org/v2/gh/alifeee/blog/HEAD
