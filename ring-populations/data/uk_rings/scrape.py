@@ -7,10 +7,10 @@ import time
 import requests
 from tqdm import tqdm
 
-CITIES_CSV = "./data/worldcities/worldcities.csv"
-OUTPUT_JSON = "./data/uk_rings/uk_rings.json"
+CITIES_CSV = "./ring-populations/data/worldcities/worldcities.csv"
+OUTPUT_JSON = "./ring-populations/data/uk_rings/uk_rings.json"
 
-SCRAPE_TOP_BY_POPULATION = 20
+SCRAPE_TOP_BY_POPULATION = 21
 MAX_DISTANCE_KM = 20
 
 RING_URL = "https://ringpopulationsapi.azurewebsites.net/api/globalringpopulations"
