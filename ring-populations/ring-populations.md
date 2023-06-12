@@ -8,6 +8,9 @@ How am I supposed to answer my pressing questions like: [is Leeds big enough to 
 
 ## Internet-Inconsistencies
 
+There would exist no problem if I could search "Birmingham, Alabama population", then "the real Birmingham population" to back up my arguments of why I shouldn't be seeing results for American towns when I'm trying to find a map of bus routes in the real Birmingham (for the results of this search, see lower down).
+However, with almost every city I search for population, the top results are from different sources, and the search engines (trying to shave precious seconds off my day) seem to pull their "summary" figure from a different one of these websites for every city.
+
 ![Bar chart of population vs source. They vary.](images/bham_pop_comparison_websites.svg)
 
 <figcaption>
