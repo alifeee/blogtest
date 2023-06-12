@@ -8,21 +8,21 @@ How am I supposed to answer my pressing questions like: [is Leeds big enough to 
 
 ## Internet-Inconsistencies
 
-![Two graphs. One of total population below vs area. It displays a log-looking plot. The other of population density around an area. It looks like exponential decay.](images/bham-pop-vs-area.svg)
-
-<figcaption>
-
-As you increase the area you're measuring, population increases, and density decreases! Revolutionary!
-[Source](https://github.com/alifeee/blog/blob/main/ring-populations/data.birminghampop-vs-km.ipynb).
-
-</figcaption>
-
 ![Bar chart of population vs source. They vary.](images/bham_pop_comparison_websites.svg)
 
 <figcaption>
 
 "Population of Birmingham" from the first few sources I could find on Google. Presumably the identical ones all use ONS' data, and the others are more 'international' statistics.
 [Source](https://github.com/alifeee/blog/blob/main/ring-populations/data/birmingham_pop_from_sources.ipynb).
+
+</figcaption>
+
+![Two graphs. One of total population below vs area. It displays a log-looking plot. The other of population density around an area. It looks like exponential decay.](images/bham-pop-vs-area.svg)
+
+<figcaption>
+
+As you increase the area you're measuring, population increases, and density decreases! Revolutionary!
+[Source](https://github.com/alifeee/blog/blob/main/ring-populations/data.birminghampop-vs-km.ipynb).
 
 </figcaption>
 
