@@ -46,5 +46,12 @@ Screenshots from Tom Forth's [Circle Populations] (circle your own city [there!]
 
 </figcaption>
 
+![Bar chart showing population of the top 20 UK cities, by population. Shown is the population from "world cities", and then 5/10/20 km rings.](images/ukcities.svg)
+
+Ring populations! Tag yourself.
+[Source](https://github.com/alifeee/blog/blob/main/ring-populations/data/ukcities.ipynb).
+
+</figcaption>
+
 [Circle Populations]: https://www.tomforth.co.uk/circlepopulations/
-[Ring Populations]: https://www.tomforth.co.uk/ringpopulations/
+<!-- [Ring Populations]: https://www.tomforth.co.uk/ringpopulations/ -->
