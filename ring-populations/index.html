@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>alifeee - ring populations</title>
+    <!-- browser metas -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Why is it so hard to compare city populations? Dispatches investigates."
+    />
+
+    <!-- embed metas - https://ogp.me/ -->
+    <meta property="og:title" content="Ring Populations" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site" content="alifeee's blog" />
+    <meta
+      property="og:url"
+      content="https://blog.alifeee.co.uk/ring-populations"
+    />
+    <meta
+      property="og:image"
+      content="https://blog.alifeee.co.uk/ring-populations/og-image.jpg"
+    />
+    <meta
+      property="og:description"
+      content="Why is it so hard to compare city populations? Dispatches investigates."
+    />
+    <meta property="og:locale" content="en_GB" />
+
+    <!-- favicons -->
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="../favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="../favicon-16x16.png"
+    />
+
+    <!-- Google tag (gtag.js) -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-85X5BXGV88"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "G-85X5BXGV88");
+    </script>
+
+    <!-- stylesheets -->
+    <link rel="stylesheet" href="../stylesheet.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Josefin+Sans|Roboto"
+    />
+
+    <!-- zero-md: https://github.com/zerodevx/zero-md -->
+    <script
+      type="module"
+      src="https://cdn.jsdelivr.net/gh/zerodevx/zero-md@2/dist/zero-md.min.js"
+    ></script>
+  </head>
+
+  <body>
+    <header>
+      <a href="../">
+        <h1>alifeee's blog</h1>
+      </a>
+    </header>
+
+    <div id="background">
+      <svg height="100%" width="100%" viewBox="-50 -50 100 100">
+        <circle r="50" fill="#fafa6e" />
+        <circle r="40" fill="#86d780" />
+        <circle r="30" fill="#23aa8f" />
+        <circle r="20" fill="#007882" />
+        <circle r="10" fill="#2a4858" />
+      </svg>
+    </div>
+    <main>
+      <zero-md src="./bike-to-cambridge.md">
+        <template data-merge="append">
+          <style>
+            h1,
+            h2,
+            h3 {
+              text-align: center;
+              font-family: "Josefin Sans", sans-serif;
+            }
+
+            .markdown-body {
+              font-family: "Roboto", sans-serif;
+            }
+
+            .markdown-body img {
+              display: block;
+              max-height: 30rem;
+              margin: 0 auto;
+              background-color: unset;
+            }
+
+            .markdown-body table {
+              max-width: max-content;
+              margin: 0 auto 1rem;
+            }
+
+            figcaption {
+              text-align: center;
+              font-size: 0.8rem;
+              color: #666;
+            }
+
+            .toc li > p {
+              margin: 0.5rem 0;
+              padding: 0;
+            }
+          </style>
+        </template>
+      </zero-md>
+    </main>
+
+    <footer>
+      <div class="subscription">
+        <form
+          action="https://tinyletter.com/alifeee"
+          method="post"
+          target="popupwindow"
+          onsubmit="window.open('https://tinyletter.com/alifeee', 'popupwindow', 'scrollbars=yes,width=800,height=600');return true"
+        >
+          <label for="tlemail">Subscribe:</label>
+          <input type="text" name="email" id="tlemail" />
+          <input type="hidden" value="1" name="embed" /><input
+            type="submit"
+            value="Notify me!"
+          />
+        </form>
+      </div>
+      <div class="links">
+        <a href="https://twitter.com/alifeeeirenn" target="_blank">
+          <img alt="_Twitter_" src="../icons/twitter.svg" />
+          <span class="text">Twitter</span>
+        </a>
+        <a href="https://github.com/alifeee/blog" target="_blank">
+          <img alt="_GitHub_" src="../icons/github.svg" />
+          <span class="text">GitHub</span>
+        </a>
+        <a href="https://linktr.ee/alifeee" target="_blank">
+          <img alt="_Linktree_" src="../icons/linktree-logo-icon.svg" />
+          <span class="text">Linktree</span>
+        </a>
+        <a href="mailto:alifeee.web@outlook.com" target="_blank">
+          <img alt="_Email_" src="../icons/envelope-solid.svg" />
+          <span class="text">Email</span>
+        </a>
+      </div>
+      <a class="backlink" href="../">Back to main page</a>
+    </footer>
+  </body>
+
+  <style>
+    #background {
+      width: 100%;
+      position: fixed;
+      top: 0;
+      bottom: 0;
+      margin: auto;
+      z-index: -1;
+      opacity: 0.1;
+    }
+  </style>
+</html>
