@@ -5,3 +5,6 @@
 {"rule":"MORFOLOGIK_RULE_EN_GB","sentence":"^\\QFrom gpx.studio\\E$"}
 {"rule":"UNIT_SPACE","sentence":"^\\QDistance I biked 150.3 km\nTotal time cycling 11h 54m\\E$"}
 {"rule":"MORFOLOGIK_RULE_EN_GB","sentence":"^\\Qroute.ipynb\nmaps_vs_cycleroutes.ipynb\ndirectionality.ipynb\\E$"}
+
+{"rule":"MANY_NN","sentence":"^\\QCircle Populations also shows you how many bus, tram, and train/metro stops are in a circle.\\E$"}
+{"rule":"MORFOLOGIK_RULE_EN_GB","sentence":"^\\Qukcities.ipynb\nbirminghampop-vs-km.ipynb\nbirmingham_pop_from_sources.ipynb\\E$"}
