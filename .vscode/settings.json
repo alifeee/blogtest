@@ -4,5 +4,8 @@
     "ltex.language": "en-GB",
     "[html]":{
         "editor.defaultFormatter": "esbenp.prettier-vscode"
-    }
+    },
+"markdown.extension.toc.omittedFromToc": {
+    "ring-populations/ring-populations.md": ["### Data", "### Birmingham vs Birmingham", "### Extra stuff", "### Footnotes"]
+}
 }
