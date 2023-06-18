@@ -2,16 +2,11 @@
 
 <div class="toc">
 
-- [Ring populations: how to compare cities more agnostically](#ring-populations-how-to-compare-cities-more-agnostically)
-  - [Internet-Inconsistencies](#internet-inconsistencies)
-  - [Let's concentrize!](#lets-concentrize)
-    - [What does 10 km look like?](#what-does-10-km-look-like)
-  - [Cities, sorted](#cities-sorted)
-  - [Appendix](#appendix)
-    - [Birmingham vs Birmingham](#birmingham-vs-birmingham)
-    - [Extra stuff](#extra-stuff)
-    - [Data](#data)
-    - [Footnotes](#footnotes)
+1. [Internet-Inconsistencies](#internet-inconsistencies)
+2. [Let's concentrize!](#lets-concentrize)
+   1. [What does 10 km look like?](#what-does-10-km-look-like)
+3. [Cities, sorted](#cities-sorted)
+4. [Appendix](#appendix)
 
 </div>
 
