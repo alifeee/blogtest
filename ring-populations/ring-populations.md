@@ -2,15 +2,16 @@
 
 <div class="toc">
 
-1. [Internet-Inconsistencies](#internet-inconsistencies)
-
-1. [Let's concentrize!](#lets-concentrize)
-
-    1. [What does 10 km look like?](#what-does-10-km-look-like)
-
-1. [Cities, sorted](#cities-sorted)
-
-1. [Appendix](#appendix)
+- [Ring populations: how to compare cities more agnostically](#ring-populations-how-to-compare-cities-more-agnostically)
+  - [Internet-Inconsistencies](#internet-inconsistencies)
+  - [Let's concentrize!](#lets-concentrize)
+    - [What does 10 km look like?](#what-does-10-km-look-like)
+  - [Cities, sorted](#cities-sorted)
+  - [Appendix](#appendix)
+    - [Birmingham vs Birmingham](#birmingham-vs-birmingham)
+    - [Extra stuff](#extra-stuff)
+    - [Data](#data)
+    - [Footnotes](#footnotes)
 
 </div>
 
@@ -115,6 +116,7 @@ Google's population result vs using [Circle Populations].
 
 - [Circle Populations] *also* shows you how many bus, tram, and train/metro stops are in a circle. Very nice for complaining about your city not having trams yet.
 - [Tom Forth] has also made [Ring Populations], which is a similar idea to [Circle Populations], but shows the change in population densities and ring populations since 2001 (UK only).
+- Colours for the cover image generated with [ColorDesigner.io](https://colordesigner.io/gradient-generator/)
 
 ### Data
 

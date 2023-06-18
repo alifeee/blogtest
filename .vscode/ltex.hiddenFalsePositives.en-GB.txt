@@ -8,3 +8,4 @@
 
 {"rule":"MANY_NN","sentence":"^\\QCircle Populations also shows you how many bus, tram, and train/metro stops are in a circle.\\E$"}
 {"rule":"MORFOLOGIK_RULE_EN_GB","sentence":"^\\Qukcities.ipynb\nbirminghampop-vs-km.ipynb\nbirmingham_pop_from_sources.ipynb\\E$"}
+{"rule":"MORFOLOGIK_RULE_EN_GB","sentence":"^\\QColours for the cover image generated with ColorDesigner.io\\E$"}
