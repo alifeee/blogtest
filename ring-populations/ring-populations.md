@@ -31,7 +31,7 @@ Here is where I *would* explain the efforts I went through, the technological to
 <figcaption>
 
 As you increase the area you're measuring, population increases, and density decreases! Revolutionary!
-[Source](https://github.com/alifeee/blog/blob/main/ring-populations/data.birminghampop-vs-km.ipynb).
+[Source](https://github.com/alifeee/blog/blob/main/ring-populations/data/birminghampop-vs-km.ipynb).
 
 </figcaption>
 
@@ -52,9 +52,9 @@ Thus, I'll stick with 10 km as my favourite circle size. Easy to remember. This 
 
 ### What does 10 km look like?
 
-If you're aware of "The North", here are some of its gems with a 10 km overlay (and of course, Birmingham). By my eye, it definitely looks like a bigger circle might be misleading, but I like the size that it is.
+If you're aware of "The North", here are some of its gems with a 10 km overlay (and of course, Birmingham). By my eye, it looks like a bigger circle could be misleading in terms of the population it represents, but a smaller one might miss out the context of the city.
 
-For example, I like Newcastle's region including Sunderland, as they're nicely connected by metro. As for Leeds, Bradford, and Wakefield. Well... they *could* be nicely connected by metro. Not sure why they aren't yet...
+For example, I like Newcastle's region including Sunderland, as they're nicely connected by metro. As for Leeds, Bradford, and Wakefield. Well... they *could* be nicely connected by metro.
 
 ![Maps displaying a 10 km ring around Manchester, Leeds, Birmingham, and Newcastle.](images/ring_comparison.png)
 
@@ -67,7 +67,7 @@ Screenshots from Tom Forth's [Circle Populations] (circle your own city [there!]
 
 ## Cities, sorted
 
-With a metric decided, we can see what the cities of the UK look like! Those who know me will understand that, naturally, London is excluded.
+With a metric decided, we can see what the cities of the UK look like! London is, naturally, excluded.
 
 ![Bar chart showing population of the top 20 UK cities, by population. Shown is the population from "world cities", and then 5/10/20 km rings.](images/ukcities.svg)
 
@@ -77,6 +77,8 @@ Ring populations! Tag yourself.
 [Source](https://github.com/alifeee/blog/blob/main/ring-populations/data/ukcities.ipynb).
 
 </figcaption>
+
+Nice! Conclusions are free for you to draw.
 
 ## Appendix
 
