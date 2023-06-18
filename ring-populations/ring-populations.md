@@ -1,5 +1,19 @@
 # Ring populations: how to compare cities more agnostically
 
+<div class="toc">
+
+1. [Internet-Inconsistencies](#internet-inconsistencies)
+
+1. [Let's concentrize!](#lets-concentrize)
+
+    1. [What does 10 km look like?](#what-does-10-km-look-like)
+
+1. [Cities, sorted](#cities-sorted)
+
+1. [Appendix](#appendix)
+
+</div>
+
 I love comparing the population of cities. I hate that every city is seemingly measured differently.
 
 How am I supposed to answer my pressing questions like: [is Leeds big enough to deserve a tram][Leeds Supertram]?
