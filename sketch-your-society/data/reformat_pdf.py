@@ -28,7 +28,7 @@ for i, page in enumerate(reader.pages):
         writer.add_page(page)
         continue
     elif i == total_pages - 1:
-        page.mediabox.upper_right = (
+        page.mediabox.lower_right = (
             page.mediabox.right / 2,
             page.mediabox.top / 2,
         )
