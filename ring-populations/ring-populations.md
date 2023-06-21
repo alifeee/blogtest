@@ -1,14 +1,10 @@
 # Ring populations: how to compare cities more agnostically
 
-<div class="toc">
-
 1. [Internet-Inconsistencies](#internet-inconsistencies)
 2. [Let's concentrize!](#lets-concentrize)
    1. [What does 10 km look like?](#what-does-10-km-look-like)
 3. [Cities, sorted](#cities-sorted)
 4. [Appendix](#appendix)
-
-</div>
 
 I love comparing the population of cities. I hate that every city is seemingly measured differently.
 

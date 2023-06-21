@@ -1,7 +1,7 @@
 {
   "default": true,
   "MD033": {
-    "allowed_elements": ["figcaption", "div"]
+    "allowed_elements": ["figcaption"]
   },
   "MD013": false,
   "MD026": {
