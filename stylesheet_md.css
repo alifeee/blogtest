@@ -1,0 +1,35 @@
+/* stylesheet for the shadow DOM element with rendered markdown */
+
+h1,
+h2,
+h3 {
+  text-align: center;
+  font-family: "Josefin Sans", sans-serif;
+}
+
+.markdown-body {
+  font-family: "Roboto", sans-serif;
+}
+
+.markdown-body img {
+  display: block;
+  max-height: 30rem;
+  margin: 0 auto;
+  background-color: unset;
+}
+
+.markdown-body table {
+  max-width: max-content;
+  margin: 0 auto 1rem;
+}
+
+figcaption {
+  text-align: center;
+  font-size: 0.8rem;
+  color: #666;
+}
+
+.toc li > p {
+  margin: 0.5rem 0;
+  padding: 0;
+}
