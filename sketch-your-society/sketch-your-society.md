@@ -2,7 +2,7 @@
 
 In 2021, [Alex] and I wanted to go to freshers' fair at Durham to check out what cool, post-covid societies had sprung up. To make it entertaining, and force ourselves to talk to societies that we wouldn't otherwise, we wanted a creative idea. What we came up with was to take round a sketchbook to each society at the fair, and to propose to them "please draw something - *whatever you feel like* - in our sketchbook, to represent your society :)".
 
-Many people who acquiesced our request asked us how they could see the whole book afterwards, or where it would be posted online. At the time we had no response, as we were just doing it for our own fun. But now, thanks to the wonders of digitization, the answer is here!
+Many people who acquiesced our request asked us how they could see the whole book afterwards, or where it would be posted online. At the time we had no response, as we were just doing it for our own amusement. But now, thanks to the wonders of digitization, the answer is: right here!
 
 (I recommend viewing this PDF with "[Even Spreads]", if you can, for the book-like experience)
 
@@ -24,7 +24,7 @@ Many people who acquiesced our request asked us how they could see the whole boo
 
 It's very fun to see such the wide range of ideas and creativity of people that results when you give them a pen. I also enjoyed that the societies ended up being almost paired up in the book, combining to create an artistic spread.
 
-I implore you to 'flick' through the book above (it's clickable!), but I also highlight some of my favourite pages here. (or even ask me in person, and I might even just find the strange drawer or shelf where it has ended up)
+I implore you to 'flick' through the book above (it's clickable!), but I also highlight some of my favourite pages here. (or even ask me in person, and I might even just find the strange drawer or shelf where it has ended up.)
 
 ### Purple Radio
 
