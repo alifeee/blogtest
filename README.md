@@ -1,6 +1,6 @@
 # alifeee's blog
 
-This holds any blog content I decide to write, as well as any code used to generate it. It can be found on [`alifeee.co.uk/blog`](https://alifeee.co.uk/blog) (some day I might figure out how to get `blog.alifeee.co.uk` to work).
+This repo contains blog stuff that I write, as well as any code used to generate it. It can be found on [`blog.alifeee.co.uk`](https://blog.alifeee.co.uk)
 
 ## Markdown
 
