@@ -9,3 +9,9 @@
 {"rule":"MANY_NN","sentence":"^\\QCircle Populations also shows you how many bus, tram, and train/metro stops are in a circle.\\E$"}
 {"rule":"MORFOLOGIK_RULE_EN_GB","sentence":"^\\Qukcities.ipynb\nbirminghampop-vs-km.ipynb\nbirmingham_pop_from_sources.ipynb\\E$"}
 {"rule":"MORFOLOGIK_RULE_EN_GB","sentence":"^\\QColours for the cover image generated with ColorDesigner.io\\E$"}
+
+{"rule":"MORFOLOGIK_RULE_EN_GB","sentence":"^\\Q\"The Honorable D.C.\"\\E$"}
+{"rule":"MORFOLOGIK_RULE_EN_GB","sentence":"^\\QA face with only eyes and a pig-like snout, with \"THE HONORABLE D.C.\" written underneath\\E$"}
+{"rule":"MORFOLOGIK_RULE_EN_GB","sentence":"^\\QFrom talking to Wine & Cheese Society, it was all about having a laff.\\E$"}
+{"rule":"EN_UNPAIRED_BRACKETS","sentence":"^\\QPage titled \"WINE + CHEESE SOC DRINKS RESPONSIBLY!\"\\E$"}
+{"rule":"SOME_OF_THE","sentence":"^\\QAbsorb some of the creativity within.\\E$"}

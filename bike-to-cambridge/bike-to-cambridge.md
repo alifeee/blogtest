@@ -1,26 +1,14 @@
 # I biked from Birmingham to Cambridge (a tribute to National Cycle Routes)
 
-<div class="toc">
-
 1. [Technicalities - how far *did* I bike?](#technicalities---how-far-did-i-bike)
-
-1. [How to plan a bike route](#how-to-plan-a-bike-route)
-
-    1. [Google Maps hates bikes](#google-maps-hates-bikes)
-
-1. [National Cycle Routes!](#national-cycle-routes)
-
-    1. [Why get lost when you can not get lost](#why-get-lost-when-you-can-not-get-lost)
-
-    1. [Do they go the right way?](#do-they-go-the-right-way)
-
-    1. [Why go the right way when you can go the wrong way](#why-go-the-right-way-when-you-can-go-the-wrong-way)
-
-1. [Conclusion ("And what?")](#conclusion-and-what)
-
-1. [Appendix: Tools](#appendix-tools)
-
-</div>
+2. [How to plan a bike route](#how-to-plan-a-bike-route)
+   1. [Google Maps hates bikes](#google-maps-hates-bikes)
+3. [National Cycle Routes!](#national-cycle-routes)
+   1. [Why get lost when you can not get lost](#why-get-lost-when-you-can-not-get-lost)
+   2. [Do they go the right way?](#do-they-go-the-right-way)
+   3. [Why go the right way when you can go the wrong way](#why-go-the-right-way-when-you-can-go-the-wrong-way)
+4. [Conclusion ("And what?")](#conclusion-and-what)
+5. [Appendix: Tools](#appendix-tools)
 
 In April, I biked from Birmingham to Cambridge.
 

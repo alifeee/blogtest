@@ -85,28 +85,8 @@
     <main>
       <zero-md src="./bike-to-cambridge.md">
         <template data-merge="append">
+          <link rel="stylesheet" href="../stylesheet_md.css" />
           <style>
-            h1,
-            h2,
-            h3,
-            h4,
-            h5,
-            h6 {
-              text-align: center;
-              font-family: "Josefin Sans", sans-serif;
-            }
-
-            .markdown-body {
-              font-family: "Roboto", sans-serif;
-            }
-
-            .markdown-body img {
-              display: block;
-              max-height: 30rem;
-              margin: 0 auto;
-              background-color: unset;
-            }
-
             /* from https://css-tricks.com/full-width-containers-limited-width-parents/ */
             /* images with src="url.png#wider" are selected :) */
             .markdown-body img[src$="wider"] {
@@ -126,22 +106,6 @@
             }
             :host {
               contain: unset;
-            }
-
-            .markdown-body table {
-              max-width: max-content;
-              margin: 0 auto 1rem;
-            }
-
-            figcaption {
-              text-align: center;
-              font-size: 0.8rem;
-              color: #666;
-            }
-
-            .toc li > p {
-              margin: 0.5rem 0;
-              padding: 0;
             }
           </style>
         </template>
