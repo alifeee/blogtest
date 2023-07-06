@@ -2,9 +2,9 @@
 
 I did a [Physics degree at Durham University](https://alifeee.co.uk/durham_physics/). This blog comes as a result of a party I had just before final year exams, after everyone had finished their final-year dissertations and reports.
 
-To celebrate that we'd all spent half the year deep inside a PDF, we had DICE (Dissertation Isdone Celebration Event)! As part of the party, I got people to write down a sentence or phrase from their dissertation, without context. We drew them out of a hat and made a game of guessing what the degree title was for each.
+To celebrate that we'd all spent half the year knee-deep inside a PDF, we had DICE (Dissertation Isdone Celebration Event)! As part of the party, I got people to write down a sentence or phrase from their dissertation, without context. We drew them out of a hat and made a game of guessing what the degree title was for each.
 
-Recently I was reminded of the party when I pulled what remained of the notes from the bottom of a deep drawer. I thought that it would be nice to digitise them, so they're viewable, as I think that it's quite artistic that each represents a sort of "summary" of someone's entire degree.
+Recently I was reminded of the party when I pulled what remained of the notes from the bottom of a deep drawer. I thought that it would be nice to digitise them, so they're viewable, as I think that it's quite artistic that each note represents a sort of "summary" of someone's entire degree.
 
 They were each numbered, but unfortunately, I didn't find the key which matched the number to the writer or degree title. But... that just means that *you* get to play the game of guessing what degree each belongs to!
 
