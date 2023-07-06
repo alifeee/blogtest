@@ -15,3 +15,8 @@
 {"rule":"MORFOLOGIK_RULE_EN_GB","sentence":"^\\QFrom talking to Wine & Cheese Society, it was all about having a laff.\\E$"}
 {"rule":"EN_UNPAIRED_BRACKETS","sentence":"^\\QPage titled \"WINE + CHEESE SOC DRINKS RESPONSIBLY!\"\\E$"}
 {"rule":"SOME_OF_THE","sentence":"^\\QAbsorb some of the creativity within.\\E$"}
+
+{"rule":"MORFOLOGIK_RULE_EN_GB","sentence":"^\\QTo celebrate that we'd all spent half the year deep inside a PDF, we had DICE (Dissertation Isdone Celebration Event)!\\E$"}
+{"rule":"UPPERCASE_SENTENCE_START","sentence":"^\\Qthe next post won't be.\\E$"}
+{"rule":"UPPERCASE_SENTENCE_START","sentence":"^\\Qmaybe.)\\E$"}
+{"rule":"MORFOLOGIK_RULE_EN_GB","sentence":"^\\QA Garden of Eden state, or paradisical state, is one that the system cannot reenter once it has left it.\\E$"}
