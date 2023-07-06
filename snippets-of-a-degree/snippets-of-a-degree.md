@@ -80,7 +80,7 @@ We find to have 16 degrees of freedom and calculate `Z = 3.52` and a Durbin-Wats
 
 <figcaption>
 
-The clearly outlined consequence for continuing gender norms would encourage conformity through threats of mockery + social shaming.
+The clearly outlined consequence for contravening gender norms would encourage conformity through threats of mockery + social shaming.
 
 </figcaption>
 
