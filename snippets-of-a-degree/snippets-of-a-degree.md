@@ -1,4 +1,4 @@
-# Snippets of a degree
+# Snippets of a Degree - random sentences from random Masters' projects
 
 I did a [Physics degree at Durham University](https://alifeee.co.uk/durham_physics/). This blog comes as a result of a party I had just before final year exams, after everyone had finished their final-year dissertations and reports.
 
@@ -136,4 +136,4 @@ A similar approach is taken when designing military aircraft in such a way to de
 
 </figcaption>
 
-How many did you guess?
+Fun! How many did you guess?
