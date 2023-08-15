@@ -8,8 +8,6 @@ Below, you *should* see a lovely image of my four most recently played games on 
 
 <figcaption>
 
-API status: <alive-checker
-        src="http://45.91.169.110:5000/steamcollage/alive"
-      ></alive-checker>
+API status: <img src="http://45.91.169.110:5000/steamcollage/alive_img" onerror="this.src='./didnotload.png'" style="background-color: orange; display: inline-block; height: 1rem; width: 1rem; border-radius: 50%;" />
 
 <figcaption>
