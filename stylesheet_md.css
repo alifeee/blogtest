@@ -33,3 +33,8 @@ figcaption {
   margin: 0.5rem 0;
   padding: 0;
 }
+
+img {
+  color: rgb(221, 37, 37);
+  text-align: center;
+}
