@@ -15,3 +15,8 @@ seximal
 
 Perivolaropoulos
 Nabiev
+
+lipu
+tenpo
+toki
+pona
