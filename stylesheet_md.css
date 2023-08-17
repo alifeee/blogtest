@@ -9,6 +9,7 @@ h3 {
 
 .markdown-body {
   font-family: "Roboto", sans-serif;
+  max-width: 95vw;
 }
 
 .markdown-body img {
