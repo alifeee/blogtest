@@ -2,18 +2,41 @@
 
 1. [What tools to use?](#what-tools-to-use)
    1. [How to get Steam library information](#how-to-get-steam-library-information)
+   2. [Image manipulation](#image-manipulation)
 
 Below, you *should* see a lovely image of my four most recently played games on [Steam].
 
 [Steam]: https://steamcommunity.com/id/alifeee/
-
-![Oops. It must have broken. Here *should* be alifeee's 4 most recently played Steam games.](http://45.91.169.110:5000/steamcollage/games?id=alifeee&cols=2&rows=2&sort=recent)
 
 <figcaption>
 
 API status: <img src="http://45.91.169.110:5000/steamcollage/alive_img" onerror="this.src='./didnotload.png'" style="background-color: orange; display: inline-block; height: 1rem; width: 1rem; border-radius: 50%;" />
 
 </figcaption>
+
+<div
+  x-data="{user: 'alifeee'}"
+  class="column"
+  >
+    <div>
+      <input type="text" x-model.lazy="user" />
+      <button>Go!</button>
+    </div>
+    <img
+      :src="'http://server.alifeee.co.uk:5000/steamcollage/games?id=' + user + '&cols=2&rows=2&sort=' + (user == 'alifeee' ? 'recent' : 'playtime')"
+      :alt="'Oops. It must have broken. Here *should* be ' + user + 's 4 most recently played Steam games.'"
+      >
+    </img>
+  </div>
+
+<figcaption>
+
+For my library, these are my four most recently played games. For yours, it's your four most played ([recent is broken](https://github.com/alifeee/steam_collage_api/issues/20)).
+
+</figcaption>
+
+<!-- 
+![Oops. It must have broken. Here *should* be alifeee's 4 most recently played Steam games.](http://server.alifeee.co.uk:5000/steamcollage/games?id=alifeee&cols=2&rows=2&sort=recent) -->
 
 This is created fresh every time you reload the page, and comes from [my server].
 
@@ -59,6 +82,83 @@ The latter had the two endpoints I needed. [Firstly][api:ResolveVanityUrl], a wa
 ```bash
 GET https://api.steampowered.com/IPlayerService/GetOwnedGames/v1/
 ```
+
+The response from the games API looks like this:
+
+```json
+[
+   {
+       "appid": 10,
+       "name": "Counter-Strike",
+       "playtime_forever": 0,
+       "img_icon_url": "2a9b1a1c8e8f9d1f9a9b1a1c8e8f9d1f9a9b1a1c",
+       "playtime_windows_forever": 0,
+       "playtime_mac_forever": 0,
+       "playtime_linux_forever": 0,
+       "rtime_last_played": 0,
+   },
+   {
+       "appid": 20,
+       "name": "Team Fortress Classic",
+       "playtime_forever": 0,
+       "img_icon_url": "2a9b1a1c8e8f9d1f9a9b1a1c8e8f9d1f9a9b1a1c",
+       "playtime_windows_forever": 0,
+       "playtime_mac_forever": 0,
+       "playtime_linux_forever": 0,
+       "rtime_last_played": 0,
+   },
+]
+```
+
+Perfect. Just need to wrap that in some Python, and I've got the games. Next, the images.
+
+### Image manipulation
+
+There was little novel here this time around, since I'd already made a collage in my [old project][old steam collage].
+
+Firstly, I had to find a reliable way of getting the game thumbnails. I found this URL which works pretty well.
+
+```bash
+GET https://cdn.cloudflare.steamstatic.com/steam/apps/400/header.jpg
+```
+
+Play around with it, see if you can randomly find the game IDs for your favourite games (or, alternatively, see what nostalgia trips you can go on since all the low number IDs are games from about 2003).
+
+<div
+        x-data="{gameid: 400}"
+        style="
+          display: flex;
+          flex-direction: column;
+          gap: 0.5rem;
+          align-items: center;
+          min-height:215px;
+        "
+      >
+        <input type="number" x-model="gameid" style="width: 5rem" />
+        <div style="display: flex; flex-wrap: wrap; justify-content: center">
+          <template x-for="id in [20, 30, 70, 150, 400, 500, 550, 810, 4000]">
+            <button
+              @click="gameid = id"
+              x-html="id"
+              style="width: 3rem; margin: 0.25rem"
+            ></button>
+          </template>
+        </div>
+        <img
+          :src="'https://cdn.cloudflare.steamstatic.com/steam/apps/' + gameid + '/header.jpg'"
+          width="460px"
+          height="215px"
+          style="max-width: 90vw; height: auto; width: auto; margin: auto;"
+          alt="game not found"
+        />
+          <!-- :alt="'game id ' + gameid + ' not found'" -->
+      </div>
+
+<figcaption>
+
+Steam game thumbnails. I don't know exactly how Steam assigns IDs, but it seems that above a few thousand, every multiple of 10 is a different game.
+
+</figcaption>
 
 [*this blog's homepage*]: ..
 [my server]: http://server.alifeee.co.uk
