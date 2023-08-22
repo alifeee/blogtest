@@ -7,7 +7,7 @@
 2. [Memory issues](#memory-issues)
 3. [Thoughts](#thoughts)
 
-Below, you *should* see a lovely image of my four most recently played games on [Steam].
+Below, you *should* see a lovely image of my four most recently played games on [Steam]. You can also change it to display your Steam account.
 
 [Steam]: https://steamcommunity.com/id/alifeee/
 
@@ -26,8 +26,10 @@ API status: <img src="http://45.91.169.110:5000/steamcollage/alive_img" onerror=
         <button>Go!</button>
     </div>
     <img
+        src="http://server.alifeee.co.uk:5000/steamcollage/games?id=alifeee&cols=2&rows=2&sort=recent"
+        :alt="Oops. It must have broken. Here *should* be alifeee's 4 most recently played Steam games.'"
         :src="'http://server.alifeee.co.uk:5000/steamcollage/games?id=' + user + '&cols=2&rows=2&sort=' + (user == 'alifeee' ? 'recent' : 'playtime')"
-        :alt="'Oops. It must have broken. Here *should* be ' + user + 's 4 most recently played Steam games.'"
+        :alt="'Oops. It must have broken. Here *should* be ' + user + 's library.'"
         >
     </img>
 </div>
@@ -41,9 +43,9 @@ For my library, these are my four most recently played games. For yours, it's yo
 This is created fresh every time you reload the page, and comes from [my server].
 
 Is being able to have a live image like that worth the considerable (as you will unearth below) pain?
-Maybe. I think it's neat.
+Maybe. I think it's neat!
 
-I consider myself a fairly visual person, and as such I like to always have an image to use in combination with text (as you see on [*this blog's homepage*] any [lipu tenpo posts][lipu tenpo], and any Notion page I have [unfortunately] made you subscribe to). In the past for these things I have used Python and [Pillow] to make collages, such as this [lipu tenpo] collage:
+I consider myself a visual person, and as such I like to always have an image to use in combination with text (as you see on [*this blog's homepage*] any [lipu tenpo posts][lipu tenpo], and any Notion page I have [unfortunately] made you subscribe to). In the past for these things I have used Python and [Pillow] to make collages, such as this [lipu tenpo] collage:
 
 ![Collage of lipu tenpo covers](./images/lipu%20tenpo%20collage.png)
 
@@ -53,7 +55,7 @@ I consider myself a fairly visual person, and as such I like to always have an i
 
 </figcaption>
 
-I also made a Python script to generate the topic of this blog post: Steam game collages.
+I also made a Python script to generate Steam game collages, the very topic of this blog post.
 This I put this [on GitHub][old steam collage] for anyone to use.
 
 However, as it only worked locally (and my [installation instructions][old steam collage] weren't exactly... *exhaustive*), it couldn't be used very easily.
@@ -164,6 +166,7 @@ Play around with it, see if you can randomly find the game IDs for your favourit
         </template>
     </div>
     <img
+        src="https://cdn.cloudflare.steamstatic.com/steam/apps/400/header.jpg"
         :src="'https://cdn.cloudflare.steamstatic.com/steam/apps/' + gameid + '/header.jpg'"
         width="460px"
         height="215px"
