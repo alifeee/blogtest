@@ -36,7 +36,7 @@ API status: <img src="http://45.91.169.110:5000/steamcollage/alive_img" onerror=
 
 <figcaption>
 
-For my library, these are my four most recently played games. For yours, it's your four most played ([recent is broken](https://github.com/alifeee/steam_collage_api/issues/20)).
+For my library, these are my four most recently played games. For yours, it's your four most played ([recent is broken](https://github.com/alifeee/steam_collage_api/issues/20)). This is HTTP content on an HTTPS page, so it may also not work if you are on a curious Wi-Fi network.
 
 </figcaption>
 
