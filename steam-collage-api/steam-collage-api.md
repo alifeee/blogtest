@@ -27,7 +27,7 @@ API status: <img src="http://45.91.169.110:5000/steamcollage/alive_img" onerror=
     </div>
     <img
         src="http://server.alifeee.co.uk:5000/steamcollage/games?id=alifeee&cols=2&rows=2&sort=recent"
-        :alt="Oops. It must have broken. Here *should* be alifeee's 4 most recently played Steam games.'"
+        alt="Oops. It must have broken. Here *should* be alifeee's 4 most recently played Steam games."
         :src="'http://server.alifeee.co.uk:5000/steamcollage/games?id=' + user + '&cols=2&rows=2&sort=' + (user == 'alifeee' ? 'recent' : 'playtime')"
         :alt="'Oops. It must have broken. Here *should* be ' + user + 's library.'"
         >
