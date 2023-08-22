@@ -4,6 +4,8 @@
    1. [How to get Steam library information](#how-to-get-steam-library-information)
    2. [Image manipulation](#image-manipulation)
    3. [Hosting as an API](#hosting-as-an-api)
+2. [Memory issues](#memory-issues)
+3. [Thoughts](#thoughts)
 
 Below, you *should* see a lovely image of my four most recently played games on [Steam].
 
@@ -172,7 +174,7 @@ Play around with it, see if you can randomly find the game IDs for your favourit
 
 <figcaption>
 
-Steam game thumbnails. I don't know exactly how Steam assigns IDs, but it seems that above a few thousand, every multiple of 10 is a different game.
+Steam game thumbnails. I don't know exactly how Steam assigns IDs, but it seems that above a few thousand, every multiple of 10 or 100 is a different game.
 
 </figcaption>
 
@@ -197,7 +199,7 @@ Again, for the actual code I used for this, see [`images.py`]. Finally, hosting!
 
 ### Hosting as an API
 
-The [original project][old steam collage] was just a Python file. The motivation this time was to make an [API] so I could host the Python file on a [server] and get the images from anywhere. Then, anyone could make a collage, without having to screw around installing Python (even with what fun that is).
+The [original project][old steam collage] was just a Python file. The motivation this time was to make an [API], so I could host the Python file on a [server] and get the images from anywhere. Then, anyone could make a collage, without having to screw around installing Python (even with what fun that is).
 
 For an API in Python, I found [Flask]. It seems to do all I want, as well as having an *ancient*-looking logo. You can run a basic HTTP server with some simple code.
 
@@ -223,7 +225,7 @@ Alive
 
 Since this example is also an [actual endpoint][api.py:alive] for the server I set up, you can see it live [here](http://server.alifeee.co.uk:5000/steamcollage/alive). With only a few lines of Python code you can make a lovely web server. At the moment, it's only HTTP, not HTTPS, which means [I can only really use it to serve images][HTTP on HTTPS]. But... that works fine for this!
 
-You can see the full api code in [`api.py`]. Its function is to: take the steam id, and required image size (rows/cols/sorting), and use the methods from the sections above to make an image and return it. Here is a briefened version of [the code][`api.py`]:
+You can see the full API code in [`api.py`]. Its function is to: take the steam ID, and required image size (rows/cols/sorting), and use the methods from the sections above to make an image and return it. Here is a briefened version of [the code][`api.py`]:
 
 ```python
 from steam_api import getGamesFromSteamId
@@ -244,6 +246,32 @@ def games():
 
     return send_file(collage_bytes, mimetype="image/jpeg")
 ```
+
+With that, it's made! And to get the image, it's as simple as changing the [query parameters] on the URL. For example, the default image at the top of this post uses the URL:
+
+```url
+http://server.alifeee.co.uk/steamcollage/games
+  ?id=alifeee
+  &rows=2
+  &cols=2
+  &sort=recent
+```
+
+So, you can get any collage you want by just changing the URL in your browser. However, to make it easier, I also made a [simple webpage on my website][frontend].
+
+## Memory issues
+
+Making a larger collage requires downloading a lot of images. To this end, I initially set up the script to save a cache of thumbnails as it went, so that over time, collages would be quicker as more and more games were locally cached. However, I use Docker to host the app, and the server I use to host it only has a small amount of memory available to use. If I downloaded the thumbnails for all the games on Steam it would amount to several gigabytes of storage (around 30 kb average thumbnail size &#215; [around 100k games](https://backlinko.com/steam-users)). This would not be a lot of disk usage, but for a reason I could never figure out, having a cache monotonically increased the memory usage of the Docker container, resulting in an inevitable shutdown when it reached the maximum allowed memory usage. Not knowing a lot about Docker, my solution to this was to disable caching. Perhaps in the future I can fight the issue again and turn it back on.
+
+After I 'fixed' the first memory issues, there was another, hiding behind the first. Initially, the program worked by downloading a thumbnail, adding it to the collage, and when it was complete, resizing the collage and returning it. The problem here was that there was no maximum size for the intermediate collage, so that if you asked for many rows and columns, it created an image in Pillow many times larger than 4K resolution, and Python quickly ran out of memory, also killing the Docker container. The fix for this was more reasonable, and was just to resize the thumbnails before adding them to the image, so that the image never got larger than 4K resolution, so the memory usage was never behemothal.
+
+## Thoughts
+
+Overall, it was a neat little contained project to make. I know a lot more about APIs, HTTP vs HTTPS, and Docker deployments, as well as using a Test-Driven-Development style to write a lot of the code. If I were to build upon the project, I'd want to add an image cache, improve the creation speed, and maybe add something funky like multithreading.
+
+I would also most likely not deploy it with Docker a second time around. It is an extremely small-in-scope hobby project, and does not need continuous deployment. I am fine to have to execute a couple of shell commands every time I want to redeploy it.
+
+Have a play on [the frontend][frontend]!
 
 <!-- links -->
 
@@ -272,3 +300,5 @@ def games():
 [HTTP on HTTPS]: https://developer.mozilla.org/en-US/docs/Web/Security/Mixed_content
 [api.py:alive]: https://github.com/alifeee/steam_collage_api/blob/5dd1bd9e44967719a7596f2b6987d42a9da1b68e/api/api.py#L21-L24
 [`api.py`]: https://github.com/alifeee/steam_collage_api/blob/master/api/api.py
+[query parameters]: https://en.wikipedia.org/wiki/Query_string
+[frontend]: https://alifeee.co.uk/steam_mosaic/

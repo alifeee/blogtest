@@ -23,3 +23,5 @@
 {"rule":"MORFOLOGIK_RULE_EN_GB","sentence":"^\\QTo celebrate that we'd all spent half the year knee-deep inside a PDF, we had DICE (Dissertation Isdone Celebration Event)!\\E$"}
 
 {"rule":"UPPERCASE_SENTENCE_START","sentence":"^\\Qlipu tenpo is a non-profit magazine written entirely in toki pona.\\E$"}
+
+{"rule":"COMP_THAN","sentence":"^\\QTo this end, I initially set up the script to save a cache of thumbnails as it went, so that over time, collages would be quicker as more and more games were locally cached.\\E$"}
