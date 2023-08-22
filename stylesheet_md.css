@@ -9,6 +9,7 @@ h3 {
 
 .markdown-body {
   font-family: "Roboto", sans-serif;
+  max-width: 95vw;
 }
 
 .markdown-body img {
@@ -32,4 +33,9 @@ figcaption {
 .toc li > p {
   margin: 0.5rem 0;
   padding: 0;
+}
+
+img {
+  color: rgb(221, 37, 37);
+  text-align: center;
 }
