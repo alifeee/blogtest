@@ -154,7 +154,7 @@ Play around with it, see if you can randomly find the game IDs for your favourit
         min-height:215px;
         "
     >
-    <input type="number" x-model="gameid" style="width: 5rem" />
+    <input type="number" x-model="gameid" style="width: 5rem" step="10" />
     <div style="display: flex; flex-wrap: wrap; justify-content: center">
         <template x-for="id in [20, 30, 70, 150, 400, 500, 550, 810, 4000]">
             <button
