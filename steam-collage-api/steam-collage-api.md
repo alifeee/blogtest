@@ -9,7 +9,22 @@
 
 Below, you *should* see a lovely image of my four most recently played games on [Steam]. You can also change it to display your Steam account.
 
+If you use Firefox, this should work. If you use Chrome (or anything else), the [images will be blocked][chrome no https], as they are [mixed media][HTTP on HTTPS]. To fix this, you can allow mixed media on `blog.alifeee.co.uk`. If I [add HTTPS in the future][fixed in future], this should not be needed.
+
+<details>
+<summary>How to enable images on Chrome</summary>
+
+1. Navigate to site settings for `blog.alifeee.co.uk`
+![Screenshot of Chrome site settings](images/chrome_site_settings.png)
+2. Enable `Insecure content`
+![Screenshot of insecure content setting](images/chrome_insecure_content.png)
+3. Done. Now HTTP images will be allowed only for this webpage.
+
+</details>
+
 [Steam]: https://steamcommunity.com/id/alifeee/
+[chrome no https]: https://blog.chromium.org/2019/10/no-more-mixed-messages-about-https.html?m=1
+[fixed in future]: https://github.com/alifeee/steam_collage_api/issues/21
 
 <figcaption>
 

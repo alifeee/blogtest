@@ -9,7 +9,9 @@
       "img",
       "input",
       "template",
-      "button"
+      "button",
+      "details",
+      "summary"
     ]
   },
   "MD013": false,
