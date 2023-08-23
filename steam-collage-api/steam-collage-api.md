@@ -28,7 +28,7 @@ If you use Firefox, this should work. If you use Chrome (or anything else), the 
 
 <figcaption>
 
-API status: <img src="http://45.91.169.110:5000/steamcollage/alive_img" onerror="this.src='./didnotload.png'" style="background-color: orange; display: inline-block; height: 1rem; width: 1rem; border-radius: 50%;" />
+API status: <img src="http://server.alifeee.co.uk:5000/steamcollage/alive_img" onerror="this.src='./didnotload.png'" style="background-color: orange; display: inline-block; height: 1rem; width: 1rem; border-radius: 50%;" />
 
 </figcaption>
 
