@@ -277,6 +277,10 @@ http://server.alifeee.co.uk/steamcollage/games
 
 So, you can get any collage you want by just changing the URL in your browser. However, to make it easier, I also made a [simple webpage on my website][frontend].
 
+That means with little effort, I can make great background images like this (all of my games on Steam):
+
+![Giant collage](./images/mosaic.jpeg)
+
 ## Memory issues
 
 Making a larger collage requires downloading a lot of images. To this end, I initially set up the script to save a cache of thumbnails as it went, so that over time, collages would be quicker as more and more games were locally cached. However, I use Docker to host the app, and the server I use to host it only has a small amount of memory available to use. If I downloaded the thumbnails for all the games on Steam it would amount to several gigabytes of storage (around 30 kb average thumbnail size &#215; [around 100k games](https://backlinko.com/steam-users)). This would not be a lot of disk usage, but for a reason I could never figure out, having a cache monotonically increased the memory usage of the Docker container, resulting in an inevitable shutdown when it reached the maximum allowed memory usage. Not knowing a lot about Docker, my solution to this was to disable caching. Perhaps in the future I can fight the issue again and turn it back on.
