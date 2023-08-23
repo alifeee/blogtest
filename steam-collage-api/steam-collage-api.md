@@ -51,7 +51,7 @@ API status: <img src="http://server.alifeee.co.uk:5000/steamcollage/alive_img" o
 
 <figcaption>
 
-For my library, these are my four most recently played games. For yours, it's your four most played ([recent is broken](https://github.com/alifeee/steam_collage_api/issues/20)). This is HTTP content on an HTTPS page, so it may also not work if you are on a curious Wi-Fi network.
+For my library, these are my four most recently played games. For yours, it's your four most played ([recent is broken](https://github.com/alifeee/steam_collage_api/issues/20)). This is HTTP content on an HTTPS page, so it may also not work if you are on Chrome - see above.
 
 </figcaption>
 
