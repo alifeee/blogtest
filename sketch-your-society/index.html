@@ -72,16 +72,13 @@
       type="module"
       src="https://cdn.jsdelivr.net/gh/zerodevx/zero-md@2/dist/zero-md.min.js"
     ></script>
-    <!-- anchorjs: https://github.com/bryanbraun/anchorjs -->
+
+    <!-- anchorjs: https://github.com/bryanbraun/anchorjs (zero-md must be no-shadow mode)-->
     <script type="module">
-      // import "https://cdn.jsdelivr.net/npm/anchor-js/anchor.min.js";
-      // document.addEventListener("zero-md-rendered", function (event) {
-      // does not currently work as:
-      // if zero-md is in shadow dom, anchorjs cannot find the headings
-      // however if zero-md is NOT in shadow dom, zero-md's `goto` func does not work
-      // see https://github.com/zerodevx/zero-md/issues/82
-      //   anchors.add();
-      // });
+      import "https://cdn.jsdelivr.net/npm/anchor-js/anchor.min.js";
+      document.addEventListener("zero-md-rendered", function (event) {
+        anchors.add();
+      });
     </script>
 
     <!-- giscus: https://giscus.app/ -->
@@ -112,7 +109,7 @@
     </header>
 
     <main>
-      <zero-md src="./sketch-your-society.md">
+      <zero-md src="./sketch-your-society.md" no-shadow>
         <template data-merge="append">
           <link rel="stylesheet" href="../stylesheet_md.css" />
           <link rel="stylesheet" href="zine.css" />
