@@ -69,8 +69,14 @@
       type="module"
       src="https://cdn.jsdelivr.net/gh/zerodevx/zero-md@2/dist/zero-md.min.js"
     ></script>
-    <!-- alpinejs -->
-    <!-- <script src="//unpkg.com/alpinejs" defer></script> -->
+
+    <!-- anchorjs: https://github.com/bryanbraun/anchorjs (zero-md must be no-shadow mode)-->
+    <script type="module">
+      import "https://cdn.jsdelivr.net/npm/anchor-js/anchor.min.js";
+      document.addEventListener("zero-md-rendered", function (event) {
+        anchors.add();
+      });
+    </script>
 
     <!-- giscus: https://giscus.app/ -->
     <script
@@ -90,6 +96,9 @@
       crossorigin="anonymous"
       async
     ></script>
+
+    <!-- alpinejs -->
+    <!-- <script src="//unpkg.com/alpinejs" defer></script> -->
 
     <!-- resize images with src ending "#10rem" etc (max width) -->
     <script>
