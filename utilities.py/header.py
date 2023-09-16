@@ -2,6 +2,7 @@
 
 import os
 import re
+import sys
 
 # test for two <a tags (for header and rss feed)
 # <header>
@@ -26,8 +27,18 @@ def get_all_html_files():
     return html_files
 
 
+bad_files = []
 for file in get_all_html_files():
     with open(file, "r", encoding="utf-8") as f:
         content = f.read()
         if not re.search(HEADER_REGEX, content):
-            raise AssertionError(f"Header not found in {file}")
+            bad_files.append(file)
+
+if bad_files:
+    print("The following files have bad headers:")
+    for file in bad_files:
+        print(file)
+    sys.exit(1)
+else:
+    print("All headers are good!")
+    sys.exit(0)
