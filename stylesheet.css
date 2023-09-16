@@ -31,7 +31,9 @@ header #rss {
   position: absolute;
   top: 50%;
   right: -1rem;
-  transform: translateY(-50%);
+  transform: translateY(-50%) scale(1.25);
+  filter: invert(54%) sepia(46%) saturate(4069%) hue-rotate(344deg)
+    brightness(95%) contrast(100%); /* from https://codepen.io/sosuke/pen/Pjoqqp */
 }
 
 main {
