@@ -1,6 +1,7 @@
 """generate RSS feed for all blog posts"""
 
 from datetime import datetime
+from zoneinfo import ZoneInfo
 from bs4 import BeautifulSoup
 
 SUMMARY_TITLE = "alifeee's blog"
@@ -19,7 +20,7 @@ for post in posts_html:
     relative_url = post.find("a", class_="link")["href"]
     date_str = post.find("time")["datetime"]
     date = datetime.strptime(date_str, "%Y-%m-%d")
-    date = date.replace(tzinfo=datetime.utcnow().astimezone().tzinfo)
+    date = date.replace(tzinfo=ZoneInfo("Etc/UTC"))
     posts.append(
         {
             "relative_url": relative_url,
