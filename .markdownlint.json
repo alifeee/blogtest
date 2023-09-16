@@ -11,7 +11,9 @@
       "template",
       "button",
       "details",
-      "summary"
+      "summary",
+      "video",
+      "source"
     ]
   },
   "MD013": false,

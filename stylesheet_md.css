@@ -39,3 +39,12 @@ img {
   color: rgb(221, 37, 37);
   text-align: center;
 }
+
+.markdown-body > video {
+  display: block;
+  max-height: 30rem;
+  max-width: 100%;
+  margin: 0 auto;
+  background-color: unset;
+  margin-bottom: 16px;
+}
