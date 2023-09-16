@@ -1,8 +1,9 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
+<title>alifeee's blog</title>
 <link href='https://blog.alifeee.co.uk' rel='self' />
-<updated>2023-08-23T00:00:00+01:00</updated>
+<updated>2023-08-23T00:00:00+00:00</updated>
 <author>
   <name>alifeee</name>
 </author>
@@ -13,7 +14,7 @@
   <title>Coding Projects! #1: Collage generator for Steam games</title>
   <link href='https://blog.alifeee.co.uk/steam-collage-api' />
   <id>https://blog.alifeee.co.uk//steam-collage-api</id>
-  <updated>2023-08-23T00:00:00+01:00</updated>
+  <updated>2023-08-23T00:00:00+00:00</updated>
   <summary>How I made an automatic collage generator: to make a custom game collage using the games in any Steam library.</summary>
 </entry>
 
@@ -21,7 +22,7 @@
   <title>Snippets of a Degree</title>
   <link href='https://blog.alifeee.co.uk/snippets-of-a-degree' />
   <id>https://blog.alifeee.co.uk//snippets-of-a-degree</id>
-  <updated>2023-07-10T00:00:00+01:00</updated>
+  <updated>2023-07-10T00:00:00+00:00</updated>
   <summary>Tiny snippets from Masters' degree reports and dissertations at Durham University.</summary>
 </entry>
 
@@ -29,7 +30,7 @@
   <title>Sketch Your Society: 100 different sketches from 100 different societies</title>
   <link href='https://blog.alifeee.co.uk/sketch-your-society' />
   <id>https://blog.alifeee.co.uk//sketch-your-society</id>
-  <updated>2023-06-24T00:00:00+01:00</updated>
+  <updated>2023-06-24T00:00:00+00:00</updated>
   <summary>We took a blank sketchbook to a university freshers' fair and asked every society to draw us something. This is what they drew!</summary>
 </entry>
 
@@ -37,7 +38,7 @@
   <title>Ring Populations</title>
   <link href='https://blog.alifeee.co.uk/ring-populations' />
   <id>https://blog.alifeee.co.uk//ring-populations</id>
-  <updated>2023-06-18T00:00:00+01:00</updated>
+  <updated>2023-06-18T00:00:00+00:00</updated>
   <summary>Why is it so hard to compare city populations? Dispatches investigates.</summary>
 </entry>
 
@@ -45,7 +46,7 @@
   <title>I biked from Birmingham to Cambridge (a tribute to National Cycle Routes)</title>
   <link href='https://blog.alifeee.co.uk/bike-to-cambridge' />
   <id>https://blog.alifeee.co.uk//bike-to-cambridge</id>
-  <updated>2023-05-10T00:00:00+01:00</updated>
+  <updated>2023-05-10T00:00:00+00:00</updated>
   <summary>The story of my first bike-tour, and why trains are great.</summary>
 </entry>
 
