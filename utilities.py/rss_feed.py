@@ -1,7 +1,10 @@
 """generate RSS feed for all blog posts"""
 
 from datetime import datetime
-from feedendum import Feed, FeedItem, to_atom_string
+from feedendum import Feed, FeedItem, utils
+
+# from feedendum import to_atom_string
+import lxml.etree as ET
 from bs4 import BeautifulSoup
 
 SUMMARY_TITLE = "alifeee's blog"
@@ -20,6 +23,7 @@ for post in posts_html:
     relative_url = post.find("a", class_="link")["href"]
     date_str = post.find("time")["datetime"]
     date = datetime.strptime(date_str, "%Y-%m-%d")
+    date = date.replace(tzinfo=datetime.utcnow().astimezone().tzinfo)
     posts.append(
         {
             "relative_url": relative_url,
@@ -59,6 +63,42 @@ feed = Feed(
     items=feed_items,
     update=max(post["date"] for post in posts),
 )
+Feed.id = SUMMARY_ID
+
+
+# edit (redefine) library function to_atom_string
+def to_atom_string(feed) -> str:
+    """Returns a string Atom rappresentation of a feed."""
+    nsmap = {None: utils.NS["atom"]}
+    schema = f"{{{utils.NS['atom']}}}"
+    root = ET.Element(f"{schema}feed", nsmap=nsmap)
+    utils.add_text_element(root, f"{schema}title", feed.title)
+    utils.add_text_element(root, f"{schema}subtitle", feed.description)
+    utils.add_text_element(root, f"{schema}updated", feed.update, datetime.isoformat)
+    if feed.url:
+        elink = ET.SubElement(root, f"{schema}link")
+        elink.set("href", feed.url)
+        utils.add_text_element(root, f"{schema}id", feed.url)
+    utils.dict_append_etree(feed._data, root)
+    for fitem in feed.items:
+        entry = ET.SubElement(root, f"{schema}entry")
+        utils.add_text_element(entry, f"{schema}title", fitem.title)
+        utils.add_text_element(entry, f"{schema}id", fitem.id)
+        utils.add_text_element(
+            entry, f"{schema}updated", fitem.update, datetime.isoformat
+        )
+        if fitem.url:
+            elink = ET.SubElement(entry, f"{schema}link")
+            elink.set("href", fitem.url)
+        elem = utils.add_content_element(entry, f"{schema}content", fitem.content)
+        utils.set_attribute(elem, "type", fitem.content_type)
+        for fcategory in fitem.categories:
+            elink = ET.SubElement(entry, f"{schema}category")
+            elink.set("term", fcategory)
+        utils.dict_append_etree(fitem._data, entry)
+    ET.cleanup_namespaces(root)
+    return ET.tostring(root, encoding="UTF-8", xml_declaration=True).decode("utf-8")
+
 
 # save to root feed.xml
 with open("feed.xml", "w", encoding="utf-8") as f:
