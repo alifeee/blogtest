@@ -1,16 +1,12 @@
 """generate RSS feed for all blog posts"""
 
 from datetime import datetime
-from feedendum import Feed, FeedItem, utils
-
-# from feedendum import to_atom_string
-import lxml.etree as ET
 from bs4 import BeautifulSoup
 
 SUMMARY_TITLE = "alifeee's blog"
 SUMMARY_LINK = "https://blog.alifeee.co.uk"
 SUMMARY_AUTHOR = "alifeee"
-SUMMARY_ID = "https://blog.alifeee.co.uk"
+SUMMARY_ID = "https://blog.alifeee.co.uk/"
 SUMMARY_ICON = "https://blog.alifeee.co.uk/og-image.png"
 
 # get all li from <ul class="blog posts"> in root index.html
@@ -40,66 +36,32 @@ for post in posts:
     post["title"] = soup.find("meta", property="og:title")["content"]
     post["description"] = soup.find("meta", property="og:description")["content"]
 
-# make feed items
-feed_items = []
+# sort posts by date
+posts.sort(key=lambda x: x["date"], reverse=True)
+
+# generate feed
+feed = ""
+feed += "<?xml version='1.0' encoding='UTF-8'?>\n"
+feed += '<feed xmlns="http://www.w3.org/2005/Atom">\n\n'
+feed += f"<title>{SUMMARY_TITLE}</title>\n"
+feed += f"<link href='{SUMMARY_LINK}' rel='self' />\n"
+feed += f"<updated>{posts[0]['date'].isoformat()}</updated>\n"
+feed += "<author>\n"
+feed += f"  <name>{SUMMARY_AUTHOR}</name>\n"
+feed += "</author>\n"
+feed += f"<id>{SUMMARY_ID}</id>\n"
+feed += f"<icon>{SUMMARY_ICON}</icon>\n\n"
 for post in posts:
     link = SUMMARY_LINK + "/" + post["relative_url"].lstrip("./")
-    feed_items.append(
-        FeedItem(
-            title=post["title"],
-            id=link,
-            content=post["description"],
-            content_type="html",
-            url=link,
-            update=post["date"],
-        )
-    )
+    feed += "<entry>\n"
+    feed += f"  <title>{post['title']}</title>\n"
+    feed += f"  <link href='{link}' />\n"
+    feed += f"  <id>{SUMMARY_ID}/{post['relative_url'].lstrip('./')}</id>\n"
+    feed += f"  <updated>{post['date'].isoformat()}</updated>\n"
+    feed += f"  <summary>{post['description']}</summary>\n"
+    feed += "</entry>\n\n"
+feed += "</feed>\n"
 
-# make feed
-feed = Feed(
-    title=SUMMARY_TITLE,
-    url=SUMMARY_LINK,
-    description="alifeee's blog",
-    items=feed_items,
-    update=max(post["date"] for post in posts),
-)
-Feed.id = SUMMARY_ID
-
-
-# edit (redefine) library function to_atom_string
-def to_atom_string(feed) -> str:
-    """Returns a string Atom rappresentation of a feed."""
-    nsmap = {None: utils.NS["atom"]}
-    schema = f"{{{utils.NS['atom']}}}"
-    root = ET.Element(f"{schema}feed", nsmap=nsmap)
-    utils.add_text_element(root, f"{schema}title", feed.title)
-    utils.add_text_element(root, f"{schema}subtitle", feed.description)
-    utils.add_text_element(root, f"{schema}updated", feed.update, datetime.isoformat)
-    if feed.url:
-        elink = ET.SubElement(root, f"{schema}link")
-        elink.set("href", feed.url)
-        utils.add_text_element(root, f"{schema}id", feed.url)
-    utils.dict_append_etree(feed._data, root)
-    for fitem in feed.items:
-        entry = ET.SubElement(root, f"{schema}entry")
-        utils.add_text_element(entry, f"{schema}title", fitem.title)
-        utils.add_text_element(entry, f"{schema}id", fitem.id)
-        utils.add_text_element(
-            entry, f"{schema}updated", fitem.update, datetime.isoformat
-        )
-        if fitem.url:
-            elink = ET.SubElement(entry, f"{schema}link")
-            elink.set("href", fitem.url)
-        elem = utils.add_content_element(entry, f"{schema}content", fitem.content)
-        utils.set_attribute(elem, "type", fitem.content_type)
-        for fcategory in fitem.categories:
-            elink = ET.SubElement(entry, f"{schema}category")
-            elink.set("term", fcategory)
-        utils.dict_append_etree(fitem._data, entry)
-    ET.cleanup_namespaces(root)
-    return ET.tostring(root, encoding="UTF-8", xml_declaration=True).decode("utf-8")
-
-
-# save to root feed.xml
+# write feed to file
 with open("feed.xml", "w", encoding="utf-8") as f:
-    f.write(to_atom_string(feed))
+    f.write(feed)
