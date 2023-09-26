@@ -3,7 +3,7 @@
 1. [Introduction](#introduction)
 2. [Opening it up](#opening-it-up)
 3. [How to connect to a bunch of scary looking electronics](#how-to-connect-to-a-bunch-of-scary-looking-electronics)
-   1. [Microchips](#microchips)
+   1. [Ribbon cable](#ribbon-cable)
    2. [Soldering](#soldering)
    3. [Connected! But it doesn't work](#connected-but-it-doesnt-work)
 4. [What is SPI?](#what-is-spi)
@@ -40,15 +40,33 @@ The first step (naturally) was to... take it all apart and look at the wires! Wi
 
 Inside there are a [lot of electronics][ConnectedHumber/Bus-Terminal-Signs#control-module]. There were two leads coming out of the box: a 3-core power cable; and an Ethernet cable. I had initially considered trying to hack into the Ethernet cable by sending the "correct" requests, and (just) maybe the sign would magically turn on, but I thought better of this idea.
 
+Instead, we wire directly into the logic microchips controlling the LEDs!
+
 ## How to connect to a bunch of scary looking electronics
+
+Here is a zoom of the sign. As you can see, the LEDs come in panels, which are removable. Under each panel are four microchips (called AS1100 chips - [datasheet][AS1100 datasheet] for the strong-hearted) for controlling the lights. These are wired up so that each chip controls a 6 x 8 pixel grid, and there are four of these per LED panel.
 
 ![Close-up picture of the electronics behind one of the panels on the display. Four AS1100 chips are visible.](images/hw_sign_as1100-chips.jpg)
 
-![Close-up of a ribbon cable connected to a PCB via a socket.](images/hw_sign_ribbon-cable.jpg)
-
-### Microchips
+The AS1100 chips are daisy-chained together, so you only have to attach wires to the input of the first chip, and then it outputs a delayed signal into the input of the next chip. All-in-all, 32 chips are daisy-chained together on the top row, and the same on the bottom. The rows are controlled independently. This is shown as a diagram in the [AS1100 datasheet]
 
 ![Screenshot from AS1100 datasheet showing chips joined to 8x8 dot matrix displays, and chained together, along with accompanying text.](images/sw_as1100_daisychain.png)
+
+<figcaption>
+
+A curious note: the AS1100 chips are actually *not* designed to drive dot-matrix displays, but instead "*should*" be used for 7-segment displays. Their ability to drive dot matrix displays is just secondary and covered in this single diagram in the datasheet.
+
+</figcaption>
+
+So...! We only need to wire into the first chip.
+
+### Ribbon cable
+
+Handily, there is already a ribbon cable, connecting from the PCB containing the chips (above) to the aforementioned ["bunch of electronics"][ConnectedHumber/Bus-Terminal-Signs#control-module] (below).
+
+![Close-up of a ribbon cable connected to a PCB via a socket.](images/hw_sign_ribbon-cable.jpg)
+
+It was already worked out which ribbon cable pins connect to which terminals on the AS1100 chips by BNNorman ([Ribbon cable pin designation]), so all I had to do was figure out a way to connect the ribbon cable wires to an [Arduino][Arduino Uno Rev3]. Without ordering any parts online, the easiest way I could think to do that was to... just solder straight onto the back of the pins of the ribbon cable connector.
 
 ![Close-up picture of the pins of the ribbon cable, and the soldering pads on the bottom of the PCB. Both are correspondingly numbered.](images/hw_sign_ribbon-port_back.png)
 
@@ -56,15 +74,37 @@ Inside there are a [lot of electronics][ConnectedHumber/Bus-Terminal-Signs#contr
 
 ### Soldering
 
+Wires!
+
 ![Picture of several loose stripped wires above an electronics workbench.](images/hw_wires_stripped.jpg)
+
+And the final soldering. As they say, "you shouldn't use solder for strength", but hey... I can pick up this circuit board by just the wires now. They only came off three times when I did that.
+
+These wires are only for controlling the logic of the chips. They are powered separately. So, the only connections we need here are:
+
+- Ground
+- ISET (sets the brightness of the LEDs)
+- DATA (for sending data packets)
+- CLOCK (for synchronising data sending)
+- LOAD (for telling the chip when we have finished sending data)
+
+In other words, this is [SPI communication][SPI]!
 
 ![Close-up picture of wires soldered into the connection pads on the back of a PCB.](images/hw_sign_ribbon-board_back.jpg)
 
+Then, we can put it together and connect the wires to the sign (as well as connecting power to it)...
+
 ![Picture of the bus sign with several wires attached to it.](images/hw_setup_zoom.jpg)
+
+...and connect the control/logic wires to the Arduino, so we can send data to the chips...
 
 ![Close-up picture of an Arduino Elego Uno R3, with three wires connected into pins 8, 9, and 10.](images/hw_arduino_lonely.jpg)
 
+...and that's all that should be needed! Now we just program the Arduino with [some code][Example code: display test], and it should work!
+
 ### Connected! But it doesn't work
+
+Lights! This was the first time I got the sign to light up. Unfortunately it lit up completely randomly and with no clear logic, but hey! Lights!
 
 <video controls preload="none" poster="./images/videopre_sign_garbage.jpg" loop>
   <source src="./images/videoff_sign_garbage.mp4" type="video/mp4">
@@ -137,3 +177,8 @@ Inside there are a [lot of electronics][ConnectedHumber/Bus-Terminal-Signs#contr
 [Brian Norman]: https://github.com/BNNorman
 [ConnectedHumber/Bus-Terminal-Signs]: https://github.com/ConnectedHumber/Bus-Terminal-Signs/
 [ConnectedHumber/Bus-Terminal-Signs#control-module]: https://github.com/ConnectedHumber/Bus-Terminal-Signs/blob/8442f09b8f9d1832f875e6f604bd82d333bfda3f/pics/Control%20Modules.png
+[AS1100 datasheet]: https://github.com/ConnectedHumber/Bus-Terminal-Signs/blob/master/Datasheets/AS1100_DS000273_1-00.pdf
+[Ribbon cable pin designation]: https://github.com/ConnectedHumber/Bus-Terminal-Signs/#pin-designation
+[Arduino Uno Rev3]: https://store.arduino.cc/products/arduino-uno-rev3
+[SPI]: https://en.wikipedia.org/wiki/Serial_Peripheral_Interface
+[Example code: display test]: https://github.com/ConnectedHumber/Bus-Terminal-Signs/blob/master/Code/Examples/display_test.ino

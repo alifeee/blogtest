@@ -37,3 +37,6 @@ Elego
 Uno
 Closeup
 Neonode
+BNorman
+BNNorman
+ISET
