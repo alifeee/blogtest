@@ -40,7 +40,7 @@ The first step (naturally) was to... take it all apart and look at the wires! Wi
 
 Inside there are a [lot of electronics][ConnectedHumber/Bus-Terminal-Signs#control-module]. There were two leads coming out of the box: a 3-core power cable; and an Ethernet cable. I had initially considered trying to hack into the Ethernet cable by sending the "correct" requests, and (just) maybe the sign would magically turn on, but I thought better of this idea.
 
-Instead, we wire directly into the logic microchips controlling the LEDs!
+Instead, we wire directly into the logic microchips controlling the LEDs!...
 
 ## How to connect to a bunch of scary looking electronics
 
@@ -68,19 +68,23 @@ Handily, there is already a ribbon cable, connecting from the PCB containing the
 
 It was already worked out which ribbon cable pins connect to which terminals on the AS1100 chips by BNNorman ([Ribbon cable pin designation]), so all I had to do was figure out a way to connect the ribbon cable wires to an [Arduino][Arduino Uno Rev3]. Without ordering any parts online, the easiest way I could think to do that was to... just solder straight onto the back of the pins of the ribbon cable connector.
 
+I initially marked the cable-to-solder-pad mapping the wrong way round (I had the first pin on the bottom right), but using a multimeter, I determined it was wrong. I probably should've realised that just like the red marking on the ribbon cable designating wire 1, the square soldering pad on the PCB also designated pin 1. If you imagine it, though, this means there are some funky Z-shaped wires inside the connector to make the pins connect to the opposite side that they entered in.
+
 ![Close-up picture of the pins of the ribbon cable, and the soldering pads on the bottom of the PCB. Both are correspondingly numbered.](images/hw_sign_ribbon-port_back.png)
 
 ![Close-up picture of the top of the PCB, showing the holes the ribbon cable enters.](images/hw_sign_ribbon-port_front.png)
 
 ### Soldering
 
-Wires!
+To solder some wires onto the PCB, I first had to have some wires. Revolutionary. So I cut some lengths from wire coils, stripped them, tinned them, and crimped them (all skills which Hull Makerspace was more than glad to help with).
 
 ![Picture of several loose stripped wires above an electronics workbench.](images/hw_wires_stripped.jpg)
 
 And the final soldering. As they say, "you shouldn't use solder for strength", but hey... I can pick up this circuit board by just the wires now. They only came off three times when I did that.
 
-These wires are only for controlling the logic of the chips. They are powered separately. So, the only connections we need here are:
+![Close-up picture of wires soldered into the connection pads on the back of a PCB.](images/hw_sign_ribbon-board_back.jpg)
+
+These wires are only for controlling the logic of the chips. The LEDs are powered separately. So, the only connections we need here are:
 
 - Ground
 - ISET (sets the brightness of the LEDs)
@@ -88,11 +92,9 @@ These wires are only for controlling the logic of the chips. They are powered se
 - CLOCK (for synchronising data sending)
 - LOAD (for telling the chip when we have finished sending data)
 
-In other words, this is [SPI communication][SPI]!
+In other words, this is [SPI communication][SPI]! I hadn't used SPI before, and so had to learn how it worked, as you'll see below.
 
-![Close-up picture of wires soldered into the connection pads on the back of a PCB.](images/hw_sign_ribbon-board_back.jpg)
-
-Then, we can put it together and connect the wires to the sign (as well as connecting power to it)...
+After soldering, we can put it together and connect the wires to the sign (as well as connecting power to it)...
 
 ![Picture of the bus sign with several wires attached to it.](images/hw_setup_zoom.jpg)
 
@@ -110,15 +112,27 @@ Lights! This was the first time I got the sign to light up. Unfortunately it lit
   <source src="./images/videoff_sign_garbage.mp4" type="video/mp4">
 </video>
 
+This was the end of the journey beginning "let's plug it in and see if it immediately works", with the sad answer of "no". Now, it was time for some investigative electronics. I.e., sticking an oscilloscope to things and seeing what happens.
+
 ## What is SPI?
+
+This part of the story is backwards. I started in the dark corner of "I have no idea what SPI is", and played around with an oscilloscope until I understood what was happening. Here, I present it backwards, with the theory first (explained as I understand it), and *then* the resulting electronic signals.
+
+SPI (Serial Peripheral Interface) is a way for one piece of electronics to send messages to another one, used mainly for devices that are physically next to each other and always attached with the same wires. One device is a "host" and the other a "listener".
+
+There are three wires. A *clock* wire, a *data* wire, and a *load* wire. When the **host** wants to send a message (2 bytes), they oscillate the *clock* signal up and down 16 times (16 bits), and each time it goes up they put the *data* wire to the corresponding bit of the byte(s). So, to send the signal 0x0E02 (0000 1110 0000 0010), the voltage on the wires looks like this:
+
+![Digital image of oscilloscope trace. Above: yellow signal oscillating. Below: blue signal turning on and off less frequently.](images/sw_oscilloscope_bad-spi.png)
+
+Finally, the third wire is used for confirmation. You can have multiple devices connected to your *clock* and *data* signals, and then you send a final signal on the *load* wire to pick which device should receive the signal.
+
+Here is the explanation of SPI from the [AS1100 datasheet]:
 
 ![Screenshot from AS1100 datasheet, showing SPI protocol as a timing diagram.](images/sw_as1100_serial-addressing-modes.png)
 
 ![Picture of workbench, showing all components to make bus sign work. Oscilloscope by the side connects to setup.](images/hw_setup_scoping.jpg)
 
 ![Closeup picture of oscilloscope probes attached to wires going into Arduino.](images/hw_arduino_probes.png)
-
-![Digital image of oscilloscope trace. Above: yellow signal oscillating. Below: blue signal turning on and off less frequently.](images/sw_oscilloscope_bad-spi.png)
 
 ![Picture of oscilloscope screen, showing neat SPI trace.](images/hw_oscilloscope_trace.jpg)
 
