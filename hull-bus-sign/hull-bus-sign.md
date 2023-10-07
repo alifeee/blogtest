@@ -8,11 +8,8 @@
    3. [Connected! But it doesn't work](#connected-but-it-doesnt-work)
 4. [What is SPI?](#what-is-spi)
    1. [The fix!](#the-fix)
-5. [An aside: Neonode touch](#an-aside-neonode-touch)
-   1. [The natural conclusion: a theremin](#the-natural-conclusion-a-theremin)
-   2. [Theremin + bus sign!](#theremin--bus-sign)
-6. [The "Final Project" - Pong!](#the-final-project---pong)
-7. [Conclusion](#conclusion)
+5. [The "Final Project" - Pong!](#the-final-project---pong)
+6. [Conclusion](#conclusion)
 
 ## Introduction
 
@@ -199,28 +196,6 @@ And there we go!
 
 <video controls preload="none" poster="./images/videopre_sign_scrolling-text_fast.jpg" loop>
   <source src="./images/videoff_sign_scrolling-text_fast.mp4" type="video/mp4">
-</video>
-
-## An aside: Neonode touch
-
-![Picture of Neonode touch components including USB cable, sensor bar, interface chip, and interface cable.](images/hw_neonode.jpg)
-
-<video controls preload="none" poster="./images/videopre_neonode_proto.jpg" loop>
-  <source src="./images/videoff_neonode_proto.mp4" type="video/mp4">
-</video>
-
-### The natural conclusion: a theremin
-
-<video controls preload="none" poster="./images/videopre_neonode_theramin.jpg">
-  <source src="./images/videoff_neonode_theramin.mp4" type="video/mp4">
-</video>
-
-### Theremin + bus sign!
-
-![Picture of many wires plugged into a breadboard, Arduino, and interface board.](images/setup_wire_mess.jpg)
-
-<video controls preload="none" poster="./images/videopre_both_jumpy-theramin.jpg">
-  <source src="./images/videoff_both_jumpy-theramin.mp4" type="video/mp4">
 </video>
 
 ## The "Final Project" - Pong!
