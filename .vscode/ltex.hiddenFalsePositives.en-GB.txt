@@ -28,3 +28,7 @@
 
 {"rule":"SETUP_VERB","sentence":"^\\QOscilloscope by the side connects to setup.\\E$"}
 {"rule":"ENGLISH_WORD_REPEAT_RULE","sentence":"^\\QAn aside: Neonode touch\nThe natural conclusion: a theremin\nTheremin + bus sign!\\E$"}
+
+{"rule":"TO_NON_BASE","sentence":"^\\QWires soldered to pins 2, 3, 5, 7, & 8\\E$"}
+{"rule":"MORFOLOGIK_RULE_EN_GB","sentence":"^\\QIn Morse, is this eeeeeee or ttttttt?\\E$"}
+{"rule":"UPPERCASE_SENTENCE_START","sentence":"^\\Qv0.4.0?\\E$"}
