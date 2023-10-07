@@ -10,6 +10,7 @@
    1. [The fix!](#the-fix)
 5. [The "Final Project" - Pong!](#the-final-project---pong)
 6. [Conclusion](#conclusion)
+7. [Links](#links)
 
 ## Introduction
 
@@ -137,7 +138,15 @@ The problem was that the Arduino wasn't grounded to the same ground as the bus s
 
 ![Picture of oscilloscope screen, showing neat SPI trace.](images/hw_oscilloscope_trace.jpg)
 
-With this 5 V signal, the sign worked perfectly, so there was nothing wrong with the code. However, at this point, I had spent almost two days figuring out how SPI works, so I [changed the code to use Arduino's native SPI][ConnectedHumber/Bus-Terminal-Signs#adding-spi] anyway.
+With this 5 V signal, the sign worked perfectly, so there was nothing wrong with the code. However, at this point, I had spent almost two days figuring out how SPI works, so I [changed the code to use Arduino's native SPI][ConnectedHumber/Bus-Terminal-Signs#adding-spi] anyway. It ended up being only a couple of lines:
+
+```arduino
+void Panel::write16(int d) {
+  SPI.beginTransaction(SPISettings(10000000, MSBFIRST, SPI_MODE3));
+  SPI.transfer16(d);
+  SPI.endTransaction();
+}
+```
 
 Finally, the third wire in SPI is used for confirmation. You can have multiple devices connected to your **CLOCK** and **DATA** signals, and then you send a final signal on the **LOAD** wire to pick which device should receive the signal. This can be seen on this trace:
 
@@ -200,13 +209,63 @@ And there we go!
 
 ## The "Final Project" - Pong!
 
+Now that I could use the sign fairly effectively, I wanted to get something cool set up. I had originally wanted to set up a server on the sign so that anyone could connect and change the text, so that it could be put up somewhere with text. However, a friend had just given me a ["touchless touch sensor"][Neonode-touch-sensor], so another friend suggested I make Pong with the touch sensor as a controller.
+
+The way time had passed its course had left me with one day to make this, so I got stuck in. The first thing I did was plan the game in pseudocode. Here's a snippet of the [full thing][pong pseudocode], with (most of) my plan for the game loop, code that is executed every frame.
+
+```text
+...
+
+# game loop (every frame)
+compute delta
+deal with touch events
+  for each event
+    get player
+    get y
+    set player position to y
+deal with ball
+  work out ball's next position
+  if off top of screen
+    reverse y velocity
+    set position to top of screen
+  ...
+  add velocity to ball position
+clear pixels
+draw paddles
+draw ball
+send display()
+```
+
+I used this to write the code in Arduino's language, and it basically... just worked :). Here's the result!
+
 <video controls preload="none" poster="./images/videopre_both_pong.jpg" loop>
   <source src="./images/videoff_both_pong.mp4" type="video/mp4">
 </video>
 
+Finally, I left the game set up in the Makerspace for a few weeks, so anyone could play it if they wanted.
+
 ![Picture of sign and electronics set up to play Pong on a workbench at Hull Makerspace.](images/output_pong.jpg)
 
 ## Conclusion
+
+Pong! The signs were pretty fun to get working and use, and I now have many ideas and other things I want to do with them. Some things I want to do are:
+
+- Set up a sign with a QR code attached, which lets you change the text displayed on a whim (e.g., by using a Raspberry Pi instead of an Arduino, which can use Wi-Fi to host a server with the tool to change the text)
+- Using it to show the next train/bus departures, returning it to its initial use (just like the [Desktop Departures® Board])
+- Make more games! For example: that tower stacking game where the tower gets thinner if you mistime the stacking; Tetris.
+- Anything else! Got any ideas?
+
+It would also be nice to close the lid of the display, so it is portable. When they were uninstalled from the bus station, the power cables were all cut off, so the main part of this is just rewiring a 3-pin plug onto the box. Otherwise, screwing around with this sign has been great contained electronical shenanigans! E-waste no more.
+
+## Links
+
+- Main Bus Sign Repository:
+
+    <https://github.com/ConnectedHumber/Bus-Terminal-Signs>
+
+- Documentation for the custom C++ library to control the signs:
+
+    <https://www.connectedhumber.org/Bus-Terminal-Signs>
 
 <!-- links -->
 [Hull Makerspace]: https://linktr.ee/makerspacehull
@@ -227,3 +286,6 @@ And there we go!
 [ConnectedHumber/Bus-Terminal-Signs#adding-spi]: https://github.com/ConnectedHumber/Bus-Terminal-Signs/commit/42d419e2f393794e35022eb3a698ca0bd0645b34
 [ConnectedHumber/Bus-Terminal-Signs#library]: https://www.connectedhumber.org/Bus-Terminal-Signs/html/index.html
 [ConnectedHumber/Bus-Terminal-Signs#scrolling-text]: https://github.com/ConnectedHumber/Bus-Terminal-Signs/blob/master/Code/Examples/scrolling_text.ino
+[Neonode-touch-sensor]: https://neonode.com/technologies/zforce/touch-sensor-modules
+[pong pseudocode]: ./pong%20plan.txt
+[Desktop Departures® Board]: https://ukdepartureboards.co.uk/store/product/desktop-departures
