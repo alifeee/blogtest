@@ -116,33 +116,86 @@ This was the end of the journey beginning "let's plug it in and see if it immedi
 
 ## What is SPI?
 
-This part of the story is backwards. I started in the dark corner of "I have no idea what SPI is", and played around with an oscilloscope until I understood what was happening. Here, I present it backwards, with the theory first (explained as I understand it), and *then* the resulting electronic signals.
+All about SPI! With only the datasheet in-hand, I started in the dark corner of "I have no idea what SPI is", and played around with an oscilloscope until I understood what was happening.
 
 SPI (Serial Peripheral Interface) is a way for one piece of electronics to send messages to another one, used mainly for devices that are physically next to each other and always attached with the same wires. One device is a "host" and the other a "listener".
 
-There are three wires. A *clock* wire, a *data* wire, and a *load* wire. When the **host** wants to send a message (2 bytes), they oscillate the *clock* signal up and down 16 times (16 bits), and each time it goes up they put the *data* wire to the corresponding bit of the byte(s). So, to send the signal 0x0E02 (0000 1110 0000 0010), the voltage on the wires looks like this:
-
-![Digital image of oscilloscope trace. Above: yellow signal oscillating. Below: blue signal turning on and off less frequently.](images/sw_oscilloscope_bad-spi.png)
-
-Finally, the third wire is used for confirmation. You can have multiple devices connected to your *clock* and *data* signals, and then you send a final signal on the *load* wire to pick which device should receive the signal.
-
-Here is the explanation of SPI from the [AS1100 datasheet]:
+Here is the explanation of SPI from the [AS1100 datasheet]. My explanation follows.
 
 ![Screenshot from AS1100 datasheet, showing SPI protocol as a timing diagram.](images/sw_as1100_serial-addressing-modes.png)
 
-![Picture of workbench, showing all components to make bus sign work. Oscilloscope by the side connects to setup.](images/hw_setup_scoping.jpg)
+SPI communication had been set up in the [original][ConnectedHumber/Bus-Terminal-Signs#original] code by using "bit banging", where wire signals are changed to **HIGH** and **LOW** using Arduino code. I wanted to change this to use Arduino's SPI library, as it is faster and less error-prone, but first I had to understand SPI. So, Hull Makerspace found me an oscilloscope. This, I attached to two SPI wires, **CLOCK** and **DATA** (explained below), to see what was happening when the Arduino sent a signal to the bus sign.
 
 ![Closeup picture of oscilloscope probes attached to wires going into Arduino.](images/hw_arduino_probes.png)
 
+![Picture of workbench, showing all components to make bus sign work. Oscilloscope by the side connects to setup.](images/hw_setup_scoping.jpg)
+
+For SPI, there are three wires. A *clock* wire, a *data* wire, and a *load* wire. When the **host** wants to send a message (2 bytes), they oscillate the *clock* signal up and down 16 times (16 bits), and each time it goes up they put the *data* wire to the corresponding bit of the byte(s). I used the Arduino to send the SPI signal 0x0E02 (0000 1110 0000 0010), and the voltage on the wires looked like this:
+
+![Digital image of oscilloscope trace. Above: yellow signal oscillating. Below: blue signal turning on and off less frequently.](images/sw_oscilloscope_bad-spi.png)
+
+So, it looked like the SPI was working! In fact, it was, and the problem was that the voltage needed to be 5 V to be registered by the bus sign, and as you can see above, they were anywhere from around 3 to 4 V. This meant that only some peaks in the above signal were registered by the sign, so it was basically receiving rubbish. That explained the flickering.
+
+The problem was that the Arduino wasn't grounded to the same ground as the bus sign, and as soon as I connected the common grounds the signal corrected itself, and became the below.
+
 ![Picture of oscilloscope screen, showing neat SPI trace.](images/hw_oscilloscope_trace.jpg)
+
+With this 5 V signal, the sign worked perfectly, so there was nothing wrong with the code. However, at this point, I had spent almost two days figuring out how SPI works, so I [changed the code to use Arduino's native SPI][ConnectedHumber/Bus-Terminal-Signs#adding-spi] anyway.
+
+Finally, the third wire in SPI is used for confirmation. You can have multiple devices connected to your **CLOCK** and **DATA** signals, and then you send a final signal on the **LOAD** wire to pick which device should receive the signal. This can be seen on this trace:
 
 ![Picture of oscilloscope screen, showing SPI trace more zoomed out.](images/hw_oscilloscope_signal.jpg)
 
 ### The fix!
 
+Now that SPI was fixed, after not actually being broken, I could start using the sign as intended: as a customisable dot matrix display! The first thing was to make sure it worked, so I sent the debug command which flashes on/off all the LEDs, and...
+
+It worked!
+
 <video controls preload="none" poster="./images/videopre_sign_display-test.jpg" loop>
   <source src="./images/videoff_sign_display-test.mp4" type="video/mp4">
 </video>
+
+Now that the sign worked, the [documented library code][ConnectedHumber/Bus-Terminal-Signs#library] could be used to make a [simple script][ConnectedHumber/Bus-Terminal-Signs#scrolling-text] to scroll the screen with text:
+
+```arduino
+#include <CH_AS1100.h>
+
+#define LOAD_PIN_TOP 7 // top panel
+#define LOAD_PIN_BOT 5 // bottom panel
+#define NUM_CHIPS 32 // panel length
+
+Panel topRow = Panel(LOAD_PIN_TOP, NUM_CHIPS);
+Panel bottomRow = Panel(LOAD_PIN_BOT, NUM_CHIPS);
+
+void showText(Panel &p, char *msg)
+{
+    p.setCursor(0, 0);
+    p.setTextColor(1);
+    p.setTextSize(1); // pixel size multiplier
+    p.println(msg);
+    p.display();
+}
+
+void setup()
+{
+    topRow.begin();
+    bottomRow.begin();
+
+    showText(topRow, (char *)"Hull Makerspace");
+    showText(bottomRow, (char *)"@alifeee");
+}
+
+void loop()
+{
+    topRow.scrollRows(1, true); // wrap scroll left to right
+    topRow.display();
+    bottomRow.scrollRows(-1, true); // wrap scroll right to left
+    bottomRow.display();
+}
+```
+
+And there we go!
 
 <video controls preload="none" poster="./images/videopre_sign_scrolling-text_fast.jpg" loop>
   <source src="./images/videoff_sign_scrolling-text_fast.mp4" type="video/mp4">
@@ -196,3 +249,6 @@ Here is the explanation of SPI from the [AS1100 datasheet]:
 [Arduino Uno Rev3]: https://store.arduino.cc/products/arduino-uno-rev3
 [SPI]: https://en.wikipedia.org/wiki/Serial_Peripheral_Interface
 [Example code: display test]: https://github.com/ConnectedHumber/Bus-Terminal-Signs/blob/master/Code/Examples/display_test.ino
+[ConnectedHumber/Bus-Terminal-Signs#adding-spi]: https://github.com/ConnectedHumber/Bus-Terminal-Signs/commit/42d419e2f393794e35022eb3a698ca0bd0645b34
+[ConnectedHumber/Bus-Terminal-Signs#library]: https://www.connectedhumber.org/Bus-Terminal-Signs/html/index.html
+[ConnectedHumber/Bus-Terminal-Signs#scrolling-text]: https://github.com/ConnectedHumber/Bus-Terminal-Signs/blob/master/Code/Examples/scrolling_text.ino
