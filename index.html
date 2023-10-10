@@ -246,6 +246,10 @@
   </body>
 
   <style>
+    * {
+      box-sizing: border-box;
+    }
+    /* posts */
     p,
     h2 {
       text-align: center;
@@ -265,52 +269,49 @@
       box-shadow: 0 0 1rem rgba(0, 0, 0, 0.2);
     }
 
+    /* inside a post */
     .link {
       text-decoration: none;
       color: black;
-      display: flex;
-      align-items: center;
       pointer-events: auto;
       min-height: 10rem;
+      display: grid;
+      grid-template-columns: 1fr 2fr;
+      grid-template-rows: 1fr;
+      grid-template-areas: "preview-image info";
+      align-items: center;
     }
-
+    .post:nth-last-child(even) > .link {
+      grid-template-columns: 2fr 1fr;
+      grid-template-areas: "info preview-image";
+    }
     .link > * {
       margin: 0 0.5rem;
     }
     .link > .info {
-      flex: 2 1 10rem;
-      max-width: 66%;
+      grid-area: info;
     }
     .link > .preview-image {
-      flex: 1 1 auto;
-      min-width: 0;
-      max-width: 33%;
-      min-height: 0;
-      max-height: 10rem;
+      grid-area: preview-image;
+      max-width: 100%;
       display: flex;
-      justify-content: center;
+    }
+    .preview-image > img {
+      width: 10em;
+      height: 10em;
+      object-fit: contain;
+      border-radius: 1em;
+      margin: 0 auto;
     }
 
     .info .title {
-      text-align: center;
       margin: 0;
     }
     .info .date {
-      text-align: center;
       margin: 0;
       margin-top: 0.5rem;
       opacity: 0.6;
       font-size: 0.8rem;
-    }
-    .preview-image > img {
-      object-fit: contain;
-      min-width: 0;
-      max-width: 100%;
-      min-height: 0;
-      max-height: 10rem;
-    }
-    .circular {
-      border-radius: 25%;
     }
   </style>
 </html>
