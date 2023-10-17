@@ -83,6 +83,11 @@
         <i>content</i> to digest.
       </p>
       <h2>Posts</h2>
+
+      <ul class="categories" id="categories">
+        <li id="category-all"><a href="/">all</a></li>
+      </ul>
+
       <ul class="blog posts">
         <li class="post">
           <a href="./factorio-proximity-chat" class="link">
@@ -126,6 +131,9 @@
               <p class="date">
                 <time datetime="2023-10-08">2023-10-08</time>
               </p>
+              <ul class="categories">
+                <li class="electronics">electronics</li>
+              </ul>
             </hgroup>
           </a>
         </li>
@@ -147,6 +155,9 @@
               <p class="date">
                 <time datetime="2023-08-23">2023-08-23</time>
               </p>
+              <ul class="categories">
+                <li class="programming">programming</li>
+              </ul>
             </hgroup>
           </a>
         </li>
@@ -166,6 +177,9 @@
               <p class="date">
                 <time datetime="2023-07-10">2023-07-10</time>
               </p>
+              <ul class="categories">
+                <li class="found-paper">found-paper</li>
+              </ul>
             </hgroup>
           </a>
         </li>
@@ -185,6 +199,9 @@
               <p class="date">
                 <time datetime="2023-06-24">2023-06-24</time>
               </p>
+              <ul class="categories">
+                <li class="found-paper">found-paper</li>
+              </ul>
             </hgroup>
           </a>
         </li>
@@ -204,6 +221,9 @@
               <p class="date">
                 <time datetime="2023-06-18">2023-06-18</time>
               </p>
+              <ul class="categories">
+                <li class="statistics">statistics</li>
+              </ul>
             </hgroup>
           </a>
         </li>
@@ -224,6 +244,9 @@
               <p class="date">
                 <time datetime="2023-05-10">2023-05-10</time>
               </p>
+              <ul class="categories">
+                <li class="adventures">adventures</li>
+              </ul>
             </hgroup>
           </a>
         </li>
@@ -269,9 +292,17 @@
   </body>
 
   <style>
+    * {
+      box-sizing: border-box;
+    }
+    /* posts */
     p,
     h2 {
       text-align: center;
+    }
+    h2 {
+      margin: 0;
+      margin-top: 2rem;
     }
     .posts {
       padding: 0;
@@ -288,52 +319,126 @@
       box-shadow: 0 0 1rem rgba(0, 0, 0, 0.2);
     }
 
+    /* inside a post */
     .link {
       text-decoration: none;
       color: black;
-      display: flex;
-      align-items: center;
       pointer-events: auto;
       min-height: 10rem;
+      display: grid;
+      grid-template-columns: 1fr 2fr;
+      grid-template-rows: 1fr;
+      grid-template-areas: "preview-image info";
+      align-items: center;
     }
-
+    .post:nth-last-child(even) > .link {
+      grid-template-columns: 2fr 1fr;
+      grid-template-areas: "info preview-image";
+    }
     .link > * {
       margin: 0 0.5rem;
     }
     .link > .info {
-      flex: 2 1 10rem;
-      max-width: 66%;
+      grid-area: info;
     }
     .link > .preview-image {
-      flex: 1 1 auto;
-      min-width: 0;
-      max-width: 33%;
-      min-height: 0;
-      max-height: 10rem;
+      grid-area: preview-image;
+      max-width: 100%;
       display: flex;
-      justify-content: center;
+    }
+    .preview-image > img {
+      width: 10em;
+      height: 10em;
+      object-fit: contain;
+      border-radius: 1em;
+      margin: 0 auto;
     }
 
     .info .title {
-      text-align: center;
       margin: 0;
     }
     .info .date {
-      text-align: center;
       margin: 0;
       margin-top: 0.5rem;
       opacity: 0.6;
       font-size: 0.8rem;
     }
-    .preview-image > img {
-      object-fit: contain;
-      min-width: 0;
-      max-width: 100%;
-      min-height: 0;
-      max-height: 10rem;
+
+    /* category chips */
+    .categories {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
     }
-    .circular {
-      border-radius: 25%;
+    .categories > li {
+      margin: 0.25rem;
+      padding: 0.25rem;
+      border-radius: 0.5rem;
+      font-size: 0.75rem;
+      pointer-events: auto;
+      opacity: 0.6;
+    }
+    .categories > li.active {
+      box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.2);
+    }
+    .categories > li > a {
+      text-decoration: none;
+      color: black;
     }
   </style>
+  <script>
+    const posts = document.querySelectorAll(".post");
+    const categorylist = document.querySelector("#categories");
+    // get "category" query param and filter posts
+    const urlParams = new URLSearchParams(window.location.search);
+    const queryCategory = urlParams.get("category");
+
+    function hasCategory(post, category) {
+      return post.querySelector(`.categories > .${category}`);
+    }
+
+    if (queryCategory) {
+      // hide all posts
+      posts.forEach((post) => {
+        post.style.display = "none";
+      });
+      // show posts with category
+      posts.forEach((post) => {
+        if (hasCategory(post, queryCategory)) {
+          post.style.display = "block";
+        }
+      });
+    } else {
+      document.querySelector("#category-all").classList.add("active");
+    }
+
+    // add links at top of page for each category
+    const categories = new Set();
+    posts.forEach((post) => {
+      post.querySelectorAll(".categories > li").forEach((category) => {
+        categories.add(category.innerText);
+      });
+    });
+
+    function categoryListItem(category, active = false) {
+      const listItem = document.createElement("li");
+      const link = document.createElement("a");
+      link.href = `?category=${category}`;
+      link.innerText = category;
+      listItem.appendChild(link);
+      if (active) {
+        listItem.classList.add("active");
+      }
+      return listItem;
+    }
+
+    categories.forEach((category) => {
+      categorylist.appendChild(
+        categoryListItem(category, category === queryCategory)
+      );
+    });
+  </script>
 </html>

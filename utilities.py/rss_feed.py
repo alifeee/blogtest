@@ -13,7 +13,7 @@ SUMMARY_ICON = "https://blog.alifeee.co.uk/og-image.png"
 # get all li from <ul class="blog posts"> in root index.html
 with open("index.html", "r", encoding="utf-8") as f:
     soup = BeautifulSoup(f, "html.parser")
-posts_html = soup.find("ul", class_="blog posts").find_all("li")
+posts_html = soup.find("ul", class_="blog posts").find_all("li", recursive=False)
 
 posts = []
 for post in posts_html:
