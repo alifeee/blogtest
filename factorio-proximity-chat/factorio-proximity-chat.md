@@ -318,6 +318,18 @@ time_t get_file_modified_time(char *path)
 
 ### Build it on Windows
 
+At this point, I’d only been able to compile the code locally on Linux (via WSL). For Windows, I used GitHub actions. This was possible as I didn’t yet need to test it with Mumble, as it was mainly just opening and parsing a file, which could be done on Linux. However, I run Factorio and Mumble on Windows. Building via Actions took around 5 minutes, so I wanted to be able to compile locally for a quicker development cycle. This was ultimately a pain as I didn’t want to install Visual Studio on my (not-a-lot-of-space) laptop, so I tried to install GCC for windows, which had many issues. I ended up finding that you could just install Visual Studio build tools and use it from the CLI.
+
+![Screenshot of Visual Studio Build Tools installer](./images/visual-studio-build-tools.png)
+
+After adding a bunch of functions which were available on Linux but missing on Windows, I could now build the mumble plugin locally on Windows. With [one command][code#windows-build] I could build, and package the code into `factorio.mumble_plugin`, so I could quickly change the code and reinstall it.
+
+```bash
+cmake -S .\mumble\ -B .\build\ -DCMAKE_C_COMPILER=cl; cmake --build .\build\ --config Release; bash package_windows.sh
+```
+
+<figcaption>The build and package command for Windows Powershell</figcaption>
+
 ## It works! (for a bit)
 
 ## It works! (weirdly)
@@ -364,6 +376,7 @@ time_t get_file_modified_time(char *path)
 [GH Actions cmake template]: https://github.com/alifeee/Factorio-Proximity-Voice-Chat/new/master?filename=.github%2Fworkflows%2Fcmake-multi-platform.yml&workflow_template=ci%2Fcmake-multi-platform
 [Factorio can't Lua on exit]: https://discord.com/channels/139677590393716737/306402592265732098/1154080788921466970
 
+[code#windows-build]: https://github.com/alifeee/Factorio-Proximity-Voice-Chat/#windows
 [code#bundle-mumble]: https://github.com/alifeee/Factorio-Proximity-Voice-Chat/blob/1b9642729f122463b356c865a170594d3e0b8dfc/.github/workflows/release.yml#L83-L88
 
 [Discord#xorimuth]: https://mods.factorio.com/user/Xorimuth
