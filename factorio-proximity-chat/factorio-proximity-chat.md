@@ -21,9 +21,14 @@ There is only one problem with Factorio: it didn't have proximity chat. That, my
       3. [Using the filesystem?](#using-the-filesystem)
 2. [Making the Factorio Mod](#making-the-factorio-mod)
 3. [Making the Mumble Plugin](#making-the-mumble-plugin)
-   1. [Simple steps](#simple-steps)
-   2. [Integrate with the Factorio mod](#integrate-with-the-factorio-mod)
-   3. [Build it on Windows](#build-it-on-windows)
+   1. [Build the C files](#build-the-c-files)
+   2. [Bundle the plugin](#bundle-the-plugin)
+   3. [Spit out random data](#spit-out-random-data)
+   4. [Only run when `Factorio.exe` is running](#only-run-when-factorioexe-is-running)
+   5. [Parse the Factorio log file](#parse-the-factorio-log-file)
+   6. [Check the log file exists](#check-the-log-file-exists)
+   7. [Check the log file is recent](#check-the-log-file-is-recent)
+   8. [Build it on Windows](#build-it-on-windows)
 4. [It works! (for a bit)](#it-works-for-a-bit)
 5. [It works! (weirdly)](#it-works-weirdly)
 6. [It works! (actually)](#it-works-actually)
@@ -149,9 +154,11 @@ PA uses: `position`, `direction` (facing) and `axis` (for games with left-right 
 
 Now, I had a debug window showing lots of 0s that I needed to put values in, and a well-described plugin API, so I forked the [Mumble plugin template] and started developing.
 
-### Simple steps
+### Build the C files
 
 First, I had to be able to build the plugin. After screwing around for too long installing [GCC] I decided to just use GitHub Actions to build the C file, as I found an [official template for building multi-platform C and C++ projects][GH Actions cmake template]. This built the plugin for Linux and Windows whenever I pushed to the repository. I also was able to build the plugin with GCC, for Linux, on WSL, but I hadn't managed to install it for Windows yet, and had to wait several minutes for the action to complete if I wanted a Windows version. This worked fine initially, as I mostly was writing and testing C code on Linux, then I would copy it into the main plugin file if I wanted to try it on Windows. Because I was just reading and writing a file initially, it didn't matter whether I was writing on Windows or Linux until I wanted to test it with Factorio running.
+
+### Bundle the plugin
 
 Next, I wanted to make the plugin installable using the Mumble UI. Following [the bundling guide][Mumble md#bundling], this involved writing a `manifest.xml` file
 
@@ -178,7 +185,136 @@ Next, I wanted to make the plugin installable using the Mumble UI. Following [th
     zip -MM factorio.mumble_plugin manifest.xml libplugin.so plugin.dll
 ```
 
-### Integrate with the Factorio mod
+### Spit out random data
+
+The function that Mumble calls to get positional data is `mumble_fetchPositionalData`. To check it worked before I carried on, I first output random data to see it in the helper.
+
+```c
+bool mumble_fetchPositionalData(float *avatarPos, float *avatarDir, float *avatarAxis, float *cameraPos, float *cameraDir, float *cameraAxis, const char **context, const char **identity)
+{
+  avatarPos[0] = 0.01f + ((float)rand() / (float)RAND_MAX) * 0.01f;
+  avatarPos[1] = 0.01f + ((float)rand() / (float)RAND_MAX) * 0.01f;
+  avatarPos[2] = 0.01f + ((float)rand() / (float)RAND_MAX) * 0.01f;
+
+  ...
+
+  return true;
+}
+```
+
+This worked great!
+
+![Screenshot of x, y, z coordinates in the PA Viewer, showing random data](images/mumble_pa-viewer_random-data.png)
+
+Now I had remembered how C works, and had a better grasp of the Mumble API, I could start attaching the plugin to Factorio.
+
+### Only run when `Factorio.exe` is running
+
+At this stage, the plugin was always active. The first integration step was to get it to only activate if `Factorio.exe` was running. Mumble occasionally calls `mumble_initPositionalData` for each installed plugin to see if they should begin. In this case, we should begin (return OK) if the game is open.
+
+```c
+uint8_t mumble_initPositionalData(const char *const *programNames, const uint64_t *programPIDs, size_t programCount)
+{
+  // programNames is a list of, e.g., ["Notion.exe", "System", "firefox.exe", "factorio.exe"]
+  // loop through programs, if FACTORIO_EXE is found, return MUMBLE_PDEC_OK
+  bool found = false;
+  for (size_t i = 0; i < programCount; i++)
+  {
+    if (strcmp(programNames[i], FACTORIO_EXE) == 0)
+    {
+      found = true;
+      break;
+    }
+  }
+
+  if (!found)
+  {
+  // If the game is not running, return MUMBLE_PDEC_ERROR_TEMP
+  return MUMBLE_PDEC_ERROR_TEMP;
+  }
+
+  return MUMBLE_PDEC_OK;
+}
+```
+
+### Parse the Factorio log file
+
+To get the data from the text file, it has to be parsed. This is done with this code
+
+```c
+int parse_factorio_logfile(float *x, float *y, float *z, int *player, int *surface, char **server, size_t *server_len, int *error)
+{
+  f_data = c_read_file(factorioLogfile, &err, &f_size);
+
+  // split by newline
+  line = strtok_r(f_data, "\n", &saveptr);
+  while (line != NULL)
+  {
+    // skip first line
+    if (strstr(line, "XYZ") != NULL)
+    {
+      line = strtok_r(NULL, "\n", &saveptr);
+      continue;
+    }
+    // split by colon
+    token2 = strtok_r(line, ":", &saveptr2);
+    value2 = strtok_r(NULL, ":", &saveptr2);
+
+    if (strcmp(token2, "x") == 0)
+    {
+      *x = atof(value2);
+    }
+    else if (strcmp(token2, "y") == 0)
+    {
+      *y = atof(value2);
+    }
+    else if (strcmp(token2, "z") == 0)
+    {
+      *z = atof(value2);
+    }
+
+    ...
+
+    line = strtok_r(NULL, "\n", &saveptr);
+  }
+}
+```
+
+<figcaption>
+
+There's some funky C stuff going on here. Functions can't return multiple values, so the function arguments are pointers which are edited (a way of getting data from a function). `strtok` is another weird one, which splits strings on a value, requiring you to sometimes give the first argument `NULL` for it to return the *second* or *third* split.
+
+</figcaption>
+
+### Check the log file exists
+
+At this point, the plugin would now see `Factorio.exe` and immediately try to open the log file. Problem is: it might not be there; if the user hasn't installed the Factorio mod yet, or not loaded a save. To protect against this, I wrote some C to check if the file exists before opening it
+
+```c
+int file_exists(const char *fname)
+{
+  FILE *file;
+  if ((file = fopen(fname, "r")))
+  {
+    fclose(file);
+    return 1;
+  }
+  return 0;
+}
+```
+
+### Check the log file is recent
+
+The final issue I considered was that the plugin would still see the log file if you quit a game to the main menu. This would mean that you would still hear people from the most recent server you were connected to. To solve this, I wanted to either blank the log file, or write different data to it when you quit a server. However, Factorio [doesn't allow][Factorio can't Lua on exit] executing mod code on exiting a save. So, my rudimentary solution was to just only enable the plugin if the log file was written recently. This way, when you quit, the file grows stale so is no longer used. I did this with a fairly simple C function (here, simple stands for "short" and *not* "the code is understandable")
+
+```c
+time_t get_file_modified_time(char *path)
+{
+  struct stat attr;
+  stat(path, &attr);
+  return attr.st_mtime;
+}
+```
 
 ### Build it on Windows
 
@@ -226,6 +362,7 @@ Next, I wanted to make the plugin installable using the Mumble UI. Following [th
 [Mumble md#bundling]: https://github.com/mumble-voip/mumble/blob/master/docs/dev/plugins/Bundling.md
 [GCC]: https://gcc.gnu.org/
 [GH Actions cmake template]: https://github.com/alifeee/Factorio-Proximity-Voice-Chat/new/master?filename=.github%2Fworkflows%2Fcmake-multi-platform.yml&workflow_template=ci%2Fcmake-multi-platform
+[Factorio can't Lua on exit]: https://discord.com/channels/139677590393716737/306402592265732098/1154080788921466970
 
 [code#bundle-mumble]: https://github.com/alifeee/Factorio-Proximity-Voice-Chat/blob/1b9642729f122463b356c865a170594d3e0b8dfc/.github/workflows/release.yml#L83-L88
 
