@@ -2,7 +2,7 @@
 to use: use CLI.
 I like this image
 
-py .\tile_grass.py .\grass-tilesheet.png .\grass-tiled.png --random-weights 50 50 50 1 1 1 1 1 1 1 1 1 1 1 1 1 --output-tiles-width 10 --output-tiles-height 10 --seed 47848
+py .\tile_grass.py .\grass-tilesheet.png .\grass-tiled.jpg --random-weights 100 100 100 1 1 1 1 1 1 1 1 1 1 1 1 1 --output-tiles-width 15 --output-tiles-height 15 --seed 72
 """
 import argparse
 import random
@@ -49,7 +49,7 @@ def main(
     random.seed(seed)
     output_width_px = output_tiles_width * tile_width
     output_height_px = output_tiles_height * tile_height
-    output = Image.new("RGBA", (output_width_px, output_height_px))
+    output = Image.new("RGB", (output_width_px, output_height_px))
     for y in range(output_tiles_height):
         for x in range(output_tiles_width):
             tile = pick_random_tile(tiles, random_weights)
@@ -63,7 +63,12 @@ def main(
                 ),
             )
 
-    output.save(output_fname)
+    # save jpg
+    output.save(
+        output_fname,
+        format="JPEG",
+        optimize=True,
+    )
     print("saved to", output_fname)
 
 
