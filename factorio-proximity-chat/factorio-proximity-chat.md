@@ -332,9 +332,75 @@ cmake -S .\mumble\ -B .\build\ -DCMAKE_C_COMPILER=cl; cmake --build .\build\ --c
 
 ## It works! (for a bit)
 
+Now, I had followed the steps that I dreamt up and had a Factorio mod which wrote the player position to a file, and a Mumble plugin which read from that file, parsed the position, and gave it to Mumble. Opening Factorio and Mumble at the same time, it worked!
+
+![Left: Factorio. Right: Mumble PA helper displaying positional information](./images/factorio_with_PAHelper.png)
+
+<figcaption>
+
+The PA helper shows me as in-game, and correctly displays my position!
+
+</figcaption>
+
+There was only one small, tiny, nagging issue.
+
+Every time I started it, Mumble crashed after 10 or so seconds.
+
+![Screenshot of Mumble crash report](images/mumble_crash.png)
+
+<figcaption>
+
+:(
+
+</figcaption>
+
+This was the first thing which went wrong that I didn't know why it went wrong. Initially, I thought there may be problems with file reading/writing at the same time. That is, that Factorio would write a file in the middle of Mumble trying to read it. I [fixed this][code commit#file-read-write] by reducing the read-time of the file, and by returning an error if the file was changed midway through reading it, which I thought that this would fix the crash, but it didn't. I was now lost, since I had run out of guesses for why the crash happened.
+
+Now, the code tried to read the file, and if it failed, did nothing. If the file was there and read correctly, then it continued as normal. So what caused the crash?
+
+After many days of thinking and a few hours of debugging, most of which I've forgotten what I tried, I eventually just started printing out the log file and watching it with my eyes. It looked normal, apart from it was supposed to print every 12th of a second, and the rhythm was slightly off (you can tell how long I sat watching scrolling text). This was when I realised I probably should have been printing a header, or something in-between prints, because what was happening was that sometimes the *file was empty*. I am still not sure why this is the case, but I assume it is something to do with Factorio falling behind on code execution, so rather than waiting, it just writes an empty file and moves on to the next task.
+
+This, naturally, meant that the C code tried to find the `"x: "` row, failed, and crashed (perhaps there's also something to say here about my error handling while parsing the file...). I [added a catch][code commit#check-empty-file] for if the file was empty and rebuilt the plugin.
+
 ## It works! (weirdly)
 
+Now it wasn't crashing, I could test the whole reason for making this: the voice chat! I found a friend, called "a game dev who hates their corporate job" [sic], and we hopped in a game together, installed the mod and plugin, and started monologuing (the sound-test type, not the vanity type).
+
+With a lot of running around and a lot of mental gymnastics, we figured out that it 'sort of' worked. This is a synonym for 'didn't work but spicily'. We found that our 'ears' were stuck at the map origin, `(0, 0)`, and our 'mouths' were attached to our players. This meant that if one of us stood in the centre of the map, and the other walked around, their volume decreased, and they came out of the left/right headphones as expected.
+
+To be honest, I still can't explain how this happens, but I already had a suspicion why: because I hadn't actually thought about Mumble's coordinate system. I just plugged Factorio's `x` and `y` coordinates into Mumble's. After reading [Mumble's coordinate system details][mumble website#coordinates], I came up with a transform from Factorio to Mumble coordinates and [rewrote the code][code commits#coordinate-system].
+
+```c
+// Factorio coordinates are:
+// x: east- west+
+// y: north- south+
+
+// Mumble coordinates are:
+// x: east- west+
+// y: up+ down-
+// z: north+ south-
+
+// thus, Mumble coordinates are:
+// x: Factorio x
+// y: Factorio z
+// z: Factorio -y
+```
+
+The final issue I had was that on Mumble 1.5 (experimental release), the voice chat volume never went silent, no matter how far away someone was. However, this was an issue with Mumble, and [already known about][mumble issues#minvolume]. This meant that we had to use Mumble 1.4. The negative with that was that there was no PA Viewer, but since the plugin was already made, that was fine enough. It would just require reinstalling Mumble 1.5 to debug it again.
+
 ## It works! (actually)
+
+After all that, it worked!
+
+![Screenshot. Left: Factorio. Right: Mumble with PA helper, displaying correct coordinates](images/factorio_working.png)
+
+<figcaption>
+
+Unlike the above screenshot, this time the coordinates are correct!
+
+</figcaption>
+
+The only further thing I did was grab some more friends
 
 ## Conclusion
 
@@ -375,8 +441,13 @@ cmake -S .\mumble\ -B .\build\ -DCMAKE_C_COMPILER=cl; cmake --build .\build\ --c
 [GCC]: https://gcc.gnu.org/
 [GH Actions cmake template]: https://github.com/alifeee/Factorio-Proximity-Voice-Chat/new/master?filename=.github%2Fworkflows%2Fcmake-multi-platform.yml&workflow_template=ci%2Fcmake-multi-platform
 [Factorio can't Lua on exit]: https://discord.com/channels/139677590393716737/306402592265732098/1154080788921466970
+[mumble website#coordinates]: https://www.mumble.info/documentation/developer/positional-audio/create-plugin/guide/#explanation-of-sound-and-coordinate-systems
+[mumble issues#minvolume]: https://github.com/mumble-voip/mumble/issues/6149
 
 [code#windows-build]: https://github.com/alifeee/Factorio-Proximity-Voice-Chat/#windows
 [code#bundle-mumble]: https://github.com/alifeee/Factorio-Proximity-Voice-Chat/blob/1b9642729f122463b356c865a170594d3e0b8dfc/.github/workflows/release.yml#L83-L88
+[code commit#check-empty-file]: https://github.com/alifeee/Factorio-Proximity-Voice-Chat/commit/a858d5033669c8ad5722aadd199d52e948ca02b1
+[code commit#file-read-write]: https://github.com/alifeee/Factorio-Proximity-Voice-Chat/commit/c6a87c8ec8b9899ad6bbd0a6d8906053c0d78cf8
+[code commits#coordinate-system]: https://github.com/alifeee/Factorio-Proximity-Voice-Chat/commit/0443f05342025088c6866317b79d3bf8e4619c91
 
 [Discord#xorimuth]: https://mods.factorio.com/user/Xorimuth
