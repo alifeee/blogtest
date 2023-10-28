@@ -1,5 +1,7 @@
 # Coding Projects! #2: Proximity-based voice chat for Factorio
 
+<word-count parent=".markdown-body"></word-count>
+
 Earlier this year, I played [Barotrauma] weekly for 21 weeks with friends. Barotrauma is "2D co-op submarine simulator – in space, with survival horror and RPG elements", and most importantly for me: it has a proximity voice-chat system. This means that if you are crafting some nuclear fuel rods at the rear of the ship, you will not hear your crewmates being torn apart by eldritch beings that found their way into the front of the ship. You will - on your way past the medbay to fix a leak in the crew quarters - hear the medical doctors through the door discussing which of the crewmembers to use for their next *'experiment'*. You will be picked as the next dead-man-walking to leave the submarine to mine precious metals, and will make your way across the ship to get orders in-person from the captain.
 
 As you can tell, I had a lot of fun playing Barotrauma; it probably deserves a blog post of its own. When we played, we were usually around 8 players, which, had we used Discord for voice chat, would have been chaos trying to hear what everyone was saying. Proximity chat added greatly to our enjoyment of the game, and planted the question in my mind of which other games which could be as fun. As far as I think of it, there are a few criteria which make Factorio great and that I would like in another game that could be as fun. They are:
