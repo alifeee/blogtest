@@ -33,6 +33,12 @@ There is only one problem with Factorio: it didn't have proximity chat. That, my
 5. [It works! (weirdly)](#it-works-weirdly)
 6. [It works! (actually)](#it-works-actually)
 7. [Conclusion](#conclusion)
+8. [People who helped](#people-who-helped)
+   1. [Testing it works!](#testing-it-works)
+   2. [Reddit thread ⇗](#reddit-thread-)
+   3. [Factorio discord ⇗](#factorio-discord-)
+   4. [Mumble Matrix ⇗](#mumble-matrix-)
+9. [Links](#links)
 
 ## Research
 
@@ -400,11 +406,48 @@ Unlike the above screenshot, this time the coordinates are correct!
 
 </figcaption>
 
-The only further thing I did was grab some more friends
+The only further thing I did was grab [two more friends](#testing-it-works) to play a four-player game of Factorio for 20 minutes to test the entire process in-situ. This worked great! We could hear each other when close, and could do our own things in pairs!
 
 ## Conclusion
 
 ![Screenshot of Factorio players, speaking. They say "Proximity Voice Chat!"; "Pardon?"](./og-image.png)
+
+## People who helped
+
+Lots of people helped me make this! As well as the standard anonymous forum people who provided C functions, help, and debugging ideas, I had a lot of help from others. Here are some!
+
+### Testing it works!
+
+- A game dev who hates their corporate job [sic]
+- [Roberto](https://github.com/roberto-holmes)
+- Branton
+
+### Reddit thread [⇗][Reddit thread]
+
+- [u/Faxxobeat](https://www.reddit.com/user/Faxxobeat/)
+- [u/Yoyobuae](https://www.reddit.com/user/Yoyobuae/)
+
+### Factorio discord [⇗][Factorio discord]
+
+- Xorimuth
+- justarandomgeek
+- Solonarv, Mernom, Danielv123
+
+### Mumble Matrix [⇗][Mumble matrix]
+
+- @davidebeatrici
+- @hartmnt
+- @krzmbrzl_raven
+
+## Links
+
+- Factorio mod page
+
+    <https://mods.factorio.com/mod/proximity-voice-chat>
+
+- GitHub repository
+
+    <https://github.com/alifeee/Factorio-Proximity-Voice-Chat/>
 
 [Barotrauma]: https://store.steampowered.com/app/602960/Barotrauma/
 [proxchat games]: https://www.familygamingdatabase.com/en-gb/search/list/Proximity+Chat
@@ -443,6 +486,7 @@ The only further thing I did was grab some more friends
 [Factorio can't Lua on exit]: https://discord.com/channels/139677590393716737/306402592265732098/1154080788921466970
 [mumble website#coordinates]: https://www.mumble.info/documentation/developer/positional-audio/create-plugin/guide/#explanation-of-sound-and-coordinate-systems
 [mumble issues#minvolume]: https://github.com/mumble-voip/mumble/issues/6149
+[Mumble matrix]: https://matrix.to/#/#mumble-dev:matrix.org
 
 [code#windows-build]: https://github.com/alifeee/Factorio-Proximity-Voice-Chat/#windows
 [code#bundle-mumble]: https://github.com/alifeee/Factorio-Proximity-Voice-Chat/blob/1b9642729f122463b356c865a170594d3e0b8dfc/.github/workflows/release.yml#L83-L88
