@@ -32,3 +32,4 @@
 {"rule":"TO_NON_BASE","sentence":"^\\QWires soldered to pins 2, 3, 5, 7, & 8\\E$"}
 {"rule":"MORFOLOGIK_RULE_EN_GB","sentence":"^\\QIn Morse, is this eeeeeee or ttttttt?\\E$"}
 {"rule":"UPPERCASE_SENTENCE_START","sentence":"^\\Qv0.4.0?\\E$"}
+{"rule":"COMMA_PARENTHESIS_WHITESPACE","sentence":"^\\Q:(\\E$"}

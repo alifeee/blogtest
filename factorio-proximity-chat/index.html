@@ -1,33 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>alifeee - steam collage api</title>
+    <title>alifeee - Factorio proximity chat</title>
     <!-- browser metas -->
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="How I made an automatic collage generator: to make a custom game collage using the games in any Steam library."
+      content="Coding Projects! #2: Making Proximity-based voice chat for Factorio"
     />
 
     <!-- embed metas - https://ogp.me/ -->
-    <meta
-      property="og:title"
-      content="Coding Projects! #1: Collage generator for Steam games"
-    />
+    <meta property="og:title" content="Making Factorio Proximity Voice Chat" />
     <meta property="og:type" content="website" />
     <meta property="og:site" content="alifeee's blog" />
     <meta
       property="og:url"
-      content="https://blog.alifeee.co.uk/steam-collage-api"
+      content="https://blog.alifeee.co.uk/factorio-proximity-chat"
     />
     <meta
       property="og:image"
-      content="https://blog.alifeee.co.uk/steam-collage-api/og-image.jpg"
+      content="https://blog.alifeee.co.uk/factorio-proximity-chat/og-image.png"
     />
     <meta
       property="og:description"
-      content="How I made an automatic collage generator: to make a custom game collage using the games in any Steam library."
+      content="Using Lua and C to enable proximity-based voice chat in Factorio"
     />
     <meta property="og:locale" content="en_GB" />
 
@@ -78,17 +75,17 @@
       data-reactions-enabled="1"
       data-emit-metadata="0"
       data-input-position="top"
-      data-theme="light"
+      data-theme="dark"
       data-lang="en"
       crossorigin="anonymous"
       async
     ></script>
 
     <!-- alpinejs -->
-    <script src="//unpkg.com/alpinejs" defer></script>
+    <!-- <script src="//unpkg.com/alpinejs" defer></script> -->
 
-    <!-- sprite web component -->
-    <script src="./alive_checker.js" defer></script>
+    <!-- word-count component from word-count.js -->
+    <script src="../word-count.js"></script>
   </head>
 
   <body>
@@ -102,21 +99,28 @@
     </header>
 
     <main>
-      <zero-md src="./steam-collage-api.md" no-shadow>
+      <zero-md src="./factorio-proximity-chat.md" no-shadow>
         <template data-merge="append">
           <link rel="stylesheet" href="../stylesheet_md.css" />
           <style>
-            input {
-              max-width: 10rem;
-              margin: auto;
+            :root {
+              --text-colour: #fff;
+              --link-colour: #e39827;
+              --unimportanttext-colour: #ccc;
+              --border-colour: #e39827;
             }
-            .column {
-              display: flex;
-              flex-direction: column;
-              align-items: center;
-              gap: 0.5rem;
+
+            /* by default, tokens (=, +, etc) have a background that...
+            doesn't get set by themes */
+            .language-css .token.string,
+            .style .token.string,
+            .token.entity,
+            .token.operator,
+            .token.url {
+              background: none;
             }
           </style>
+          <link href="prism-atom-dark.css" rel="stylesheet" />
         </template>
       </zero-md>
       <hr />
@@ -166,4 +170,9 @@
       <a class="backlink" href="../">Back to main page</a>
     </footer>
   </body>
+  <style>
+    body {
+      background-image: url("./images/grass-tiled.jpg");
+    }
+  </style>
 </html>

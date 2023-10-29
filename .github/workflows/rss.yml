@@ -3,7 +3,7 @@ name: Create RSS feed
 on:
   push:
     branches:
-      - master
+      - main
       - rss-feed
 
 jobs:
