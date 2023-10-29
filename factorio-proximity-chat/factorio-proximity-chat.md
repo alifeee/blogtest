@@ -4,6 +4,14 @@
 
 Earlier this year, I played [Barotrauma] weekly for 21 weeks with friends. Barotrauma is a "2D co-op submarine simulator – in space, with survival horror and RPG elements", and most importantly for me: it has a proximity voice-chat system. This means that if you are crafting some nuclear fuel rods at the rear of the ship, you will not hear your crewmates being torn apart by eldritch beings that found their way into the front of the ship. You will be on your way past the medbay to fix a leak in the crew quarters, and hear the medical doctors through the door discussing which of the crewmembers to use for their next *'experiment'*. You will be picked as the next dead-man-walking to leave the submarine to mine precious metals, and will make your way across the ship to get orders in-person from the captain.
 
+![Screenshot of Barotrauma, showing three players mining](images/barotrauma_mining.png)
+
+<figcaption>
+
+Here, three of us make small talk while we mine outside the submarine. What conversations were being had inside the submarine, we were unaware.
+
+</figcaption>
+
 As you can tell, I had a lot of fun playing Barotrauma; it probably deserves a blog post of its own. When we played, we were usually around 8 players, which, had we used Discord for voice chat, would have been chaos trying to hear what everyone was saying. Proximity chat added greatly to our enjoyment of the game, and planted the question in my mind of which other games which could be as fun. In my view, there are a few criteria which made Barotrauma great and that I would like in another game that could be as fun. They are:
 
 - Proximity chat. Games which come to mind immediately which have this are Among Us and Minecraft. There are [lists online][proxchat games].
