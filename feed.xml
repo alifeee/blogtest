@@ -3,12 +3,20 @@
 
 <title>alifeee's blog</title>
 <link href='https://blog.alifeee.co.uk' rel='self' />
-<updated>2023-10-08T00:00:00+00:00</updated>
+<updated>2023-10-30T00:00:00+00:00</updated>
 <author>
   <name>alifeee</name>
 </author>
 <id>https://blog.alifeee.co.uk/</id>
 <icon>https://blog.alifeee.co.uk/og-image.png</icon>
+
+<entry>
+  <title>Making Factorio Proximity Voice Chat</title>
+  <link href='https://blog.alifeee.co.uk/factorio-proximity-chat' />
+  <id>https://blog.alifeee.co.uk//factorio-proximity-chat</id>
+  <updated>2023-10-30T00:00:00+00:00</updated>
+  <summary>Using Lua and C to enable proximity-based voice chat in Factorio</summary>
+</entry>
 
 <entry>
   <title>Hull Bus Terminal Signs</title>
