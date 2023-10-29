@@ -2,17 +2,17 @@
 
 <word-count parent=".markdown-body"></word-count>
 
-Earlier this year, I played [Barotrauma] weekly for 21 weeks with friends. Barotrauma is "2D co-op submarine simulator – in space, with survival horror and RPG elements", and most importantly for me: it has a proximity voice-chat system. This means that if you are crafting some nuclear fuel rods at the rear of the ship, you will not hear your crewmates being torn apart by eldritch beings that found their way into the front of the ship. You will - on your way past the medbay to fix a leak in the crew quarters - hear the medical doctors through the door discussing which of the crewmembers to use for their next *'experiment'*. You will be picked as the next dead-man-walking to leave the submarine to mine precious metals, and will make your way across the ship to get orders in-person from the captain.
+Earlier this year, I played [Barotrauma] weekly for 21 weeks with friends. Barotrauma is a "2D co-op submarine simulator – in space, with survival horror and RPG elements", and most importantly for me: it has a proximity voice-chat system. This means that if you are crafting some nuclear fuel rods at the rear of the ship, you will not hear your crewmates being torn apart by eldritch beings that found their way into the front of the ship. You will be on your way past the medbay to fix a leak in the crew quarters, and hear the medical doctors through the door discussing which of the crewmembers to use for their next *'experiment'*. You will be picked as the next dead-man-walking to leave the submarine to mine precious metals, and will make your way across the ship to get orders in-person from the captain.
 
-As you can tell, I had a lot of fun playing Barotrauma; it probably deserves a blog post of its own. When we played, we were usually around 8 players, which, had we used Discord for voice chat, would have been chaos trying to hear what everyone was saying. Proximity chat added greatly to our enjoyment of the game, and planted the question in my mind of which other games which could be as fun. As far as I think of it, there are a few criteria which make Factorio great and that I would like in another game that could be as fun. They are:
+As you can tell, I had a lot of fun playing Barotrauma; it probably deserves a blog post of its own. When we played, we were usually around 8 players, which, had we used Discord for voice chat, would have been chaos trying to hear what everyone was saying. Proximity chat added greatly to our enjoyment of the game, and planted the question in my mind of which other games which could be as fun. In my view, there are a few criteria which made Barotrauma great and that I would like in another game that could be as fun. They are:
 
 - Proximity chat. Games which come to mind immediately which have this are Among Us and Minecraft. There are [lists online][proxchat games].
 - Campaign-based. By this, I mean games where you play the same save, and wouldn't start fresh every week. Among Us is out.
-- Players are... in proximity to each other. In Barotrauma, you can always hear mutterings and ramblings of other people as you are all trapped inside a submarine. In Minecraft, you travel massive distances and make bases separate from each other.
+- Players are... in proximity to each other. In Barotrauma, you can always hear mutterings and ramblings of other people as you are all trapped inside a submarine. In Minecraft, you may travel massive distances and end up spending most of your time separate from each other.
 
-The games on the [above list][proxchat games] that are probably most like what I'm after are Sea of Thieves and Ark/Rust. However, the secret fourth category is: people I know must own the game. So, after all that, I was suggested [Factorio], which I thought would be a bunch of fun to play with a bunch of people. Factorio doesn't pass the third criterion of "players are always vaguely close to each other", but it's a great game, so I'm sure I can allow it on fail on the list. Since I've not started the collective game, it remains to be seen how close people remain to each other when playing: maybe people stick together more if they have proximity chat!
+The games on the [above list][proxchat games] that are probably most like what I'm after are Sea of Thieves and Ark/Rust. However, the secret fourth category is: people I know must own the game. So, after all that, I was suggested [Factorio], which I thought would be a bunch of fun to play with a bunch of people. Factorio doesn't pass the third criterion of "players are always vaguely close to each other", but it's a great game, so I'm sure I can allow it one strike. Since I've not played yet, it remains to be seen how close people remain to each other when playing: maybe people stick together more if they have proximity chat!
 
-There is only one problem with Factorio: it didn't have proximity chat. That, my dear friend, is why we're here. I wanted to play Factorio with proximity chat so much that I made it myself. Within these words lies the tales, struggle, and strife of that process.
+There was only one problem with Factorio: it didn't have proximity chat. That, my dear friend, is why we're here. I wanted to play Factorio with proximity chat so much that I made it myself. Within these words lies the tales, struggle, and strife of that process.
 
 1. [Research](#research)
    1. [How do other games do it?](#how-do-other-games-do-it)
@@ -60,7 +60,7 @@ Without this thread, I don't think I would have started trying to make a Factori
 
 ### Using Mumble
 
-I found a *lot* of different documentation for Mumble and Mumble's PA. There was a [wiki][Mumble wiki#PA], a [website][Mumble website#PA], and [some markdown files][Mumble md#PA]. These were, respectively: outdated with a banner saying as such; outdated with no such information; and up-to-date. Initially, I did not find the markdown files buried in the GitHub repository, so naturally after seeing the wiki was outdated, I used the (unbeknownst to me at the time) outdated website. This had several pages:
+I found a *lot* of different documentation for Mumble and Mumble's PA. There was a [wiki][Mumble wiki#PA], a [website][Mumble website#PA], and [some markdown files][Mumble md#PA]. These were, respectively: outdated with a banner saying as such; outdated with no such information; and up-to-date. Initially, I did not find the third guide (the up to date one), so naturally after seeing the wiki was outdated, I used the second, outdated (unbeknownst to me at the time) guide. This had several pages:
 
 - [Positional Audio (PA) explanation for users](https://www.mumble.info/documentation/user/positional-audio/)
 - [Positional Audio (PA) explanation for developers](https://www.mumble.info/documentation/developer/positional-audio/)
@@ -95,7 +95,7 @@ The brief was clear: make a mod which took the player position, and write it to 
 
 I had never modded Factorio or used Lua before, so I read some [Factorio modding tutorial] and [read about Lua][Lua website] too.
 
-Then, I joined the [Factorio discord] to ask how I could go about doing what I wanted. Less than 30 minutes[¹](https://discord.com/channels/139677590393716737/306402592265732098/1153658704835657729) after my initial message, [Xorimuth][Discord#xorimuth] told me that you could write files with Factorio's [write_file][Lua#write_file] function, and provided a code snippet to do what I wanted:
+Then, I joined the [Factorio discord] to ask how I could go about doing what I wanted. Less than 30 minutes[¹](https://discord.com/channels/139677590393716737/306402592265732098/1153658704835657729) after my initial message, a user, [Xorimuth][Discord#xorimuth], told me that you could write files with Factorio's [write_file][Lua#write_file] function, and provided a code snippet to do what I wanted:
 
 ```lua
 script.on_nth_tick(30, function()
@@ -150,13 +150,13 @@ That's it! Now for the Mumble plugin. I'm sure it will definitely be as easy and
 
 ## Making the Mumble Plugin
 
-After finding the up-to-date documentation for-real-this-time, I also found the [Mumble plugin template]. This was a simple implementation of a Mumble plugin, with the latest API, written in C. In theory, it was [possible to use C++ or Rust][Mumble md#language-bindings] to write the plugin, but to keep it simple, I decided to just write it in C. I had also found that there was a [Positional Audio Helper][MumblePAHelper], which was only available in the pre-release of Mumble, [version 1.5][Mumble website#1.5], so I installed that (which will come back to bite me, as you will see...). The helper showed all the data involved with positional audio:
+After finding the up-to-date documentation for-real-this-time, I also found the [Mumble plugin template]. This was a simple implementation of a Mumble plugin, with the latest API, written in C. In theory, it was [possible to use C++ or Rust][Mumble md#language-bindings] to write the plugin, but to keep it simple, I decided to keep to C. I had also found that there was a [Positional Audio Helper][MumblePAHelper], which was only available in the pre-release of Mumble, [version 1.5][Mumble website#1.5], so I installed that (which will come back to bite me, as you will see...). The helper showed all the data involved with positional audio:
 
 ![Screenshot of Mumble PA helper, showing lots of debug information including player and camera positions.](images/mumble_pa-helper.png)
 
 <figcaption>
 
-PA uses: `position`, `direction` (facing) and `axis` (for games with left-right leaning) for the player and the camera; `Context` (usually a server ID) to determine if the players are in the same game-server; and `Identity` (usually player ID) to tell players apart. If your context is the same as another person's, you will hear them based on where they are in the game. Positional audio!
+PA uses: `position` (where you are), `direction` (which way you're facing) and `axis` (which way you're leaning, for games with leaning) for the player and the camera; `Context` (usually a server ID) to determine if the players are in the same game-server; and `Identity` (usually player ID) to tell players apart. If your context is the same as another person's, you will hear them based on where they are in the game. Positional audio!
 
 </figcaption>
 
@@ -164,7 +164,7 @@ Now, I had a debug window showing lots of 0s that I needed to put values in, and
 
 ### Build the C files
 
-First, I had to be able to build the plugin. After screwing around for too long installing [GCC] I decided to just use GitHub Actions to build the C file, as I found an [official template for building multi-platform C and C++ projects][GH Actions cmake template]. This built the plugin for Linux and Windows whenever I pushed to the repository. I also was able to build the plugin with GCC, for Linux, on WSL, but I hadn't managed to install it for Windows yet, and had to wait several minutes for the action to complete if I wanted a Windows version. This worked fine initially, as I mostly was writing and testing C code on Linux, then I would copy it into the main plugin file if I wanted to try it on Windows. Because I was just reading and writing a file initially, it didn't matter whether I was writing on Windows or Linux until I wanted to test it with Factorio running.
+First, I had to be able to build the plugin. After screwing around for too long installing [GCC] I decided to just use GitHub Actions to build the C file, as I found an [official template for building multi-platform C and C++ projects][GH Actions cmake template]. This built the plugin for Linux and Windows whenever I pushed to the repository. I also was able to build the plugin with GCC, for Linux, on WSL, but I hadn't managed to install it for Windows yet, and had to wait several minutes for the action to complete if I wanted a Windows version. This worked fine initially, as I mostly was writing and testing C code on Linux, then I would copy it into the main plugin file if I wanted to try it on Windows. Because I was just reading and writing a file initially, it didn't matter whether I was writing on Windows or Linux. At least, not until I wanted to test it at the same time as playing Factorio.
 
 ### Bundle the plugin
 
@@ -192,6 +192,12 @@ Next, I wanted to make the plugin installable using the Mumble UI. Following [th
     mv mumble/manifest.xml manifest.xml
     zip -MM factorio.mumble_plugin manifest.xml libplugin.so plugin.dll
 ```
+
+<figcaption>
+
+Every character has a story. Here, the story is that little `-MM`. Without it, `zip` ignored any missing files. I spent a while wondering why my plugin didn't work before realising that `manifest.xml` didn't exist, and `zip` was just happily ignoring that fact.
+
+</figcaption>
 
 ### Spit out random data
 
@@ -313,7 +319,7 @@ int file_exists(const char *fname)
 
 ### Check the log file is recent
 
-The final issue I considered was that the plugin would still see the log file if you quit a game to the main menu. This would mean that you would still hear people from the most recent server you were connected to. To solve this, I wanted to either blank the log file, or write different data to it when you quit a server. However, Factorio [doesn't allow][Factorio can't Lua on exit] executing mod code on exiting a save. So, my rudimentary solution was to just only enable the plugin if the log file was written recently. This way, when you quit, the file grows stale so is no longer used. I did this with a fairly simple C function (here, simple stands for "short" and *not* "the code is understandable")
+The final issue I considered was that the plugin would still see the log file if you quit a game to the main menu. This would mean that you would still hear people from the most recent server you were connected to. To solve this, I wanted to either blank the log file, or write different data to it when you quit a server. However, Factorio [doesn't allow][Factorio can't Lua on exit] executing code on exiting a save. So, my rudimentary solution was to just only enable the plugin if the log file was written recently. This way, when you quit, the file grows stale so is no longer used. I did this with a fairly simple C function (here, simple stands for "short" and *not* "the code is understandable")
 
 ```c
 time_t get_file_modified_time(char *path)
@@ -326,9 +332,15 @@ time_t get_file_modified_time(char *path)
 
 ### Build it on Windows
 
-At this point, I’d only been able to compile the code locally on Linux (via WSL). For Windows, I used GitHub actions. This was possible as I didn’t yet need to test it with Mumble, as it was mainly just opening and parsing a file, which could be done on Linux. However, I run Factorio and Mumble on Windows. Building via Actions took around 5 minutes, so I wanted to be able to compile locally for a quicker development cycle. This was ultimately a pain as I didn’t want to install Visual Studio on my (not-a-lot-of-space) laptop, so I tried to install GCC for windows, which had many issues. I ended up finding that you could just install Visual Studio build tools and use it from the CLI.
+At this point, I’d only been able to compile the code locally on Linux (via WSL). For Windows, I used GitHub actions. This was possible as I didn’t yet need to test it with Mumble, as it was mainly just opening and parsing a file, which could be done on Linux. However, I use Windows for both Factorio and Mumble. Building via Actions took around 5 minutes; I wanted to be able to compile locally for a quicker development cycle. This was ultimately a pain as I didn’t want to install Visual Studio on my (not-a-lot-of-space) laptop, so I tried to install GCC for windows, which had many issues. I ended up finding that you could install Visual Studio build tools and use it from the CLI.
 
 ![Screenshot of Visual Studio Build Tools installer](./images/visual-studio-build-tools.png)
+
+<figcaption>
+
+Installing Visual Studio Build Tools. I've never seen so many installation options or checkboxes than in the Visual Studio installer (which is an entire program in itself).
+
+</figcaption>
 
 After adding a bunch of functions which were available on Linux but missing on Windows, I could now build the mumble plugin locally on Windows. With [one command][code#windows-build] I could build, and package the code into `factorio.mumble_plugin`, so I could quickly change the code and reinstall it.
 
@@ -362,9 +374,9 @@ Every time I started it, Mumble crashed after 10 or so seconds.
 
 </figcaption>
 
-This was the first thing which went wrong that I didn't know why it went wrong. Initially, I thought there may be problems with file reading/writing at the same time. That is, that Factorio would write a file in the middle of Mumble trying to read it. I [fixed this][code commit#file-read-write] by reducing the read-time of the file, and by returning an error if the file was changed midway through reading it, which I thought that this would fix the crash, but it didn't. I was now lost, since I had run out of guesses for why the crash happened.
+This was the first point at which I didn't know what was going on. Initially, I thought there may be problems with file reading/writing at the same time. That is, that Factorio would write a file in the middle of Mumble trying to read it. So, I [tried to fix it][code commit#file-read-write] by reducing the read-time of the file, and by returning an error if the file was changed midway through reading it. This didn't fix it: it was still crashing. I had now run out of guesses for why.
 
-Now, the code tried to read the file, and if it failed, did nothing. If the file was there and read correctly, then it continued as normal. So what caused the crash?
+In its current implementation, the code tried to read the file, and if it failed to read it, did nothing. If the file was there and was opened with no issue, then it continued as normal. So what caused the crash?
 
 After many days of thinking and a few hours of debugging, most of which I've forgotten what I tried, I eventually just started printing out the log file and watching it with my eyes. It looked normal, apart from it was supposed to print every 12th of a second, and the rhythm was slightly off (you can tell how long I sat watching scrolling text). This was when I realised I probably should have been printing a header, or something in-between prints, because what was happening was that sometimes the *file was empty*. I am still not sure why this is the case, but I assume it is something to do with Factorio falling behind on code execution, so rather than waiting, it just writes an empty file and moves on to the next task.
 
@@ -374,9 +386,9 @@ This, naturally, meant that the C code tried to find the `"x: "` row, failed, an
 
 Now it wasn't crashing, I could test the whole reason for making this: the voice chat! I found a friend, called "a game dev who hates their corporate job" [sic], and we hopped in a game together, installed the mod and plugin, and started monologuing (the sound-test type, not the vanity type).
 
-With a lot of running around and a lot of mental gymnastics, we figured out that it 'sort of' worked. This is a synonym for 'didn't work but spicily'. We found that our 'ears' were stuck at the map origin, `(0, 0)`, and our 'mouths' were attached to our players. This meant that if one of us stood in the centre of the map, and the other walked around, their volume decreased, and they came out of the left/right headphones as expected.
+After a lot of running around and a lot of mental gymnastics, we figured out that it 'sort of' worked. This is a synonym for 'didn't work but spicily'. We found that our 'ears' were stuck at the map origin, `(0, 0)`, and our 'mouths' were attached to our players. This meant that if one of us stood in the centre of the map, and the other walked around, proximity chat worked as expected (their volume decreased, and they came out of the left/right headphones), but if we both walked around, we could still hear each other as if we were stood still at `(0, 0)`.
 
-To be honest, I still can't explain how this happens, but I already had a suspicion why: because I hadn't actually thought about Mumble's coordinate system. I just plugged Factorio's `x` and `y` coordinates into Mumble's. After reading [Mumble's coordinate system details][mumble website#coordinates], I came up with a transform from Factorio to Mumble coordinates and [rewrote the code][code commits#coordinate-system].
+To be honest, I still can't explain how this happens, but I already had a suspicion why: because I hadn't actually thought about Mumble's coordinate system. I just plugged Factorio's `x` and `y` coordinates into Mumble's. After reading [Mumble's documentation][mumble website#coordinates], I came up with a transform from Factorio to Mumble coordinates and [rewrote the code][code commits#coordinate-system].
 
 ```c
 // Factorio coordinates are:
@@ -404,19 +416,31 @@ After all that, it worked!
 
 <figcaption>
 
-Unlike the above screenshot, this time the coordinates are correct!
+This time the coordinates are correct!
 
 </figcaption>
 
 The only further thing I did was grab [two more friends](#testing-it-works) to play a four-player game of Factorio for 20 minutes to test the entire process in-situ. This worked great! We could hear each other when close, and could do our own things in pairs!
 
+I cleaned up the presentation of the project, made a [logo][code#logo], and made the [1.0.0 release][code#1.0.0]. The mod is available on the [Factorio mods website][Factorio mod portal#mod] and the source code on [the GitHub][code] :)
+
+![Screenshot of mod from Factorio mod portal](images/factorio-mod-portal.png)
+
 ## Conclusion
 
-![Screenshot of Factorio players, speaking. They say "Proximity Voice Chat!"; "Pardon?"](./og-image.png)
+To wrap things up, I also [commented on the original Reddit thread][Reddit thread#my-comment] telling the author I'd made the mod.
+
+The only thing left to do now is... play the game! As mentioned in the introduction, I hope to play a 'big game' of Factorio, which should be helped greatly by the option of proximity-based voice chat.
+
+As of writing, there are six [open issues](https://github.com/alifeee/Factorio-Proximity-Voice-Chat/issues) on the GitHub, so... still lots to do! This was a fun project to create, and I've definitely learnt a lot. [Other conclusionary remarks redacted]
+
+Go forth and chat!
 
 ## People who helped
 
 Lots of people helped me make this! As well as the standard anonymous forum people who provided C functions, help, and debugging ideas, I had a lot of help from others. Here are some!
+
+Everyone's help was invaluable, and I wouldn't have been developing this if not for it :)
 
 ### Testing it works!
 
@@ -489,11 +513,16 @@ Lots of people helped me make this! As well as the standard anonymous forum peop
 [mumble website#coordinates]: https://www.mumble.info/documentation/developer/positional-audio/create-plugin/guide/#explanation-of-sound-and-coordinate-systems
 [mumble issues#minvolume]: https://github.com/mumble-voip/mumble/issues/6149
 [Mumble matrix]: https://matrix.to/#/#mumble-dev:matrix.org
+[Factorio mod portal#mod]: https://mods.factorio.com/mod/proximity-voice-chat
+[Reddit thread#my-comment]: https://www.reddit.com/r/factorio/comments/ixtqgs/positional_voip_audio/k3nm9mq/
 
+[code]: https://github.com/alifeee/Factorio-Proximity-Voice-Chat/
 [code#windows-build]: https://github.com/alifeee/Factorio-Proximity-Voice-Chat/#windows
 [code#bundle-mumble]: https://github.com/alifeee/Factorio-Proximity-Voice-Chat/blob/1b9642729f122463b356c865a170594d3e0b8dfc/.github/workflows/release.yml#L83-L88
 [code commit#check-empty-file]: https://github.com/alifeee/Factorio-Proximity-Voice-Chat/commit/a858d5033669c8ad5722aadd199d52e948ca02b1
 [code commit#file-read-write]: https://github.com/alifeee/Factorio-Proximity-Voice-Chat/commit/c6a87c8ec8b9899ad6bbd0a6d8906053c0d78cf8
 [code commits#coordinate-system]: https://github.com/alifeee/Factorio-Proximity-Voice-Chat/commit/0443f05342025088c6866317b79d3bf8e4619c91
+[code#logo]: https://github.com/alifeee/Factorio-Proximity-Voice-Chat/blob/master/factorio/thumbnail.png
+[code#1.0.0]: https://github.com/alifeee/Factorio-Proximity-Voice-Chat/releases/tag/v1.0.0
 
 [Discord#xorimuth]: https://mods.factorio.com/user/Xorimuth
