@@ -109,6 +109,16 @@
               --unimportanttext-colour: #ccc;
               --border-colour: #e39827;
             }
+
+            /* by default, tokens (=, +, etc) have a background that...
+            doesn't get set by themes */
+            .language-css .token.string,
+            .style .token.string,
+            .token.entity,
+            .token.operator,
+            .token.url {
+              background: none;
+            }
           </style>
           <link href="prism-atom-dark.css" rel="stylesheet" />
         </template>
