@@ -20,6 +20,11 @@ class BookendModel extends HTMLElement {
 
   render() {
     let canvas = document.createElement("canvas");
+    canvas.width = 200;
+    canvas.height = 200;
+    canvas.style.backgroundColor = "black";
+    canvas.style.display = "block";
+    canvas.style.margin = "auto";
     this.root.appendChild(canvas);
 
     this.illo = new Zdog.Illustration({
