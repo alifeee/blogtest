@@ -59,7 +59,7 @@ class BookendModel extends HTMLElement {
 
   animate() {
     if (this.getRotating()) {
-      this.illo.rotate.y += 0.03;
+      this.illo.rotate.y += 0.01;
     }
     this.illo.updateRenderGraph();
     requestAnimationFrame(() => this.animate());
