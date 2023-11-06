@@ -52,13 +52,6 @@ class CushionModel extends HTMLElement {
       translate: { y: -22 / 2, z: -89 / 2 },
     });
 
-    // let squareOutline = new Zdog.Rect({
-    //   addTo: this.illo,
-    //   width: 30,
-    //   height: 30,
-    //   color: "#fff",
-    // });
-
     for (let direction = -1; direction <= 1; direction += 2) {
       for (let y = 1; y < 30; y += 1) {
         let percent;
