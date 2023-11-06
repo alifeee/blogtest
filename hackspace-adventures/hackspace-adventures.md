@@ -40,6 +40,16 @@ See also the [hackspace wiki][HackerspaceWiki]'s definition:
 
 <shelf-model></shelf-model>
 
+## Trousers hem
+
+<figcaption>
+
+*made at*: Sheffield Hackspace · *made in*: 1 day · *made with* thread
+
+</figcaption>
+
+<trousers-model></trousers-model>
+
 ## Cushion
 
 <figcaption>
