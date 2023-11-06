@@ -4,6 +4,7 @@ class ShelfModel extends HTMLElement {
     this.root = this.attachShadow({ mode: "closed" });
     this._rotating = true;
     this.illo = null;
+    this.canvas = null;
   }
 
   setRotating(value) {
@@ -18,21 +19,33 @@ class ShelfModel extends HTMLElement {
     this.render();
   }
 
+  startDrag() {
+    this.setRotating(false);
+    this.canvas.style.cursor = "grabbing";
+  }
+
+  endDrag() {
+    this.setRotating(true);
+    this.canvas.style.cursor = "grab";
+  }
+
   render() {
-    let canvas = document.createElement("canvas");
+    this.canvas = document.createElement("canvas");
+    let canvas = this.canvas;
     canvas.width = 200;
     canvas.height = 200;
     canvas.style.backgroundColor = "black";
     canvas.style.display = "block";
     canvas.style.margin = "auto";
+    canvas.style.cursor = "grab";
     this.root.appendChild(canvas);
 
     this.illo = new Zdog.Illustration({
       element: canvas,
       zoom: 0.5,
       dragRotate: true,
-      onDragStart: () => this.setRotating(false),
-      onDragEnd: () => this.setRotating(true),
+      onDragStart: () => this.startDrag(),
+      onDragEnd: () => this.endDrag(),
       rotate: { y: -Zdog.TAU / 16, x: -Zdog.TAU / 24 },
     });
 
