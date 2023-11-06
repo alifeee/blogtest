@@ -49,7 +49,6 @@ class CushionModel extends HTMLElement {
       onDragStart: () => this.setRotating(false),
       onDragEnd: () => this.setRotating(true),
       rotate: { y: -Zdog.TAU / 4, x: -Zdog.TAU / 32 },
-      translate: { y: -22 / 2, z: -89 / 2 },
     });
 
     for (let direction = -1; direction <= 1; direction += 2) {
