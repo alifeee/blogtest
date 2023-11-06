@@ -1,0 +1,127 @@
+class FridgeMagnetsModel extends HTMLElement {
+  constructor() {
+    super();
+    this.root = this.attachShadow({ mode: "closed" });
+    this._rotating = true;
+    this.illo = null;
+  }
+
+  setRotating(value) {
+    this._rotating = value;
+  }
+
+  getRotating() {
+    return this._rotating;
+  }
+
+  connectedCallback() {
+    this.render();
+  }
+
+  render() {
+    let canvas = document.createElement("canvas");
+    canvas.width = 200;
+    canvas.height = 200;
+    canvas.style.backgroundColor = "black";
+    canvas.style.display = "block";
+    canvas.style.margin = "auto";
+    this.root.appendChild(canvas);
+
+    this.illo = new Zdog.Illustration({
+      element: canvas,
+      zoom: 1,
+      dragRotate: true,
+      onDragStart: () => this.setRotating(false),
+      onDragEnd: () => this.setRotating(true),
+      rotate: { y: -Zdog.TAU / 4, x: -Zdog.TAU / 32 },
+    });
+
+    let consolasFont = new Zdog.Font({
+      src: "./CONSOLA.TTF",
+    });
+
+    // new Zdog.Text({
+    //   addTo: this.illo,
+    //   font: consolasFont,
+    //   value: "Hey, Zdog!",
+    //   fontSize: 64,
+    //   color: "#fff",
+    // });
+
+    // random seed
+    let seed = 0.1;
+    let random = () => {
+      seed = (seed * 9301 + 49297) % 233280;
+      return seed / 233280;
+    };
+
+    let html_fragments = [
+      "</body>",
+      "<div>",
+      "<hr>",
+      "</option>",
+      "<li>",
+      '<meta charset="utf-8">',
+      "</p>",
+      "<!DOCTYPE html>",
+      "<textarea>",
+      "<div>",
+    ];
+    let FONT_SIZE = 12;
+    let PADDING = 2;
+    let SPREAD = 100;
+    let ROT_SPREAD = 0.9;
+
+    Zdog.waitForFonts().then(() => {
+      let textGroup = new Zdog.Group({
+        addTo: this.illo,
+        translate: { z: 0 },
+      });
+      for (let i = 0; i < html_fragments.length; i++) {
+        let fragment = html_fragments[i];
+        let textSize = consolasFont.measureText(fragment, FONT_SIZE);
+        let width = textSize.width;
+        let height = textSize.height;
+        let x = random() * SPREAD - SPREAD / 2;
+        let y = random() * SPREAD - SPREAD / 2;
+        let rotation = random() * ROT_SPREAD - ROT_SPREAD / 2;
+
+        new Zdog.Rect({
+          addTo: textGroup,
+          width: width + PADDING * 2,
+          height: height + PADDING * 2,
+          translate: { x: x, y: y, z: i + 0 },
+          rotate: { z: rotation },
+          stroke: 1,
+          color: "#fff",
+          fill: true,
+        });
+
+        new Zdog.Text({
+          addTo: textGroup,
+          font: consolasFont,
+          value: fragment,
+          fontSize: FONT_SIZE,
+          color: "#000",
+          translate: { x: x, y: y, z: i },
+          rotate: { z: rotation },
+          textAlign: "center",
+          textBaseline: "middle",
+        });
+      }
+    });
+
+    this.illo.updateRenderGraph();
+    this.animate();
+  }
+
+  animate() {
+    if (this.getRotating()) {
+      this.illo.rotate.y += 0.01;
+    }
+    this.illo.updateRenderGraph();
+    requestAnimationFrame(() => this.animate());
+  }
+}
+
+customElements.define("fridge-magnets-model", FridgeMagnetsModel);
