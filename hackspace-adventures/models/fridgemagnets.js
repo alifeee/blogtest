@@ -46,7 +46,7 @@ class FridgeMagnetsModel extends HTMLElement {
       dragRotate: true,
       onDragStart: () => this.startDrag(),
       onDragEnd: () => this.endDrag(),
-      rotate: { y: -Zdog.TAU / 4, x: -Zdog.TAU / 32 },
+      rotate: { y: -Zdog.TAU / 16, x: -Zdog.TAU / 32 },
     });
 
     let consolasFont = new Zdog.Font({
