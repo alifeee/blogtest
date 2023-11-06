@@ -56,3 +56,6 @@ Solonarv
 @krzmbrzl
 conclusionary
 Hackspace
+hackspaces
+makerspaces
+hackspace
