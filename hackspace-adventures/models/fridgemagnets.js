@@ -40,14 +40,6 @@ class FridgeMagnetsModel extends HTMLElement {
       src: "./CONSOLA.TTF",
     });
 
-    // new Zdog.Text({
-    //   addTo: this.illo,
-    //   font: consolasFont,
-    //   value: "Hey, Zdog!",
-    //   fontSize: 64,
-    //   color: "#fff",
-    // });
-
     // random seed
     let seed = 0.1;
     let random = () => {
