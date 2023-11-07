@@ -34,7 +34,6 @@ class BookendModel extends HTMLElement {
     let canvas = this.canvas;
     canvas.width = 200;
     canvas.height = 200;
-    canvas.style.backgroundColor = "black";
     canvas.style.display = "block";
     canvas.style.margin = "auto";
     canvas.style.cursor = "grab";
