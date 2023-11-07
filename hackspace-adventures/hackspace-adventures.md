@@ -163,7 +163,7 @@ My *second* time using a sewing machine, to make a lovely little cushion.
 
 <figcaption>
 
-For me, this was a lot of sewing. It deserves, and may well get, its own blog post.
+This cushion is around 60 cm by 60 cm. For me, it was a lot of sewing, and my first "3D" sewing project. It deserves, and may well get, its own blog post.
 
 </figcaption>
 

@@ -3,12 +3,20 @@
 
 <title>alifeee's blog</title>
 <link href='https://blog.alifeee.co.uk' rel='self' />
-<updated>2023-10-30T00:00:00+00:00</updated>
+<updated>2023-11-07T00:00:00+00:00</updated>
 <author>
   <name>alifeee</name>
 </author>
 <id>https://blog.alifeee.co.uk/</id>
 <icon>https://blog.alifeee.co.uk/og-image.png</icon>
+
+<entry>
+  <title>Hackspace Adventures</title>
+  <link href='https://blog.alifeee.co.uk/hackspace-adventures/' />
+  <id>https://blog.alifeee.co.uk//hackspace-adventures/</id>
+  <updated>2023-11-07T00:00:00+00:00</updated>
+  <summary>What, why, and how is a Hackspace, and what have I used them for?</summary>
+</entry>
 
 <entry>
   <title>Making Factorio Proximity Voice Chat</title>
