@@ -30,15 +30,14 @@ class TrousersModel extends HTMLElement {
   }
 
   render() {
-    this.canvas = document.createElement("canvas");
-    let canvas = this.canvas;
-    canvas.width = 200;
-    canvas.height = 200;
-    canvas.style.backgroundColor = "black";
-    canvas.style.display = "block";
-    canvas.style.margin = "auto";
+    let canvas = document.createElementNS("http://www.w3.org/2000/svg", "svg");
+    canvas.setAttribute("width", "200");
+    canvas.setAttribute("height", "200");
+    canvas.style.width = "100%";
+    canvas.style.height = "100%";
     canvas.style.cursor = "grab";
     this.root.appendChild(canvas);
+    this.canvas = canvas;
 
     let maxCushionArcHeight = 20;
 
