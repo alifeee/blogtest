@@ -32,9 +32,8 @@ class BookendModel extends HTMLElement {
   render() {
     this.canvas = document.createElement("canvas");
     let canvas = this.canvas;
-    canvas.width = 200;
-    canvas.height = 200;
-    canvas.style.backgroundColor = "black";
+    canvas.width = 600;
+    canvas.height = 600;
     canvas.style.display = "block";
     canvas.style.margin = "auto";
     canvas.style.cursor = "grab";
@@ -42,7 +41,7 @@ class BookendModel extends HTMLElement {
 
     this.illo = new Zdog.Illustration({
       element: canvas,
-      zoom: 1,
+      zoom: 3,
       dragRotate: true,
       onDragStart: () => this.startDrag(),
       onDragEnd: () => this.endDrag(),
@@ -113,8 +112,12 @@ class BookendModel extends HTMLElement {
       translate: { x: -86 },
     });
 
-    let slantScrewTop = new Zdog.Ellipse({
+    let backScrewGroup = new Zdog.Group({
       addTo: slantBack,
+    });
+
+    let slantScrewTop = new Zdog.Ellipse({
+      addTo: backScrewGroup,
       diameter: 6,
       stroke: false,
       fill: true,
@@ -122,13 +125,21 @@ class BookendModel extends HTMLElement {
       translate: { z: 0, y: -25 },
       stroke: 3,
     });
-
     let slantScrewBottom = slantScrewTop.copy({
       translate: { z: 0, y: 25 },
     });
+    new Zdog.Shape({
+      //offset group for z-fighting
+      addTo: backScrewGroup,
+      visible: false,
+      translate: { z: -100 },
+    });
 
-    let bottomScrewRight = new Zdog.Ellipse({
+    let bottomScrewGroup = new Zdog.Group({
       addTo: front,
+    });
+    let bottomScrewRight = new Zdog.Ellipse({
+      addTo: bottomScrewGroup,
       diameter: 6,
       stroke: false,
       fill: true,
@@ -137,13 +148,21 @@ class BookendModel extends HTMLElement {
       translate: { y: 99 / 2 + 22, x: 86 / 2 - 15 },
       stroke: 3,
     });
-
     let bottomScrewLeft = bottomScrewRight.copy({
       translate: { y: 99 / 2 + 22, x: -86 / 2 + 15 },
+    });
+    new Zdog.Shape({
+      //offset group for z-fighting
+      addTo: bottomScrewGroup,
+      visible: false,
+      translate: { y: 200 },
     });
 
     this.illo.updateRenderGraph();
     this.animate();
+
+    canvas.style.width = "100%";
+    canvas.style.height = "100%";
   }
 
   animate() {

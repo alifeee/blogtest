@@ -32,9 +32,8 @@ class BusSignModel extends HTMLElement {
   render() {
     this.canvas = document.createElement("canvas");
     let canvas = this.canvas;
-    canvas.width = 200;
-    canvas.height = 200;
-    canvas.style.backgroundColor = "black";
+    canvas.width = 600;
+    canvas.height = 600;
     canvas.style.display = "block";
     canvas.style.margin = "auto";
     canvas.style.cursor = "grab";
@@ -44,7 +43,7 @@ class BusSignModel extends HTMLElement {
 
     this.illo = new Zdog.Illustration({
       element: canvas,
-      zoom: 0.2,
+      zoom: 0.6,
       dragRotate: true,
       onDragStart: () => this.startDrag(),
       onDragEnd: () => this.endDrag(),
@@ -112,6 +111,7 @@ class BusSignModel extends HTMLElement {
       translate: { x: -900 / 2 + 130, y: -160 / 2 + 35 / 2 },
       textAlign: "left",
       textBaseline: "middle",
+      fill: true,
     });
     new Zdog.Text({
       addTo: faceGroup,
@@ -122,6 +122,7 @@ class BusSignModel extends HTMLElement {
       translate: { x: -900 / 2 + 350, y: -160 / 2 + 35 / 2 },
       textAlign: "left",
       textBaseline: "middle",
+      fill: true,
     });
     new Zdog.Text({
       addTo: faceGroup,
@@ -132,6 +133,13 @@ class BusSignModel extends HTMLElement {
       translate: { x: -900 / 2 + 700, y: -160 / 2 + 35 / 2 },
       textAlign: "left",
       textBaseline: "middle",
+      fill: true,
+    });
+
+    new Zdog.Shape({
+      addTo: faceGroup,
+      visible: false,
+      translate: { z: 500 },
     });
 
     let trapezeAnchor = new Zdog.Anchor({
@@ -202,6 +210,9 @@ class BusSignModel extends HTMLElement {
 
     this.illo.updateRenderGraph();
     this.animate();
+
+    canvas.style.width = "100%";
+    canvas.style.height = "100%";
   }
 
   animate() {

@@ -45,9 +45,8 @@ class CushionModel extends HTMLElement {
   render() {
     this.canvas = document.createElement("canvas");
     let canvas = this.canvas;
-    canvas.width = 200;
-    canvas.height = 200;
-    canvas.style.backgroundColor = "black";
+    canvas.width = 600;
+    canvas.height = 600;
     canvas.style.display = "block";
     canvas.style.margin = "auto";
     canvas.style.cursor = "grab";
@@ -57,7 +56,7 @@ class CushionModel extends HTMLElement {
 
     this.illo = new Zdog.Illustration({
       element: canvas,
-      zoom: 3,
+      zoom: 9,
       dragRotate: true,
       onDragStart: () => this.startDrag(),
       onDragEnd: () => this.endDrag(),
@@ -128,6 +127,9 @@ class CushionModel extends HTMLElement {
 
     this.illo.updateRenderGraph();
     this.animate();
+
+    canvas.style.width = "100%";
+    canvas.style.height = "100%";
   }
 
   animate() {
