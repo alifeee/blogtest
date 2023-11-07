@@ -4,13 +4,67 @@
 
 I love hackspaces.
 
-Also called makerspaces, I describe them as "rooms with lots of interesting machines and even more interesting people". At a hackspace, you could find laser cutters, 3D printers, sewing machines, wood lathes, embroidery machines, lino cutters, electronics supplies, screen printing stuff, kilns,
+1. [What is a hackspace?](#what-is-a-hackspace)
+2. [What could you do in a hackspace?](#what-could-you-do-in-a-hackspace)
+3. [Hackspaces I've been to](#hackspaces-ive-been-to)
+   1. [fizzPOP Makerspace Birmingham](#fizzpop-makerspace-birmingham)
+   2. [Makerspace Hull](#makerspace-hull)
+   3. [Sheffield Hackspace](#sheffield-hackspace)
+4. [(Mostly small) Things I've done in hackspaces](#mostly-small-things-ive-done-in-hackspaces)
+   1. [Bus Sign](#bus-sign)
+   2. [HTML Fridge Magnets](#html-fridge-magnets)
+   3. [Bookends](#bookends)
+   4. [Shelf](#shelf)
+   5. [Trousers hem](#trousers-hem)
+   6. [Cushion](#cushion)
+   7. [Foam Cushion](#foam-cushion)
+5. [Conclusion](#conclusion)
 
-See also the [hackspace wiki][HackerspaceWiki]'s definition:
+## What is a hackspace?
 
-> Hackerspaces are community-operated physical places, where people can meet and work on their projects.
+Also called makerspaces, I describe them as "rooms with lots of interesting machines and even more interesting people". At a hackspace, you could find laser cutters, 3D printers, sewing machines, wood lathes, embroidery machines, lino cutters, electronics supplies, screen printing stuff, kilns, and more. Without the humans, they are rooms or buildings full of machines and tools for all making-related activities.
 
-## HTML Fridge Magnets
+But! That wouldn't be describing much more than a workshop. Hackspaces also have members! Usually, a space will have one or more open evenings a week when members are invited to come to the space and work on their projects under the same roof, and non-members (people) are encouraged to come along to check out the space while someone is there to let them in. Usually, there is a common space (a desk, chairs, a sofa, etc), where people can gather and chat while working on whatever project is currently interesting them... or just chat! It's this combination of people hanging around together and chatting about both the projects they're working on and general chit-chat that I love most about makerspaces. I have ultimately not spent a lot of time in them, but I have learnt so much.
+
+## What could you do in a hackspace?
+
+I won't provide here any project ideas, but a genericized description of why you might want to use a hackspace. In a hackspace, you could:
+
+- get help or pointers with a project you're working on by people who've done similar things before
+- use expensive machines and tools that wouldn't be worth buying for yourself
+- try out many hobbies, crafts, and skills for the first time
+
+Hackspaces are primarily a space to get started with skills, work on small projects, and exist in a community of other people doing similar. If you want to develop one skill particularly deeply, you may need to extend beyond the hackspace. For example: the wood lathe might not be long enough to make the size furniture you want to make; you might want to 3D print *lots* of stuff, and use the 3D printer for more time than is reasonable; you might want to make things to sell commercially. These are all things quite large in scope, and while a hackspace may not be a good place for them, it creates a great jumping off point for getting started.
+
+## Hackspaces I've been to
+
+### fizzPOP Makerspace Birmingham
+
+The first hackspace I went to was [fizzPOP Makerspace](https://fizzpop.org.uk/), which is a community-run hackspace in Birmingham. This remains the largest space I've been to, and is the only one with enough space (and permission) to do hot metalwork. There, there is a large common area, a woodworking room, a hot metalwork room, and many small rooms for things like electronics, printing, laser cutting, and pottery.
+
+### Makerspace Hull
+
+Hull's makerspace, [MakerspaceHull](https://www.hcandl.co.uk/libraries/makerspace) is a bit different to what I described above, because it is a library service, instead of being community run. It is part of Hull library, so it only opens for a few hours a day, but for all of that time there are multiple staff members there. They have lots of expertise on the tools and machines in the space, and can teach you how to use any of them. Hull's makerspace is more art-focused, with a lot of supplies for printing, some electronics, and currently no woodwork.
+
+### Sheffield Hackspace
+
+[Sheffield Hackspace](https://www.sheffieldhackspace.org.uk/) is my current haunt, and the smallest of the three spaces I've been to. It is split over two rooms; a common room & electronics/3D printing/laser cutting cupboard, and a woodwork/metalwork dungeon. There are currently open evenings three days a week which you can attend for a small membership price after your first few, meaning that you can get a lot out of it without having to become a full-fledged member with a key and 24/7 access.
+
+## (Mostly small) Things I've done in hackspaces
+
+I first came across hackspaces in the middle of 2023. It's now the end of 2023. As an example, here are some of the things I've done in various places. Some of them took a few weeks or months of on-and-off, and some only took a couple of hours. For your amusement, I have also provided a [Zdog](https://zzz.dog/) 3D render of each item. You can drag them around!
+
+### Bus Sign
+
+<figcaption>
+
+*made at*: Hull Makerspace · *made in*: 1 month · *made with*: bus sign, electronics
+
+</figcaption>
+
+<bussign-model></bussign-model>
+
+### HTML Fridge Magnets
 
 <figcaption>
 
@@ -20,7 +74,7 @@ See also the [hackspace wiki][HackerspaceWiki]'s definition:
 
 <fridge-magnets-model></fridge-magnets-model>
 
-## Bookends
+### Bookends
 
 <figcaption>
 
@@ -30,7 +84,7 @@ See also the [hackspace wiki][HackerspaceWiki]'s definition:
 
 <bookend-model></bookend-model>
 
-## Shelf
+### Shelf
 
 <figcaption>
 
@@ -40,7 +94,7 @@ See also the [hackspace wiki][HackerspaceWiki]'s definition:
 
 <shelf-model></shelf-model>
 
-## Trousers hem
+### Trousers hem
 
 <figcaption>
 
@@ -50,7 +104,7 @@ See also the [hackspace wiki][HackerspaceWiki]'s definition:
 
 <trousers-model></trousers-model>
 
-## Cushion
+### Cushion
 
 <figcaption>
 
@@ -60,4 +114,12 @@ See also the [hackspace wiki][HackerspaceWiki]'s definition:
 
 <cushion-model></cushion--model>
 
-[HackerspaceWiki]: https://wiki.hackerspaces.org/
+### Foam Cushion
+
+<figcaption>
+
+*made at*: Sheffield Makerspace · *made in*: 1 week · *made with*: fabric, foam
+
+</figcaption>
+
+## Conclusion
