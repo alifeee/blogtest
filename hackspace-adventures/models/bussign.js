@@ -112,6 +112,7 @@ class BusSignModel extends HTMLElement {
       translate: { x: -900 / 2 + 130, y: -160 / 2 + 35 / 2 },
       textAlign: "left",
       textBaseline: "middle",
+      fill: true,
     });
     new Zdog.Text({
       addTo: faceGroup,
@@ -122,6 +123,7 @@ class BusSignModel extends HTMLElement {
       translate: { x: -900 / 2 + 350, y: -160 / 2 + 35 / 2 },
       textAlign: "left",
       textBaseline: "middle",
+      fill: true,
     });
     new Zdog.Text({
       addTo: faceGroup,
@@ -132,6 +134,7 @@ class BusSignModel extends HTMLElement {
       translate: { x: -900 / 2 + 700, y: -160 / 2 + 35 / 2 },
       textAlign: "left",
       textBaseline: "middle",
+      fill: true,
     });
 
     let trapezeAnchor = new Zdog.Anchor({
