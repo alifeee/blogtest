@@ -1,4 +1,4 @@
-# Hackspace Adventures
+# What, why, and how is a Hackspace, and what have I used them for?
 
 <word-count parent=".markdown-body"></word-count>
 
