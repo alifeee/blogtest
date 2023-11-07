@@ -136,6 +136,12 @@ class BusSignModel extends HTMLElement {
       fill: true,
     });
 
+    new Zdog.Shape({
+      addTo: faceGroup,
+      visible: false,
+      translate: { z: 500 },
+    });
+
     let trapezeAnchor = new Zdog.Anchor({
       addTo: body,
       translate: { x: -700 / 2, y: -160 / 2, z: -50 / 2 },
