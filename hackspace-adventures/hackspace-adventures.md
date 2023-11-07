@@ -18,7 +18,6 @@ I love hackspaces.
    5. [Trousers hem](#trousers-hem)
    6. [Cushion](#cushion)
    7. [Foam Cushion](#foam-cushion)
-5. [Conclusion](#conclusion)
 
 ## What is a hackspace?
 
@@ -165,5 +164,3 @@ My *second* time using a sewing machine, to make a lovely little cushion.
 For me, this was a lot of sewing. It deserves, and may well get, its own blog post.
 
 </figcaption>
-
-## Conclusion
