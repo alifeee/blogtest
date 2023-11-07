@@ -32,8 +32,8 @@ class ShelfModel extends HTMLElement {
   render() {
     this.canvas = document.createElement("canvas");
     let canvas = this.canvas;
-    canvas.width = 200;
-    canvas.height = 200;
+    canvas.width = 600;
+    canvas.height = 600;
     canvas.style.display = "block";
     canvas.style.margin = "auto";
     canvas.style.cursor = "grab";
@@ -41,7 +41,7 @@ class ShelfModel extends HTMLElement {
 
     this.illo = new Zdog.Illustration({
       element: canvas,
-      zoom: 0.5,
+      zoom: 1.5,
       dragRotate: true,
       onDragStart: () => this.startDrag(),
       onDragEnd: () => this.endDrag(),
@@ -240,6 +240,9 @@ class ShelfModel extends HTMLElement {
 
     this.illo.updateRenderGraph();
     this.animate();
+
+    canvas.style.width = "100%";
+    canvas.style.height = "100%";
   }
 
   animate() {
