@@ -75,6 +75,30 @@
 
       <ul class="blog posts">
         <li class="post">
+          <a href="./hackspace-adventures/" class="link">
+            <div class="preview-image">
+              <img
+                src="./hackspace-adventures/og-image.png"
+                alt="three hackspace logos"
+                height="450"
+                width="450"
+              />
+            </div>
+            <hgroup class="info">
+              <h2 class="title">
+                What, why, and how is a Hackspace, and what have I used them
+                for?
+              </h2>
+              <p class="date">
+                <time datetime="XXXX-XX-XX">XXXX-XX-XX</time>
+              </p>
+              <ul class="categories">
+                <li class="hackspaces">hackspaces</li>
+              </ul>
+            </hgroup>
+          </a>
+        </li>
+        <li class="post">
           <a href="./factorio-proximity-chat" class="link">
             <div class="preview-image">
               <img
@@ -121,6 +145,7 @@
               </p>
               <ul class="categories">
                 <li class="electronics">electronics</li>
+                <li class="hackspaces">hackspaces</li>
               </ul>
             </hgroup>
           </a>
@@ -423,7 +448,9 @@
       return listItem;
     }
 
-    categories.forEach((category) => {
+    // sort categories alphabetically
+    let categories_sorted = Array.from(categories).sort();
+    categories_sorted.forEach((category) => {
       categorylist.appendChild(
         categoryListItem(category, category === queryCategory)
       );
