@@ -73,7 +73,7 @@ This was actually quite a big project. See the [separate blog post](../hull-bus-
 
 <figcaption>
 
-*made at*: Hull Makerspace · *made in*: 1 day · *made with*: magnetic printable paper
+*made at*: Hull Makerspace · *made in*: 1 day · *made with*: magnetic printable paper, ink, determination
 
 </figcaption>
 
@@ -81,7 +81,7 @@ This was actually quite a big project. See the [separate blog post](../hull-bus-
 
 <figcaption>
 
-I wanted to cut these out automatically, but instead I spent an hour in front of the paper cutter. See [more info here](https://github.com/alifeee/html-fridge-magnets).
+I just printed a design onto magnetic paper and then cut it out. I wanted to cut them out automatically, but instead I spent an hour in front of the paper cutter. See [more info here](https://github.com/alifeee/html-fridge-magnets).
 
 </figcaption>
 
@@ -89,7 +89,7 @@ I wanted to cut these out automatically, but instead I spent an hour in front of
 
 <figcaption>
 
-*made at*: Sheffield Hackspace · *made in*: 1 day · *made with*: wood
+*made at*: Sheffield Hackspace · *made in*: 1 day · *made with*: wood, screws
 
 </figcaption>
 
