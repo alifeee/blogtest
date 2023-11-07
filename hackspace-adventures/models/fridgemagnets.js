@@ -112,6 +112,7 @@ class FridgeMagnetsModel extends HTMLElement {
           rotate: { z: rotation },
           textAlign: "center",
           textBaseline: "middle",
+          fill: true,
         });
       }
     });
