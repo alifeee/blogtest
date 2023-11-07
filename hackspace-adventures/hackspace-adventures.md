@@ -39,19 +39,19 @@ Hackspaces are primarily a space to get started with skills, work on small proje
 
 ### fizzPOP Makerspace Birmingham
 
-The first hackspace I went to was [fizzPOP Makerspace](https://fizzpop.org.uk/), which is a community-run hackspace in Birmingham. This remains the largest space I've been to, and is the only one with enough space (and permission) to do hot metalwork. There, there is a large common area, a woodworking room, a hot metalwork room, and many small rooms for things like electronics, printing, laser cutting, and pottery.
+The first hackspace I went to was [fizzPOP Makerspace](https://fizzpop.org.uk/), which is a community-run hackspace in Birmingham. This remains the largest space I've been to, and is the only one with enough space (and permission) to do hot metalwork. At fizzPOP, there is a large common area, a woodworking room, a hot metalwork room, and many small rooms for things like electronics, printing, laser cutting, and pottery.
 
 ### Makerspace Hull
 
-Hull's makerspace, [MakerspaceHull](https://www.hcandl.co.uk/libraries/makerspace) is a bit different to what I described above, because it is a library service, instead of being community run. It is part of Hull library, so it only opens for a few hours a day, but for all of that time there are multiple staff members there. They have lots of expertise on the tools and machines in the space, and can teach you how to use any of them. Hull's makerspace is more art-focused, with a lot of supplies for printing, some electronics, and currently no woodwork.
+Hull's makerspace, [MakerspaceHull](https://www.hcandl.co.uk/libraries/makerspace) is a bit different to what I described above, because it is a library service, instead of being community run. It is part of Hull library, so it only opens for a few hours a day, but for all of that time there are multiple staff members there. They have lots of expertise with the tools and machines in the space, and can teach you how to use any of them. Hull's makerspace is more art-focused, with a lot of supplies for printing, some electronics, and currently no woodwork.
 
 ### Sheffield Hackspace
 
-[Sheffield Hackspace](https://www.sheffieldhackspace.org.uk/) is my current haunt, and the smallest of the three spaces I've been to. It is split over two rooms; a common room & electronics/3D printing/laser cutting cupboard, and a woodwork/metalwork dungeon. There are currently open evenings three days a week which you can attend for a small membership price after your first few, meaning that you can get a lot out of it without having to become a full-fledged member with a key and 24/7 access.
+[Sheffield Hackspace](https://www.sheffieldhackspace.org.uk/) is my current haunt, and the smallest of the three spaces I've been to. It is split over two rooms; a common room & electronics/3D printing/laser cutting cupboard, and a woodwork/metalwork dungeon. There are currently open evenings three days a week which you can attend for a small membership price after your first few, meaning that you can get a lot out of it without having to become a full-fledged member.
 
 ## (Mostly small) Things I've done in hackspaces
 
-I first came across hackspaces in the middle of 2023. It's now the end of 2023. As an example, here are some of the things I've done in various places. Some of them took a few weeks or months of on-and-off, and some only took a couple of hours. For your amusement, I have also provided a [Zdog](https://zzz.dog/) 3D render of each item. You can drag them around!
+I first came across hackspaces in the middle of 2023. It's now the end of 2023. Here, I show off some of the things I've done in various hackspaces, as an example of what you could get up to there. Some of them took a few weeks or months of on-and-off, and some only took a couple of hours. For your amusement, I have also provided a [Zdog](https://zzz.dog/) 3D render of each item. You can drag them around!
 
 ### Bus Sign
 
