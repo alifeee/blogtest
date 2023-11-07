@@ -18,6 +18,8 @@ I love hackspaces.
    5. [Trousers hem](#trousers-hem)
    6. [Cushion](#cushion)
    7. [Foam Cushion](#foam-cushion)
+5. [Conclusion](#conclusion)
+6. [Resources](#resources)
 
 ## What is a hackspace?
 
@@ -164,3 +166,19 @@ My *second* time using a sewing machine, to make a lovely little cushion.
 For me, this was a lot of sewing. It deserves, and may well get, its own blog post.
 
 </figcaption>
+
+## Conclusion
+
+I have lots of ideas of things I want to work on at my local hackspace. The list gets bigger by the week. As long as I have time to, I endeavour to continue indiscriminately making things.
+
+If you haven't, I think you should definitely check out your local hackspace! You can find them by googling for hackspace or makerspace.
+
+## Resources
+
+- [Hackspace wiki] - more information about what hackspaces are
+- [Hackspace foundation] - A non-profit, community organisation dedicated to promoting and coordinating hackspaces in and around the UK.
+- [Hackspace Wikipedia] - Wikipedia's entry for "hackerspace"
+
+[Hackspace wiki]: https://wiki.hackerspaces.org/
+[Hackspace foundation]: https://www.hackspace.org.uk/
+[Hackspace Wikipedia]: https://en.wikipedia.org/wiki/Hackerspace
