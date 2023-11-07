@@ -64,6 +64,12 @@ I first came across hackspaces in the middle of 2023. It's now the end of 2023. 
 
 <bus-sign-model></bus-sign-model>
 
+<figcaption>
+
+This was actually quite a big project. See the [separate blog post](../hull-bus-sign/).
+
+</figcaption>
+
 ### HTML Fridge Magnets
 
 <figcaption>
@@ -73,6 +79,12 @@ I first came across hackspaces in the middle of 2023. It's now the end of 2023. 
 </figcaption>
 
 <fridge-magnets-model></fridge-magnets-model>
+
+<figcaption>
+
+I wanted to cut these out automatically, but instead I spent an hour in front of the paper cutter. See [more info here](https://github.com/alifeee/html-fridge-magnets).
+
+</figcaption>
 
 ### Bookends
 
@@ -84,6 +96,12 @@ I first came across hackspaces in the middle of 2023. It's now the end of 2023. 
 
 <bookend-model></bookend-model>
 
+<figcaption>
+
+My first time doing anything remotely woodworky. They turned out pretty well. I mean, they hold up my books.
+
+</figcaption>
+
 ### Shelf
 
 <figcaption>
@@ -93,6 +111,12 @@ I first came across hackspaces in the middle of 2023. It's now the end of 2023. 
 </figcaption>
 
 <shelf-model></shelf-model>
+
+<figcaption>
+
+My *second* time doing anything remotely woodworky. This time, no nails! Friction fit. Look at that join.
+
+</figcaption>
 
 ### Trousers hem
 
@@ -104,6 +128,12 @@ I first came across hackspaces in the middle of 2023. It's now the end of 2023. 
 
 <trousers-model></trousers-model>
 
+<figcaption>
+
+This was a little modification I wanted to make to my trousers that also happened to be my first time using a sewing machine.
+
+</figcaption>
+
 ### Cushion
 
 <figcaption>
@@ -114,12 +144,25 @@ I first came across hackspaces in the middle of 2023. It's now the end of 2023. 
 
 <cushion-model></cushion--model>
 
+<figcaption>
+
+My *second* time using a sewing machine, to make a lovely little cushion.
+
+</figcaption>
+
 ### Foam Cushion
 
 <figcaption>
 
 *made at*: Sheffield Makerspace · *made in*: 1 week · *made with*: fabric, foam
+
+</figcaption>
+
 <foam-cushion-model></foam-cushion-model>
+
+<figcaption>
+
+For me, this was a lot of sewing. It deserves, and may well get, its own blog post.
 
 </figcaption>
 
