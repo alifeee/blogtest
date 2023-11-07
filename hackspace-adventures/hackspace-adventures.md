@@ -62,7 +62,7 @@ I first came across hackspaces in the middle of 2023. It's now the end of 2023. 
 
 </figcaption>
 
-<bussign-model></bussign-model>
+<bus-sign-model></bus-sign-model>
 
 ### HTML Fridge Magnets
 
