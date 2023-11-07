@@ -119,6 +119,7 @@ I first came across hackspaces in the middle of 2023. It's now the end of 2023. 
 <figcaption>
 
 *made at*: Sheffield Makerspace · *made in*: 1 week · *made with*: fabric, foam
+<foam-cushion-model></foam-cushion-model>
 
 </figcaption>
 
