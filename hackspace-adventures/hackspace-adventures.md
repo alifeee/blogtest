@@ -127,7 +127,7 @@ My *second* time doing anything remotely woodworky. This time, no nails! Frictio
 
 </figcaption>
 
-<trousers-model></trousers-model>
+<img src="" alt="model broken, please check back never"></img>
 
 <figcaption>
 

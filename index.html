@@ -75,7 +75,7 @@
 
       <ul class="blog posts">
         <li class="post">
-          <a href="./hackspace-adventures/" class="link">
+          <a href="./hackspace-adventures" class="link">
             <div class="preview-image">
               <img
                 src="./hackspace-adventures/og-image.png"
@@ -222,7 +222,7 @@
           <a href="./ring-populations" class="link">
             <div class="preview-image">
               <img
-                src="ring-populations/images/rings.svg"
+                src="./ring-populations/images/rings.svg"
                 alt="Sketch of
               concentric rings with 'Birmingham' in centre"
               />
@@ -244,7 +244,7 @@
           <a href="./bike-to-cambridge" class="link">
             <div class="preview-image">
               <img
-                src="bike-to-cambridge/images/directionality.svg"
+                src="./bike-to-cambridge/images/directionality.svg"
                 alt="Polar bar chart of direction travelled"
                 title="Which directions I biked the most. Red line is the bearing from Birmingham to Cambridge."
               />
@@ -304,104 +304,6 @@
     </footer>
   </body>
 
-  <style>
-    * {
-      box-sizing: border-box;
-    }
-    /* posts */
-    p,
-    h2 {
-      text-align: center;
-    }
-    h2 {
-      margin: 0;
-      margin-top: 2rem;
-    }
-    .posts {
-      padding: 0;
-      margin: 0;
-    }
-    .post {
-      list-style: none;
-      box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.2);
-      padding: 1rem;
-      pointer-events: none;
-      margin: 1rem 0;
-    }
-    .post:hover {
-      box-shadow: 0 0 1rem rgba(0, 0, 0, 0.2);
-    }
-
-    /* inside a post */
-    .link {
-      text-decoration: none;
-      color: black;
-      pointer-events: auto;
-      min-height: 10rem;
-      display: grid;
-      grid-template-columns: 1fr 2fr;
-      grid-template-rows: 1fr;
-      grid-template-areas: "preview-image info";
-      align-items: center;
-    }
-    .post:nth-last-child(even) > .link {
-      grid-template-columns: 2fr 1fr;
-      grid-template-areas: "info preview-image";
-    }
-    .link > * {
-      margin: 0 0.5rem;
-    }
-    .link > .info {
-      grid-area: info;
-    }
-    .link > .preview-image {
-      grid-area: preview-image;
-      max-width: 100%;
-      display: flex;
-    }
-    .preview-image > img {
-      width: 10em;
-      height: 10em;
-      object-fit: contain;
-      border-radius: 1em;
-      margin: 0 auto;
-    }
-
-    .info .title {
-      margin: 0;
-    }
-    .info .date {
-      margin: 0;
-      margin-top: 0.5rem;
-      opacity: 0.6;
-      font-size: 0.8rem;
-    }
-
-    /* category chips */
-    .categories {
-      list-style: none;
-      padding: 0;
-      margin: 0;
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-    }
-    .categories > li {
-      margin: 0.25rem;
-      padding: 0.25rem;
-      border-radius: 0.5rem;
-      font-size: 0.75rem;
-      pointer-events: auto;
-      opacity: 0.6;
-    }
-    .categories > li.active {
-      box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.2);
-    }
-    .categories > li > a {
-      text-decoration: none;
-      color: black;
-    }
-  </style>
   <script>
     const posts = document.querySelectorAll(".post");
     const categorylist = document.querySelector("#categories");
