@@ -31,49 +31,42 @@
     />
     <meta property="og:locale" content="en_GB" />
 
-    <!-- favicons -->
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="32x32"
-      href="../favicon-32x32.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="16x16"
-      href="../favicon-16x16.png"
-    />
-
+    <!-- favicon -->
+    <link rel="icon" type="image/png" href="../favicon.png" />
     <!-- stylesheets -->
     <link rel="stylesheet" href="../stylesheet.css" />
+    <!-- fonts -->
     <link
       rel="stylesheet"
       href="https://fonts.googleapis.com/css?family=Josefin+Sans|Roboto"
     />
-
     <!-- zero-md: https://github.com/zerodevx/zero-md -->
     <script
       type="module"
       src="https://cdn.jsdelivr.net/gh/zerodevx/zero-md@2/dist/zero-md.min.js"
     ></script>
-
+    <!-- alpinejs -->
+    <script src="//unpkg.com/alpinejs" defer></script>
+    <!-- htmx -->
+    <script
+      src="https://unpkg.com/htmx.org@1.9.8"
+      integrity="sha384-rgjA7mptc2ETQqXoYC3/zJvkU7K/aP44Y+z7xQuJiVnB/422P/Ak+F/AqFR7E4Wr"
+      crossorigin="anonymous"
+    ></script>
     <!-- anchorjs: https://github.com/bryanbraun/anchorjs (zero-md must be no-shadow mode)-->
     <script type="module">
       import "https://cdn.jsdelivr.net/npm/anchor-js/anchor.min.js";
       document.addEventListener("zero-md-rendered", function (event) {
-        anchors.add();
+        let tags = ["h2", "h3", "h4", "h5", "h6"];
+        anchors.add("#content " + tags.join(", #content "));
       });
     </script>
 
-    <!-- alpinejs -->
-    <script src="//unpkg.com/alpinejs" defer></script>
-
-    <!-- sprite web component -->
-    <script src="./alive_checker.js" defer></script>
-
-    <!-- word count web component -->
+    <!-- word-count component from word-count.js -->
     <script src="../word-count.js"></script>
+
+    <!-- alive checker web component -->
+    <script src="./alive_checker.js" defer></script>
   </head>
 
   <body>
@@ -87,41 +80,50 @@
     </header>
 
     <main>
-      <zero-md src="./steam-collage-api.md" no-shadow>
-        <template data-merge="append">
-          <link rel="stylesheet" href="../stylesheet_md.css" />
-          <style>
-            input {
-              max-width: 10rem;
-              margin: auto;
-            }
-            .column {
-              display: flex;
-              flex-direction: column;
-              align-items: center;
-              gap: 0.5rem;
-            }
-          </style>
-        </template>
-      </zero-md>
+      <section id="content">
+        <zero-md src="./steam-collage-api.md" no-shadow>
+          <template data-merge="append">
+            <link rel="stylesheet" href="../stylesheet_md.css" />
+            <style>
+              input {
+                max-width: 10rem;
+                margin: auto;
+              }
+              .column {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 0.5rem;
+              }
+            </style>
+          </template>
+        </zero-md>
+      </section>
       <hr />
-      <!-- giscus: https://giscus.app/ -->
-      <script
-        src="https://giscus.app/client.js"
-        data-repo="alifeee/blog"
-        data-repo-id="R_kgDOJaqeLQ"
-        data-category="comments"
-        data-category-id="DIC_kwDOJaqeLc4CZQST"
-        data-mapping="og:title"
-        data-strict="1"
-        data-reactions-enabled="1"
-        data-emit-metadata="0"
-        data-input-position="top"
-        data-theme="light"
-        data-lang="en"
-        crossorigin="anonymous"
-        async
-      ></script>
+
+      <section id="comments">
+        <script
+          src="https://giscus.app/client.js"
+          data-repo="alifeee/blog"
+          data-repo-id="R_kgDOJaqeLQ"
+          data-category="comments"
+          data-category-id="DIC_kwDOJaqeLc4CZQST"
+          data-mapping="og:title"
+          data-strict="1"
+          data-reactions-enabled="1"
+          data-emit-metadata="0"
+          data-input-position="top"
+          data-theme="light"
+          data-lang="en"
+          crossorigin="anonymous"
+          async
+        ></script>
+      </section>
+
+      <section id="similar">
+        <h1>Similar posts</h1>
+        <div hx-get="./similar.html" hx-trigger="load" hx-swap="afterend"></div>
+      </section>
     </main>
 
     <footer>

@@ -63,3 +63,5 @@ makerspace
 MakerspaceHull
 Zdog
 woodworky
+Hazledine
+LLMs
