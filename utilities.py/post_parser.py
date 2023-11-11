@@ -25,6 +25,26 @@ class Post:
     md_url: str
     date: datetime
 
+    def html_with_links_level(self, link_depth: int) -> str:
+        """returns html but with links at a certain level
+        (only edits <a> href and <img> src)
+        e.g.,
+          link_depth=0: <a href="./page">go here!</a>
+          link_depth=1: <a href="../page">go here!</a>
+        """
+        soup = BeautifulSoup(self.html, "html.parser")
+        links = soup.find_all("a")
+        for link in links:
+            href = link["href"]
+            href = "../" * link_depth + href
+            link["href"] = href
+        images = soup.find_all("img")
+        for image in images:
+            src = image["src"]
+            src = "../" * link_depth + src
+            image["src"] = src
+        return str(soup)
+
 
 def get_all_posts() -> List[Post]:
     with open(INDEX_FILE, "r", encoding="utf-8") as file:

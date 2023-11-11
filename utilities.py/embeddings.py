@@ -167,7 +167,8 @@ def main():
         suggestions_fname = os.path.join(post.relative_url, SUGGESTIONS_FNAME)
         with open(suggestions_fname, "w", encoding="utf-8") as file:
             for p in suggestions:
-                file.write(p.html + "\n")
+                html = p.html_with_links_level(1)
+                file.write(html + "\n")
         print(f"wrote similarities to {suggestions_fname}")
     print()
 
