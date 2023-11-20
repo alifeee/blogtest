@@ -467,7 +467,12 @@
             if (this.imgBefore && this.imgBefore.loaded === true &&
                 this.imgAfter && this.imgAfter.loaded === true) {
 
-                this.wrapper = document.querySelector(this.selector);
+                // if selector is a DOM element, use it directly
+                if (this.selector instanceof Element) {
+                    this.wrapper = this.selector;
+                } else {
+                    this.wrapper = document.querySelector(this.selector);
+                }
                 addClass(this.wrapper, 'juxtapose');
 
                 this.wrapper.style.width = getNaturalDimensions(this.imgBefore.image).width;
