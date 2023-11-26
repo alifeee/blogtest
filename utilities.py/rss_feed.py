@@ -16,6 +16,7 @@ posts.sort(key=lambda post: post.date, reverse=True)
 # generate feed
 feed = ""
 feed += "<?xml version='1.0' encoding='UTF-8'?>\n"
+feed += '<?xml-stylesheet href="/feed.xsl" type="text/xsl"?>\n'
 feed += '<feed xmlns="http://www.w3.org/2005/Atom">\n\n'
 feed += f"<title>{SUMMARY_TITLE}</title>\n"
 feed += f"<link href='{SUMMARY_LINK}' rel='self' />\n"
