@@ -41,7 +41,7 @@ for post in posts:
     feed += f"    <p>{post.description}</p>\n"
     feed += "    <![CDATA[\n"
     feed += f"     <a href='{link}'>\n"
-    OG_IMAGE = SUMMARY_LINK + "/og-image.png"
+    OG_IMAGE = link + "/og-image.png"
     feed += f"        <img alt='{post.title}' src='{OG_IMAGE}' />\n"
     feed += "      </a>\n"
     feed += "    ]]>\n"
