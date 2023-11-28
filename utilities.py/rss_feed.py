@@ -16,6 +16,7 @@ posts.sort(key=lambda post: post.date, reverse=True)
 # generate feed
 feed = ""
 feed += "<?xml version='1.0' encoding='UTF-8'?>\n"
+feed += '<?xml-stylesheet href="/feed.xsl" type="text/xsl"?>\n'
 feed += '<feed xmlns="http://www.w3.org/2005/Atom">\n\n'
 feed += f"<title>{SUMMARY_TITLE}</title>\n"
 feed += f"<link href='{SUMMARY_LINK}' rel='self' />\n"
@@ -33,6 +34,19 @@ for post in posts:
     feed += f"  <id>{SUMMARY_ID}/{post.relative_url.lstrip('./')}</id>\n"
     feed += f"  <updated>{post.date.isoformat()}</updated>\n"
     feed += f"  <summary>{post.description}</summary>\n"
+
+    # content (link + summary + image)
+    feed += "  <content type='html'>\n"
+    feed += f"    <a href='{link}'>{link}</a>\n"
+    feed += f"    <p>{post.description}</p>\n"
+    feed += "    <![CDATA[\n"
+    feed += f"     <a href='{link}'>\n"
+    OG_IMAGE = link + "/og-image.png"
+    feed += f"        <img alt='{post.title}' src='{OG_IMAGE}' />\n"
+    feed += "      </a>\n"
+    feed += "    ]]>\n"
+    feed += "  </content>\n"
+
     feed += "</entry>\n\n"
 feed += "</feed>\n"
 
