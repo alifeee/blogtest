@@ -78,15 +78,6 @@ footer {
   justify-content: start;
 }
 
-footer > .subscription > form {
-  padding: 0.25rem;
-  text-align: center;
-}
-
-footer > .subscription #tlemail {
-  width: 10rem;
-}
-
 footer > .links {
   display: flex;
   align-items: center;
