@@ -25,18 +25,7 @@
     <meta property="og:locale" content="en_GB" />
 
     <!-- favicons -->
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="32x32"
-      href="./favicon-32x32.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="16x16"
-      href="./favicon-16x16.png"
-    />
+    <link rel="icon" type="image/png" href="./favicon.png" />
 
     <!-- stylesheets -->
     <link rel="stylesheet" href="./stylesheet.css" />
@@ -57,23 +46,48 @@
     </header>
 
     <main>
-      <p>
-        Welcome to my blog! I will sometimes write things! You are welcome to
-        like the things!
-      </p>
-      <p>
-        Subscribe below (or use the
-        <a href="./feed.xml">RSS feed</a>
-        ) and I may remember to email you when there's new
-        <i>content</i> to digest.
-      </p>
-      <h2>Posts</h2>
+      <section id="introduction">
+        <p>
+          Welcome to my blog! I will sometimes write things! You are welcome to
+          like the things!
+        </p>
+        <p>
+          Subscribe to the
+          <a href="./feed.xml">RSS feed</a>
+          to be notified when there is new <i>content</i> to digest.
+        </p>
+      </section>
+
+      <h2 id="posts-header">Posts</h2>
 
       <ul class="categories" id="categories">
         <li id="category-all"><a href="/">all</a></li>
       </ul>
 
       <ul class="blog posts">
+        <li class="post">
+          <a href="./what-is-a-third-space" class="link">
+            <div class="preview-image">
+              <img
+                src="./what-is-a-third-space/og-image.png"
+                alt="third space text on a shape background"
+                height="450"
+                width="450"
+              />
+            </div>
+            <hgroup class="info">
+              <h2 class="title">
+                What is a third space and why do I like the concept?
+              </h2>
+              <p class="date">
+                <time datetime="2023-12-15">2023-12-15</time>
+              </p>
+              <ul class="categories">
+                <li class="societal-commentary">societal-commentary</li>
+              </ul>
+            </hgroup>
+          </a>
+        </li>
         <li class="post">
           <a href="./hackspace-adventures" class="link">
             <div class="preview-image">
@@ -267,21 +281,6 @@
     </main>
 
     <footer>
-      <div class="subscription">
-        <form
-          action="https://tinyletter.com/alifeee"
-          method="post"
-          target="popupwindow"
-          onsubmit="window.open('https://tinyletter.com/alifeee', 'popupwindow', 'scrollbars=yes,width=800,height=600');return true"
-        >
-          <label for="tlemail">Subscribe:</label>
-          <input type="text" name="email" id="tlemail" />
-          <input type="hidden" value="1" name="embed" /><input
-            type="submit"
-            value="Notify me!"
-          />
-        </form>
-      </div>
       <div class="links">
         <a href="https://twitter.com/alifeeeirenn" target="_blank">
           <img alt="_Twitter_" src="./icons/twitter.svg" />

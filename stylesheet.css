@@ -78,15 +78,6 @@ footer {
   justify-content: start;
 }
 
-footer > .subscription > form {
-  padding: 0.25rem;
-  text-align: center;
-}
-
-footer > .subscription #tlemail {
-  width: 10rem;
-}
-
 footer > .links {
   display: flex;
   align-items: center;
@@ -137,11 +128,11 @@ header a:visited {
 /*  */
 /*  */
 /*  */
-p,
-h2 {
+#introduction p,
+#introduction h2 {
   text-align: center;
 }
-h2 {
+#posts-header {
   margin: 0;
   margin-top: 2rem;
 }
@@ -150,6 +141,7 @@ h2 {
   margin: 0;
 }
 .post {
+  text-align: center;
   list-style: none;
   box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.2);
   padding: 1rem;
@@ -161,7 +153,7 @@ h2 {
 }
 
 /* inside a post */
-.link {
+.post .link {
   text-decoration: none;
   color: black;
   pointer-events: auto;
@@ -176,18 +168,18 @@ h2 {
   grid-template-columns: 2fr 1fr;
   grid-template-areas: "info preview-image";
 }
-.link > * {
+.post .link > * {
   margin: 0 0.5rem;
 }
-.link > .info {
+.post .link > .info {
   grid-area: info;
 }
-.link > .preview-image {
+.post .link > .preview-image {
   grid-area: preview-image;
   max-width: 100%;
   display: flex;
 }
-.preview-image > img {
+.post .preview-image > img {
   width: 10em;
   height: 10em;
   object-fit: contain;
@@ -195,10 +187,10 @@ h2 {
   margin: 0 auto;
 }
 
-.info .title {
+.post .info .title {
   margin: 0;
 }
-.info .date {
+.post .info .date {
   margin: 0;
   margin-top: 0.5rem;
   opacity: 0.6;
