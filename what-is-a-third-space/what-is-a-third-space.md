@@ -24,7 +24,7 @@ Time for a lightning round of the 5 Ws
 
 ## Who (is this relevant to)?
 
-Everyone! I encourage anyone I can get my vocal box a hold of to think about and visit third spaces. I believe there is something for everyone.
+Everyone! I encourage everyone I know to think about and visit third spaces. I believe they provide an experience valuable to everyone.
 
 ## What (is a third space)?
 
@@ -33,17 +33,19 @@ To me, a third space is:
 - a place that is not your work or your home
 - and a place which you can visit semi-regularly, and have repeated interactions and chats with the same people, without planning to meet with them beforehand
 
-Immediately, meeting with friends/colleagues/acquaintances by shooting them a text renders the activity "not a third space", to me (it may be strange for me to refer to an activity as a space, but they are hard to separate).
+If you text friends/colleagues/acquaintances, and then go to a place to meet them, it is not a third space in my view. This is just a group of people meeting together, as an activity. A third space is somewhere people meet by chance, and somewhere that people are comfortable going to alone, because they know that people will be there who they can socialise with and chat to.
 
 I have tried to keep this definition broad, to include many places. In my personal opinion, some third spaces are better than others, "better" here meaning more socially "good". "Good" here meaning "good"[¹](#footnotes).
 
 ## Why (do they exist)?
 
-Humans are social creatures[²](#footnotes). Third spaces are places that people *choose* to go exist in, and to socialise in, unlike the more forced nature of socialising at work, or even at home.
+Humans are social creatures[²](#footnotes). Third spaces are places that people *choose* to go exist in, and to socialise in, unlike the more forced nature of socialising at work, or even at home. There is a level of intentionalness about going to a third space which renders them different to "the first" (home) or "second" (work) places.
 
 ## When (do they exist)?
 
 Okay, this is a strange W, but, I have twisted it into: third spaces have always existed, and I think people in "modern" society should be more aware of them as a social good, especially as the Internet and modern post-capitalism have trended younger generations towards a more... isolated lifestyle. In this way I also think that they should flourish and their existence grow.
+
+In my experience, a lot of people disregard third spaces as unimportant because they feel they lack the time outside of work and domesticity to be able to just "hang around" somewhere, without being *productive* with what little time they have left of the week. I think this is a bad thing, and that everyone should have more time (that fact alone is worth another entire blog post) to slow down and enjoy a third space.
 
 ## Where (are they)?
 
@@ -73,7 +75,7 @@ Some social spaces only exist because everybody there has a task in common that 
 
 ### List of third spaces!
 
-In no particular order, here is my (and [Robyn]'s') list of third spaces. Each space has a clarification of what problems it may have to limit its goodness as a third space. These are theoretical based on our assumptions of a presumed average space of each type.
+In no particular order, here is my (and [Robyn]'s) list of third spaces. Each space has a clarification of what problems it may have to limit its goodness as a third space. These are theoretical based on our assumptions of a presumed average space of each type.
 
 - Hackspace/makerspace
 
@@ -93,7 +95,7 @@ In no particular order, here is my (and [Robyn]'s') list of third spaces. Each s
 
 - Barbershop/hair stylist
 
-    I think people get a lot of social time out of hair establishments. I think they are similar to cafés, and have similar problems of financial accessibilities.
+    I think people get a lot of social time out of hair establishments. I think they are similar to cafés, and have similar problems of financial accessibility.
 
 - Gym
 
@@ -105,7 +107,7 @@ In no particular order, here is my (and [Robyn]'s') list of third spaces. Each s
 
 - Pool hall
 
-    An example I often use. However, could be socially daunting or socially exclusionary, especially if everyone is there to play their own games of pool with their own friends.
+    An example I often use. However, could be socially daunting or socially exclusionary, especially if the people there are there to play their *own* games of pool with their *own* friends, and not necessarily speak to *strangers*.
 
 - Board game café
 
@@ -131,7 +133,7 @@ In no particular order, here is my (and [Robyn]'s') list of third spaces. Each s
 
     Also ditto to the above, but "dog to walk" → "garment to walk".
 
-I do not mean to be overly negative in my list; I think that any place has the potential to be a great third space, for anyone! I simply find that there are a few common reasons holding some places back, or holding some people (me) back from thinking they are the third spaces that they want to represent the ideal.
+I think that any place has the potential to be a great third space, for anyone! I think that there are a few common reasons holding some places back, or holding some people back (me) from thinking they are the best examples of third spaces that they want to provide to represent and explain the idea.
 
 This is also not an exhaustive list! If you have any other ideas, do comment or text me.
 
@@ -151,9 +153,9 @@ The content here was produced from my own brain. Lots of other people over time 
 
 [The Great Good Place](https://en.wikipedia.org/wiki/The_Great_Good_Place_(book)) is a book I have not read, but I keep hearing about.
 
-[The Wikipedia page on Third Places](https://en.wikipedia.org/wiki/Third_place) has a lot of information. In particular, the section on "Oldenburg's characteristics" makes interesting criteria for what a third place is ("Neutral ground", "Leveller (a levelling place)", "Conversation is the main activity", [read more...](https://en.wikipedia.org/wiki/Third_place#Oldenburg's_characteristics))
+[The Wikipedia page on Third Places](https://en.wikipedia.org/wiki/Third_place) has a lot of information. In particular, the section on "Oldenburg's characteristics" makes interesting criteria for what a third place is ("Neutral ground", "A levelling place", "Conversation is the main activity", [read more...](https://en.wikipedia.org/wiki/Third_place#Oldenburg's_characteristics))
 
-[Andrewism](https://www.youtube.com/@Andrewism) is a YouTuber who posts videos about solarpunk ideals and ideas for a better society. In particular
+[Andrewism](https://www.youtube.com/@Andrewism) is a YouTuber who posts videos about solarpunk ideals and ideas for a better society. In particular, he has a [video specifically about third spaces](https://youtu.be/MD_CMrCpBMc?si=0gHkONRWMC7vu652).
 
 ## Footnotes
 
