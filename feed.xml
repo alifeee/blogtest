@@ -4,12 +4,29 @@
 
 <title>alifeee's blog</title>
 <link href='https://blog.alifeee.co.uk' rel='self' />
-<updated>2023-11-07T00:00:00+00:00</updated>
+<updated>2023-12-15T00:00:00+00:00</updated>
 <author>
   <name>alifeee</name>
 </author>
 <id>https://blog.alifeee.co.uk/</id>
 <icon>https://blog.alifeee.co.uk/og-image.png</icon>
+
+<entry>
+  <title>What is a third space and why do I like the concept?</title>
+  <link href='https://blog.alifeee.co.uk/what-is-a-third-space' />
+  <id>https://blog.alifeee.co.uk//what-is-a-third-space</id>
+  <updated>2023-12-15T00:00:00+00:00</updated>
+  <summary>I talk a lot about third spaces. These are some thoughts and opinions.</summary>
+  <content type='html'>
+    <a href='https://blog.alifeee.co.uk/what-is-a-third-space'>https://blog.alifeee.co.uk/what-is-a-third-space</a>
+    <p>I talk a lot about third spaces. These are some thoughts and opinions.</p>
+    <![CDATA[
+     <a href='https://blog.alifeee.co.uk/what-is-a-third-space'>
+        <img alt='What is a third space and why do I like the concept?' src='https://blog.alifeee.co.uk/what-is-a-third-space/og-image.png' />
+      </a>
+    ]]>
+  </content>
+</entry>
 
 <entry>
   <title>Hackspace Adventures</title>
