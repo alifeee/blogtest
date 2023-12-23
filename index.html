@@ -48,6 +48,13 @@
       .also:hover a {
         text-decoration: none;
       }
+      @font-face {
+        font-family: "BogFace";
+        src: url("making-bogface/BogFace.woff");
+      }
+      .BogFace {
+        font-family: "BogFace";
+      }
     </style>
   </head>
 
@@ -85,6 +92,29 @@
       </ul>
 
       <ul class="blog posts">
+        <li class="post">
+          <a href="./making-bogface" class="link">
+            <div class="preview-image">
+              <img
+                src="./making-bogface/front-page-image.png"
+                alt="bogface text"
+                height="450"
+                width="450"
+              />
+            </div>
+            <hgroup class="info">
+              <h2 class="title">
+                Making my own Font - <span class="BogFace">BogFace</span>
+              </h2>
+              <p class="date">
+                <time datetime="2023-12-23">2023-12-23</time>
+              </p>
+              <ul class="categories">
+                <li class="creation">creation</li>
+              </ul>
+            </hgroup>
+          </a>
+        </li>
         <li class="post">
           <a href="./what-is-a-third-space" class="link">
             <div class="preview-image">
