@@ -4,12 +4,29 @@
 
 <title>alifeee's blog</title>
 <link href='https://blog.alifeee.co.uk' rel='self' />
-<updated>2023-12-15T00:00:00+00:00</updated>
+<updated>2023-12-23T00:00:00+00:00</updated>
 <author>
   <name>alifeee</name>
 </author>
 <id>https://blog.alifeee.co.uk/</id>
 <icon>https://blog.alifeee.co.uk/og-image.png</icon>
+
+<entry>
+  <title>Making my own Font - BogFace</title>
+  <link href='https://blog.alifeee.co.uk/making-bogface' />
+  <id>https://blog.alifeee.co.uk//making-bogface</id>
+  <updated>2023-12-23T00:00:00+00:00</updated>
+  <summary>How and why I made my first font</summary>
+  <content type='html'>
+    <a href='https://blog.alifeee.co.uk/making-bogface'>https://blog.alifeee.co.uk/making-bogface</a>
+    <p>How and why I made my first font</p>
+    <![CDATA[
+     <a href='https://blog.alifeee.co.uk/making-bogface'>
+        <img alt='Making my own Font - BogFace' src='https://blog.alifeee.co.uk/making-bogface/og-image.png' />
+      </a>
+    ]]>
+  </content>
+</entry>
 
 <entry>
   <title>What is a third space and why do I like the concept?</title>
