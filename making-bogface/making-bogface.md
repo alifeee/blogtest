@@ -12,6 +12,17 @@ BogFace, available for download [NOW](https://alifeee.co.uk/fonts)!
 
 </span>
 
+<!-- Rounded switch -->
+<div class="view-in-bogface BogFace">
+    <fieldset>
+        <label for="bogswitch">Read this post in BogFace</label>
+        <label class="switch">
+            <input type="checkbox" name="bogswitch" id="bogswitch-1">
+            <span class="slider round"></span>
+        </label>
+    </fieldset>
+</div>
+
 1. [Why?](#why)
    1. [Moving away from font repositories like Google Fonts](#moving-away-from-font-repositories-like-google-fonts)
 2. [How to make a font?](#how-to-make-a-font)
