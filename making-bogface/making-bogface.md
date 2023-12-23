@@ -25,7 +25,8 @@ BogFace, available for download [NOW](https://alifeee.co.uk/fonts)!
    7. [Font completion!](#font-completion)
    8. [Adding more things](#adding-more-things)
 3. [The leftovers](#the-leftovers)
-4. [Resources](#resources)
+4. [Footnotes](#footnotes)
+5. [Resources](#resources)
 
 ## Why?
 
@@ -99,7 +100,7 @@ However, I googled around (using my all-too-common method of prepending the phra
 
 ### Learning how to use FontForge
 
-With not much to do, I spent the better half of a Boneless Wednesday¹ reading the [FontForge documentation](https://fontforge.org/en-US/documentation/). As well as teaching you how to use FontForge itself, there was a lot of information about how typefaces in general are rendered by computers, and the differences for different writing systems like Arabic and Mandarin. It is interesting stuff, especially if you're into typography (I have not decided whether I am or not, but evidence would sway me towards being).
+With not much to do, I spent the better half of a Boneless Wednesday[¹](#footnotes) reading the [FontForge documentation](https://fontforge.org/en-US/documentation/). As well as teaching you how to use FontForge itself, there was a lot of information about how typefaces in general are rendered by computers, and the differences for different writing systems like Arabic and Mandarin. It is interesting stuff, especially if you're into typography (I have not decided whether I am or not, but evidence would sway me towards being).
 
 ### Making a typeface
 
@@ -198,7 +199,7 @@ bog.
 
 This, combined with the facts that "I thought the font looked a little boggy", and "I fell in a bog on a [trip to Scotland](https://alifeee.co.uk/scotland-trip/) this summer" solidified what I was going to call my as-yet-unnamed typeface: <span class="BogFace">BogFace</span>.
 
-(I only check this as of writing (if you want to make something: don't google it to check if it exists - just make it²), but it [seems like](https://www.google.com/search?q=%22bogface%22+font) there was not already a typeface on the Internet called the same.)
+(I only check this as of writing (if you want to make something: don't google it to check if it exists - just make it), but it [seems like](https://www.google.com/search?q=%22bogface%22+font) there was not already a typeface on the Internet called the same.)
 
 ### Font completion!
 
@@ -271,6 +272,10 @@ I have not spoken about kerning. It is and was an entire ordeal. I hope you enjo
 I will probably make more fonts. If I do make another font, I would like to spend more time designing it, and spend a bit more effort on it beyond "trace a hand-drawn image".
 
 <span class="BogFace">FIN.</span>
+
+## Footnotes
+
+1. Phoneless Wednesday
 
 ## Resources
 
