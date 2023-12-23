@@ -4,7 +4,7 @@
 
 I was told by a friend that they had never woken up and thought "I want to make a font".
 
-However, I had.
+However, I had done exactly that.
 
 <span class="large centred BogFace">
 
@@ -169,7 +169,7 @@ This one looks a lot more scruffy. But it did only take about 20 seconds to make
 
 </figcaption>
 
-This worked for two reasons:
+This worked fine for me for two reasons:
 
 - I was just tracing a hand-drawn font, rather than designing a font on a PC. This would involve a lot more fiddling around.
 - I did not care about consistent letter sizes/thicknesses/widths. This would involve a lot more fiddling around.
@@ -182,7 +182,7 @@ When I started doing lowercase letters, I had to decide a few things:
 - the height of "ascenders" (i.e., h, b, l)
 - the "height" of "descenders" (i.e., "y")
 
-I pulled in three letters to my font-window to decide this: o, g, and b. Since I was doing this at the hackspace (I was working on it on-and-off over a few days), someone leaned over and read out the three large letters on my screen, which I was too busy thinking about ascenders and descenders to parse.
+I pulled in three letters to my font-window to decide this: o, g, and b. Since I was doing this at the [hackspace](https://blog.alifeee.co.uk/hackspace-adventures/) (I was working on it on-and-off over a few days), someone leaned over and read out the three large letters on my screen, which I was too busy thinking about ascenders and descenders to parse.
 
 "**bog?**", they inquired.
 
