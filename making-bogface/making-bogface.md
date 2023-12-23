@@ -2,7 +2,9 @@
 
 <word-count parent=".markdown-body"></word-count>
 
-I was told by a friend that they had never woken up and thought "I want to make a font". However, that's what I did.
+I was told by a friend that they had never woken up and thought "I want to make a font".
+
+However, I had.
 
 <span class="large centred BogFace">
 
@@ -264,7 +266,11 @@ Some places I've come across my own font in the wild include RightMove and rando
 
 It's also nice to be able to know that if I need a whimsical typeface, I have one at my fingertips (for example for an [online newsletter](https://liputenpo.alifeee.co.uk/) written entirely in [toki pona](https://tokipona.org/) (link probably broken))
 
-I will probably make more fonts. I will probably spend more time thinking about the design and feeling of these, and spend a bit more effort on them beyond "trace a hand-drawn image".
+I have not spoken about kerning. It is and was an entire ordeal. I hope you enjoy dealing with it if you choose to make a font.
+
+I will probably make more fonts. If I do make another font, I would like to spend more time designing it, and spend a bit more effort on it beyond "trace a hand-drawn image".
+
+<span class="BogFace">FIN.</span>
 
 ## Resources
 
