@@ -1,33 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>alifeee - Factorio proximity chat</title>
+    <title>alifeee - making bogface</title>
     <!-- browser metas -->
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-      name="description"
-      content="Coding Projects! #2: Making Proximity-based voice chat for Factorio"
-    />
+    <meta name="description" content="How and why I made my first font" />
 
     <!-- embed metas - https://ogp.me/ -->
-    <meta property="og:title" content="Making Factorio Proximity Voice Chat" />
+    <meta property="og:title" content="Making my own Font - BogFace" />
     <meta property="og:type" content="website" />
     <meta property="og:site" content="alifeee's blog" />
     <meta
       property="og:url"
-      content="https://blog.alifeee.co.uk/factorio-proximity-chat"
+      content="https://blog.alifeee.co.uk/making-bogface"
     />
     <meta
       property="og:image"
-      content="https://blog.alifeee.co.uk/factorio-proximity-chat/og-image.png"
+      content="https://blog.alifeee.co.uk/making-bogface/og-image.png"
     />
     <meta
       property="og:description"
-      content="Using Lua and C to enable proximity-based voice chat in Factorio"
+      content="How and why I made my first font"
     />
     <meta property="og:locale" content="en_GB" />
 
+    <!-- styling -->
     <!-- favicon -->
     <link rel="icon" type="image/png" href="../favicon.png" />
     <!-- stylesheets -->
@@ -37,18 +35,12 @@
       rel="stylesheet"
       href="https://fonts.googleapis.com/css?family=Josefin+Sans|Roboto"
     />
+
+    <!-- libraries -->
     <!-- zero-md: https://github.com/zerodevx/zero-md -->
     <script
       type="module"
       src="https://cdn.jsdelivr.net/gh/zerodevx/zero-md@2/dist/zero-md.min.js"
-    ></script>
-    <!-- alpinejs -->
-    <script src="//unpkg.com/alpinejs" defer></script>
-    <!-- htmx -->
-    <script
-      src="https://unpkg.com/htmx.org@1.9.8"
-      integrity="sha384-rgjA7mptc2ETQqXoYC3/zJvkU7K/aP44Y+z7xQuJiVnB/422P/Ak+F/AqFR7E4Wr"
-      crossorigin="anonymous"
     ></script>
     <!-- anchorjs: https://github.com/bryanbraun/anchorjs (zero-md must be no-shadow mode)-->
     <script type="module">
@@ -61,6 +53,15 @@
 
     <!-- word-count component from word-count.js -->
     <script src="../word-count.js"></script>
+
+    <!-- htmx -->
+    <script
+      src="https://unpkg.com/htmx.org@1.9.8"
+      integrity="sha384-rgjA7mptc2ETQqXoYC3/zJvkU7K/aP44Y+z7xQuJiVnB/422P/Ak+F/AqFR7E4Wr"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- extra scripts -->
   </head>
 
   <body>
@@ -75,21 +76,30 @@
 
     <main>
       <section id="content">
-        <zero-md src="./factorio-proximity-chat.md" no-shadow>
+        <zero-md src="./making-bogface.md" no-shadow>
           <template data-merge="append">
             <link rel="stylesheet" href="../stylesheet_md.css" />
+            <link rel="stylesheet" href="./zine.css" />
             <style>
-              /* by default, tokens (=, +, etc) have a background that...
-              doesn't get set by themes */
-              .language-css .token.string,
-              .style .token.string,
-              .token.entity,
-              .token.operator,
-              .token.url {
-                background: none;
+              @font-face {
+                font-family: "BogFace";
+                src: url("./BogFace.woff");
+              }
+              .BogFace {
+                font-family: "BogFace";
+              }
+              .large {
+                font-size: 1.5em;
+              }
+              .centred {
+                text-align: center;
+              }
+              .textarea {
+                width: 100%;
+                height: 10rem;
+                font-size: 3em;
               }
             </style>
-            <link href="prism-atom-dark.css" rel="stylesheet" />
           </template>
         </zero-md>
       </section>
@@ -107,7 +117,7 @@
           data-reactions-enabled="1"
           data-emit-metadata="0"
           data-input-position="top"
-          data-theme="dark"
+          data-theme="light"
           data-lang="en"
           crossorigin="anonymous"
           async
@@ -142,16 +152,4 @@
       <a class="backlink" href="../">Back to main page</a>
     </footer>
   </body>
-  <style>
-    :root {
-      --text-colour: #fff;
-      --link-colour: #e39827;
-      --unimportanttext-colour: #ccc;
-      --border-colour: #e39827;
-      --background-colour: #002b02;
-    }
-    body {
-      background-image: url("./images/grass-tiled.jpg");
-    }
-  </style>
 </html>
