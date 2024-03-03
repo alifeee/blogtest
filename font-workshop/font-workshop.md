@@ -59,18 +59,66 @@ No method was wrong. Some methods were slower, fostering - I think - more apprec
 
 Described briefly, and each description written in their own font, here are the ways people created their fonts:
 
+(Some are incomplete. Some will be updated as time passes.)
+
 <div class="font--classic-neil">
 
 ### Auto-traced handwriting
 
-This font is classic Neil
+Tanya[¹] did what many designate the "classic move" in font-making: they made a handwriting font.
+
+The method was to draw the letters a through z on paper and take a picture of it. Then, each letter was isolated into a bitmap image of each letter. [potrace](https://potrace.sourceforge.net/) was used to convert the bitmap images into SVG images, which were then imported into FontForge, where they could be resized and moved around to look good.
 
 </div>
 
+<div class="font--cursive">
+
 ### Manually traced hand-designed letters
+
+Ivanka[¹] drew some guidelines on paper, and designed and drew block letters on the sheet. Then, they too took a picture of the hand-drawn letters and digitised them. They digitised the letters manually, using the vector tools in FontForge.
+
+</div>
+
+<div class="font--cursive">
 
 ### Designed a Morse code font
 
+Dragomir[¹] designed a Morse font. You are reading it now.
+
+</div>
+
+<div class="font--cursive">
+
 ### Digitally designed letter forms
 
+Katya[¹] designed their letter forms entirely digitally, within FontForge. After a few, they were able to copy parts of letters to other letters, such as the caps of "b" and "d".
+
+</div>
+
+<div class="font--cursive">
+
 ### Stroke-expanded lines drawn via touchscreen
+
+Tomislav[¹] used their touchscreen laptop to draw the letters with a single stroke, and then used FontForge's ["Expand Stroke"](https://fontforge.org/docs/techref/stroke.html) to turn the one-dimensional drawings into two-dimensional vector shapes.
+
+</div>
+
+## I'd love to do another workshop
+
+I had a lot of fun helping people make fonts, through thinking about design to practically using the tools. It was very interesting and cool to me that each person involved made their font differently.
+
+In terms of how I ran it, and my presentation, I have some ideas of how to make things clearer and easier to understand.
+
+It was very fun to do, and I'd love to run another font workshop!
+
+## Resources
+
+- My blog post about how I made a font: <https://blog.alifeee.co.uk/making-bogface/>
+- The presentation I used for this workshop: <https://github.com/alifeee/font-workshop/>
+- Another font I am halfway through making as of writing (repository contains some nice commands for working with traced images): <https://github.com/alifeee/kiran-builder-typeface>
+
+## Footnotes
+
+[¹]: #footnotes
+
+- ¹Names randomly generated using <https://github.com/Necronhym/Name_Generator>
