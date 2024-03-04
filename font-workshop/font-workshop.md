@@ -2,9 +2,7 @@
 
 <word-count parent=".markdown-body"></word-count>
 
-## What?
-
-This week I ran a computer font-making workshop at my local hackspace. It was a bunch of fun, and I really enjoyed seeing the creativity come out of people via the medium of creating typefaces.
+This week I ran a computer font-making workshop at my local hackspace. It was a bunch of fun, and I really enjoyed seeing the creativity come out of people via the medium of creating typefaces :)
 
 ## Why?
 
@@ -12,7 +10,7 @@ This week I ran a computer font-making workshop at my local hackspace. It was a 
 
 ## Who, Where, When?
 
-I ran the workshop at my local hackspace. I'd seen that they had run workshops before on knife-making and other things, and I thought it would be neat if I did something collective. Often, people are together at the hackspace, which I [enjoy in and of itself](../what-is-a-third-space/). But, it is extra neat if people can be together and all be working on similar things.
+I ran the workshop at my local hackspace. I'd seen that they had run workshops before on knife-making and other things, and I thought it would be neat if I did something similarly collective. Often, people are together at the hackspace, which I [enjoy in and of itself](../what-is-a-third-space/). But, it is extra neat if people can be together and all be working on similar things.
 
 About three or four weeks ago, I decided to just "do it", and I made up a sign and put it up at the hackspace.
 
@@ -24,7 +22,7 @@ Some have pointed out an irony that a poster for a computer font workshop was ha
 
 </figcaption>
 
-As far as I was concerned, "a workshop" was not really an established idea. But that's part of the reason I like community spaces like the hackspace: I can pretend something is an established idea and people will believe it.
+As far as I was concerned, "a workshop" was not really an established idea. But that's part of the reason I like community spaces like the hackspace: I can pretend something is an established idea and people will believe it is.
 
 I didn't start with a great plan, but rather started by motivating myself to create a plan (by putting up the poster). This turned out to be a nice method of motivation, as I had set a date for my "workshop", which forced me to consider what a "workshop" would involve.
 
@@ -47,7 +45,7 @@ The presentation is hosted at <https://alifeee.co.uk/font-workshop/>, but since 
 
 <figcaption>
 
-If I do another workshop in the future, I will probably update this a bit. Depending on what time you exist within at the moment, there could have been any number of updates!
+If I do another workshop in the future, I will probably update this a bit, and this embed would change :)
 
 </figcaption>
 
@@ -75,7 +73,7 @@ The method was to draw the letters a through z on paper and take a picture of it
 
 ### Manually traced hand-designed letters
 
-Ivanka[¹] drew some guidelines on paper, and designed and drew block letters on the sheet. Then, they too took a picture of the hand-drawn letters and digitised them. They digitised the letters manually, using the vector tools in FontForge.
+Ivanka[¹] drew some guidelines on paper, and designed and drew block letters on the sheet. Then, they took a picture of the hand-drawn letters and digitised them manually, using the vector tools in FontForge.
 
 </div>
 
@@ -91,7 +89,7 @@ Dragomir[¹] designed a Morse font. You are reading it now.
 
 ### Digitally designed letter forms
 
-Katya[¹] designed their letter forms entirely digitally, within FontForge. After a few, they were able to copy parts of letters to other letters, such as the caps of "b" and "d".
+Katya[¹] designed their letter forms entirely digitally, within FontForge. After a few, they were able to copy stylistic parts of letters to other letters, such as the caps of "b" and "d".
 
 </div>
 
