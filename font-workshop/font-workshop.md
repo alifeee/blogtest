@@ -77,7 +77,7 @@ Ivanka[¹] drew some guidelines on paper, and designed and drew block letters on
 
 </div>
 
-<div class="font--cursive">
+<div class="font--vmorse">
 
 ### Designed a Morse code font
 
