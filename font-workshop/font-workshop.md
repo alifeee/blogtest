@@ -69,7 +69,7 @@ The method was to draw the letters a through z on paper and take a picture of it
 
 </div>
 
-<div class="font--cursive">
+<div class="font--font">
 
 ### Manually traced hand-designed letters
 
