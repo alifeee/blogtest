@@ -85,7 +85,7 @@ Dragomir[¹] designed a Morse font. You are reading it now.
 
 </div>
 
-<div class="font--cursive">
+<div class="font--a-font">
 
 ### Digitally designed letter forms
 
@@ -93,7 +93,7 @@ Katya[¹] designed their letter forms entirely digitally, within FontForge. Afte
 
 </div>
 
-<div class="font--cursive">
+<div class="font--ricardo">
 
 ### Stroke-expanded lines drawn via touchscreen
 
