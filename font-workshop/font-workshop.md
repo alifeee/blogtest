@@ -101,9 +101,9 @@ Tomislav[¹] used their touchscreen laptop to draw the letters with a single str
 
 </div>
 
-## I'd love to do another workshop
+## I'd love to do another workshop!
 
-I had a lot of fun helping people make fonts, through thinking about design to practically using the tools. It was very interesting and cool to me that each person involved made their font differently.
+I had a lot of fun helping people make fonts, through thinking about design to how to practically using tools. It was very interesting and cool to me that each person involved made their font differently.
 
 In terms of how I ran it, and my presentation, I have some ideas of how to make things clearer and easier to understand.
 
