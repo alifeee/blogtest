@@ -4,12 +4,29 @@
 
 <title>alifeee's blog</title>
 <link href='https://blog.alifeee.co.uk' rel='self' />
-<updated>2023-12-23T00:00:00+00:00</updated>
+<updated>2024-03-03T00:00:00+00:00</updated>
 <author>
   <name>alifeee</name>
 </author>
 <id>https://blog.alifeee.co.uk/</id>
 <icon>https://blog.alifeee.co.uk/og-image.png</icon>
+
+<entry>
+  <title>I ran a computer font-making workshop!</title>
+  <link href='https://blog.alifeee.co.uk/font-workshop' />
+  <id>https://blog.alifeee.co.uk//font-workshop</id>
+  <updated>2024-03-03T00:00:00+00:00</updated>
+  <summary>What did people make and what did I learn?</summary>
+  <content type='html'>
+    <a href='https://blog.alifeee.co.uk/font-workshop'>https://blog.alifeee.co.uk/font-workshop</a>
+    <p>What did people make and what did I learn?</p>
+    <![CDATA[
+     <a href='https://blog.alifeee.co.uk/font-workshop'>
+        <img alt='I ran a computer font-making workshop!' src='https://blog.alifeee.co.uk/font-workshop/og-image.png' />
+      </a>
+    ]]>
+  </content>
+</entry>
 
 <entry>
   <title>Making my own Font - BogFace</title>
