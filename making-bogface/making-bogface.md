@@ -43,7 +43,7 @@ BogFace, available for download [NOW](https://alifeee.co.uk/fonts)!
 
 I think design is fascinating, and I have read a few books about fonts. One is [Why Fonts Matter](https://www.goodreads.com/en/book/show/25658538),
 
-<a class="why-fonts-matter hover-area" href="https://www.goodreads.com/en/book/show/25658538" target="_blank">
+<a class="why-fonts-matter hover-area" href="https://www.goodreads.com/en/book/show/25658538">
     <div class="zine back"></div>
     <div class="zine front"></div>
 </a>
@@ -52,7 +52,7 @@ which posed a fun experiment of asking "how many different fonts am I exposed to
 
 Another book, which I still own, is [Script Fonts](https://www.goodreads.com/book/show/26246257-script-fonts),
 
-<a class="script-fonts hover-area" href="https://www.goodreads.com/book/show/26246257-script-fonts" target="_blank">
+<a class="script-fonts hover-area" href="https://www.goodreads.com/book/show/26246257-script-fonts">
     <div class="zine back"></div>
     <div class="zine front"></div>
 </a>
