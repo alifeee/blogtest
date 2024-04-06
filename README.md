@@ -11,7 +11,7 @@ Markdown parsing is done client side using [zero-md](https://github.com/zerodevx
     ...
   <script
     type="module"
-    src="https://cdn.jsdelivr.net/gh/zerodevx/zero-md@2/dist/zero-md.min.js"
+    src="../zero-md.js"
   ></script>
   ...
 </head>
