@@ -17,11 +17,6 @@ def main():
 
     links = [
         {
-            "to": "https://twitter.com/alifeeeirenn",
-            "text": "Twitter",
-            "icon": "twitter",
-        },
-        {
             "to": "https://github.com/alifeee/blog",
             "text": "GitHub",
             "icon": "github",
