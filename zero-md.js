@@ -45,10 +45,7 @@ export class ZeroMd extends HTMLElement {
         ],
         "https://cdn.jsdelivr.net/gh/PrismJS/prism@1/plugins/autoloader/prism-autoloader.min.js",
       ],
-      cssUrls: [
-        "https://cdn.jsdelivr.net/gh/sindresorhus/github-markdown-css@4/github-markdown.min.css",
-        "https://cdn.jsdelivr.net/gh/PrismJS/prism@1/themes/prism.min.css",
-      ],
+      cssUrls: [],
       hostCss:
         ":host{display:block;position:relative;contain:content;}:host([hidden]){display:none;}",
       ...defaults,
