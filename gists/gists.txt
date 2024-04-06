@@ -1,3 +1,75 @@
+# WHAT is a gist
+
+It is just "some text on the Internet". Usually, people put either code or markdown in them. Sort of like pastebin, but more permanent.
+
+They can be like blog posts, or they can be like a miniature GitHub repository for a commonly used script.
+
+They can also be somewhere to (publically or privately) store data to be retrieved from elsewhere, like https://jsonresume.org/
+
+Anyone with a GitHub account can make a gist. It is an easy way to share text.
+
+This is not an endorsement of GitHub. You could make a non-GitHub gist on another website.
+
+# WHY I like gists
+
+They're shareable, both to other people...
+
+https://gist.github.com/alifeee/c857bfb45bfd260a9b9dd9c45e4f7478
+https://gist.github.com/alifeee/75df204c2be3815806e1d4be47e54d08
+https://gist.github.com/alifeee/829344ed02efb0952e81fc35c445df18
+
+...and to my future self...
+
+https://gist.github.com/alifeee/2f4be232f6b9c4b384f4c020a5bc10a1
+https://gist.github.com/alifeee/2e1ea8ad5290a553316e715f658f1fd7
+https://gist.github.com/alifeee/8342d9677c436e2353233f68f34cfe19
+
+...and (much to GitHub's enjoyment) they're in the same place.
+
+I make a lot of scripts and they would otherwise end up in a combination of:
+
+- random repositories
+- random folders on my computer
+
+Gists make it easy to have them in one place.
+
+## Secondly, other people's
+
+I know other people do a similar thing as me, so I often add `"site:gist.github.com"` to web searches.
+
+Yes, I know that not everyone likes GitHub, but I know that enough do that I will find what I want.
+I do not have a better way to get through the search engine SEO garbage.
+For example (surmise what I've been doing for the past several weeks)
+
+how to make a Google Form -> GitHub issue Google Apps Script
+https://gist.github.com/bmcbride/62600e48274961819084
+Simple XSL boilerplate for styling Atom feeds in Jekyll
+https://gist.github.com/andrewstiefel/57a0a400aa2deb6c9fe18c6da4e16e0f
+how to print avery labels with only a .csv and a web browser
+https://gist.github.com/kgodard/5072573
+Make an issue on github using API V3 and Python
+https://gist.github.com/JeffPaine/3145490
+Decoding Morse Code With JavaScript
+https://gist.github.com/bennadel/9760604
+RevealJS cheat sheet
+https://gist.github.com/peeweek/55d6c2eb006d11c7da01fde974325f33
+Globally install ffmpeg and convert video to gif
+https://gist.github.com/JaimeStill/8adb695ee46425f1ee9830357cd9c6bb
+Getting started with the D1 mini (ESP8266)
+https://gist.github.com/carljdp/e6a3f5a11edea63c2c14312b534f4e53
+Simple morse en- & decoding for Arduino (including LED Example)
+https://gist.github.com/madc/4474559
+How to copy, read and write Paxton fobs and cards with an RFIDler
+https://gist.github.com/natmchugh/18e82761dbce52fa284c87c190dc926f
+Change End of Line Sequence from CRLF to LF to all files in the project
+https://gist.github.com/tjsudarsan/f2bfe4c4d567243e302cf8ba40e1c7e5
+How to permalink to a gist's raw file
+https://gist.github.com/atenni/5604615
+Departures board
+https://gist.github.com/veltman/f2b2a06d4ffa62f4d39d5ebac5ceeef0
+Merge vs. Rebase vs. Squash
+https://gist.github.com/mitchellh/319019b1b8aac9110fcfb1862e0c97fb
+
 types of gist
 - data
 - how-to
