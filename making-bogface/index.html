@@ -29,9 +29,12 @@
     <!-- favicon -->
     <link rel="icon" type="image/png" href="../favicon.png" />
     <!-- stylesheets -->
-    
+    <link rel="stylesheet" href="../stylesheet.css" />
     <!-- fonts -->
-    
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Josefin+Sans|Roboto"
+    />
 
     <!-- libraries -->
     <!-- zero-md: https://github.com/zerodevx/zero-md -->
@@ -96,15 +99,136 @@
       <section id="content">
         <zero-md src="./making-bogface.md" no-shadow>
           <template data-merge="append">
-            
-            
-            
+            <link rel="stylesheet" href="../stylesheet_md.css" />
+            <link rel="stylesheet" href="./zine.css" />
+            <style>
+              @font-face {
+                font-family: "BogFace";
+                src: url("./BogFace.woff");
+              }
+              .BogFace {
+                font-family: "BogFace";
+              }
+              .large {
+                font-size: 1.5em;
+              }
+              .centred {
+                text-align: center;
+              }
+              .textarea {
+                width: 100%;
+                height: 10rem;
+                font-size: 3em;
+              }
+
+              .view-in-bogface {
+                width: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+              }
+              .view-in-bogface fieldset {
+                padding: 0.5em;
+                margin: auto;
+                border: 1px solid black;
+                border-radius: 0.5em;
+                background-color: #f0f0f0;
+                font-size: 1.5em;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+              }
+              .view-in-bogface fieldset label {
+                margin: 0 0.5rem;
+              }
+
+              /* from https://www.w3schools.com/howto/howto_css_switch.asp */
+              /* The switch - the box around the slider */
+              .switch {
+                position: relative;
+                display: inline-block;
+                width: 60px;
+                height: 34px;
+              }
+
+              /* Hide default HTML checkbox */
+              .switch input {
+                opacity: 0;
+                width: 0;
+                height: 0;
+              }
+
+              /* The slider */
+              .slider {
+                position: absolute;
+                cursor: pointer;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                background-color: #ccc;
+                -webkit-transition: 0.4s;
+                transition: 0.4s;
+              }
+
+              .slider:before {
+                position: absolute;
+                content: "";
+                height: 26px;
+                width: 26px;
+                left: 4px;
+                bottom: 4px;
+                background-color: white;
+                -webkit-transition: 0.4s;
+                transition: 0.4s;
+              }
+
+              input:checked + .slider {
+                background-color: #2196f3;
+              }
+
+              input:focus + .slider {
+                box-shadow: 0 0 1px #2196f3;
+              }
+
+              input:checked + .slider:before {
+                -webkit-transform: translateX(26px);
+                -ms-transform: translateX(26px);
+                transform: translateX(26px);
+              }
+
+              /* Rounded sliders */
+              .slider.round {
+                border-radius: 34px;
+              }
+
+              .slider.round:before {
+                border-radius: 50%;
+              }
+            </style>
           </template>
         </zero-md>
       </section>
       <hr />
 
-      
+      <section id="comments">
+        <script
+          src="https://giscus.app/client.js"
+          data-repo="alifeee/blog"
+          data-repo-id="R_kgDOJaqeLQ"
+          data-category="comments"
+          data-category-id="DIC_kwDOJaqeLc4CZQST"
+          data-mapping="og:title"
+          data-strict="1"
+          data-reactions-enabled="1"
+          data-emit-metadata="0"
+          data-input-position="top"
+          data-theme="light"
+          data-lang="en"
+          crossorigin="anonymous"
+          async
+        ></script>
+      </section>
 
       <section id="similar">
         <h1>Similar posts</h1>

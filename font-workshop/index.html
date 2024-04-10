@@ -32,9 +32,12 @@
     <!-- favicon -->
     <link rel="icon" type="image/png" href="../favicon.png" />
     <!-- stylesheets -->
-    
+    <link rel="stylesheet" href="../stylesheet.css" />
     <!-- fonts -->
-    
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Josefin+Sans|Roboto"
+    />
 
     <!-- libraries -->
     <!-- zero-md: https://github.com/zerodevx/zero-md -->
@@ -66,7 +69,16 @@
     ></script>
 
     <!-- extra scripts -->
-    
+    <style>
+      body {
+        opacity: 0.8;
+        background-image: radial-gradient(
+          #444cf7 0.5px,
+          var(--background-colour) 0.5px
+        );
+        background-size: 10px 10px;
+      }
+    </style>
   </head>
 
   <body>
@@ -83,14 +95,70 @@
       <section id="content">
         <zero-md src="./font-workshop.md" no-shadow>
           <template data-merge="append">
-            
-            
+            <link rel="stylesheet" href="../stylesheet_md.css" />
+            <style>
+              @font-face {
+                font-family: "classic-neil";
+                src: url("fonts/classic-neil/classicneil.woff") format("woff");
+              }
+              .font--classic-neil * {
+                font-family: "classic-neil", cursive;
+              }
+              @font-face {
+                font-family: "vmorse";
+                src: url("fonts/vmorse/VMORSE.woff") format("woff");
+              }
+              .font--vmorse * {
+                font-family: "vmorse", cursive;
+              }
+              @font-face {
+                font-family: "font";
+                src: url("fonts/font/font.woff") format("woff");
+              }
+              .font--font * {
+                font-family: "font", sans-serif;
+              }
+              @font-face {
+                font-family: "Ricardo";
+                src: url("fonts/ricardo/Ricardo.woff") format("woff");
+              }
+              .font--ricardo * {
+                font-family: "Ricardo", cursive;
+              }
+              @font-face {
+                font-family: "A Font";
+                src: url("fonts/a-font/a-font.woff") format("woff");
+              }
+              .font--a-font * {
+                font-family: "A Font", cursive;
+              }
+              .font--cursive * {
+                font-family: cursive;
+              }
+            </style>
           </template>
         </zero-md>
       </section>
       <hr />
 
-      
+      <section id="comments">
+        <script
+          src="https://giscus.app/client.js"
+          data-repo="alifeee/blog"
+          data-repo-id="R_kgDOJaqeLQ"
+          data-category="comments"
+          data-category-id="DIC_kwDOJaqeLc4CZQST"
+          data-mapping="og:title"
+          data-strict="1"
+          data-reactions-enabled="1"
+          data-emit-metadata="0"
+          data-input-position="top"
+          data-theme="light"
+          data-lang="en"
+          crossorigin="anonymous"
+          async
+        ></script>
+      </section>
 
       <section id="similar">
         <h1>Similar posts</h1>

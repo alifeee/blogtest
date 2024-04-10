@@ -31,9 +31,12 @@
     <!-- favicon -->
     <link rel="icon" type="image/png" href="../favicon.png" />
     <!-- stylesheets -->
-    
+    <link rel="stylesheet" href="../stylesheet.css" />
     <!-- fonts -->
-    
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Josefin+Sans|Roboto"
+    />
     <!-- zero-md: https://github.com/zerodevx/zero-md -->
     <script type="module" src="../zero-md.js"></script>
     <!-- alpinejs -->
@@ -78,14 +81,35 @@
       <section id="content">
         <zero-md src="./snippets-of-a-degree.md" no-shadow>
           <template data-merge="append">
-            
-            
+            <link rel="stylesheet" href="../stylesheet_md.css" />
+            <style>
+              figcaption {
+                font-style: italic;
+              }
+            </style>
           </template>
         </zero-md>
       </section>
       <hr />
 
-      
+      <section id="comments">
+        <script
+          src="https://giscus.app/client.js"
+          data-repo="alifeee/blog"
+          data-repo-id="R_kgDOJaqeLQ"
+          data-category="comments"
+          data-category-id="DIC_kwDOJaqeLc4CZQST"
+          data-mapping="og:title"
+          data-strict="1"
+          data-reactions-enabled="1"
+          data-emit-metadata="0"
+          data-input-position="top"
+          data-theme="light"
+          data-lang="en"
+          crossorigin="anonymous"
+          async
+        ></script>
+      </section>
 
       <section id="similar">
         <h1>Similar posts</h1>
