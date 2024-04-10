@@ -18,6 +18,30 @@ There are [good reasons][o kepeken ala GitHub] you may not want to support GitHu
 
 ## Why I like creating gists
 
+I like creating gists because they make text easy to share with two groups of people.
+
+### I can share them with people
+
+The first group of people is "other people", either specifically for someone, or just information or code I share a lot, so I like having a quick link to it. Gists I've made in this category include:
+
+- [how to create a blog?](https://gist.github.com/alifeee/c857bfb45bfd260a9b9dd9c45e4f7478) - I share this one with people whenever they muse about blogging and talk about using some complicated- or expensive-sounding tool, to try and convince them that they need not take on such an undertaking, and can just "put text on the Internet".
+- [Remove all CSS styles from HTML files with bash](https://gist.github.com/alifeee/75df204c2be3815806e1d4be47e54d08) - this is a bash script I wrote and shared for [CSS Naked Day 2024](https://css-naked-day.github.io/). There were lots of ways of removing styles for site-builders and site-backends, but none for pure HTML.
+- [How to use Ruby and Jekyll on Linux](https://gist.github.com/alifeee/829344ed02efb0952e81fc35c445df18) - when I set up Jekyll to edit a website for the first time, it was really confusing, partly because I'd never used Ruby before.
+
+### I can share them with myself in the future
+
+The second group of people is really just one person, and they are "me in the future". Most of my usage of gists has been to remember how I did some specific thing with code or how I installed something. Writing it down in the first place help future me *a lot* to remember, because all I have to remember is in what context I did the thing, and then I can find out exactly how by reading the gist. Some examples of gists that have been very helpful to future- (well, now past-) me are:
+
+- [How to setup RSA keys for automatic SSH login](https://gist.github.com/alifeee/2f4be232f6b9c4b384f4c020a5bc10a1) - I found cryptography and keys confusing for a long time. Writing down what I did helped me set it up and get more confident doing so in future.
+- [Plot graphs using the terminal (bash)](https://gist.github.com/alifeee/2e1ea8ad5290a553316e715f658f1fd7) - I often `cat` data out to the terminal. It's nice to graph it. This is a way of doing so *in* the terminal, so doesn't require a UI library.
+- [Common RSS URL extensions](https://gist.github.com/alifeee/8342d9677c436e2353233f68f34cfe19) - is what it says on the tin
+
+### The ramblings of my existence can end up in the same place
+
+I make a lot of random scripts. In another world, they would end up either buried in random repositories on GitHub, or buried in random folders on my computer or laptop. They would get lost.
+
+Gists make it easy to paste a script into, and then have all these 
+
 ## Why I like finding other people's gists
 
 More than just being able to share my own code, I like gists because other people have the same idea!

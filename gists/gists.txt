@@ -1,17 +1,5 @@
 # WHY I like gists
 
-They're shareable, both to other people...
-
-https://gist.github.com/alifeee/c857bfb45bfd260a9b9dd9c45e4f7478
-https://gist.github.com/alifeee/75df204c2be3815806e1d4be47e54d08
-https://gist.github.com/alifeee/829344ed02efb0952e81fc35c445df18
-
-...and to my future self...
-
-https://gist.github.com/alifeee/2f4be232f6b9c4b384f4c020a5bc10a1
-https://gist.github.com/alifeee/2e1ea8ad5290a553316e715f658f1fd7
-https://gist.github.com/alifeee/8342d9677c436e2353233f68f34cfe19
-
 ...and (much to GitHub's enjoyment) they're in the same place.
 
 I make a lot of scripts and they would otherwise end up in a combination of:
@@ -25,7 +13,13 @@ Gists make it easy to have them in one place.
 
 types of gist
 - data
+  - what is it for?
+  - is it automatic?
+  - is it useful?
 - how-to
+  - who is it for?
+  - why did I make it?
+  - have I come back to it?
 - blog posts
 
 resume
