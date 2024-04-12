@@ -1,16 +1,3 @@
-# WHY I like gists
-
-...and (much to GitHub's enjoyment) they're in the same place.
-
-I make a lot of scripts and they would otherwise end up in a combination of:
-
-- random repositories
-- random folders on my computer
-
-Gists make it easy to have them in one place.
-
-## Secondly, other people's
-
 types of gist
 - data
   - what is it for?

@@ -1,5 +1,17 @@
 # Why I like (GitHub) gists and a short tour through ones I have created
 
+1. [What are gists?](#what-are-gists)
+2. [Why I like creating gists](#why-i-like-creating-gists)
+   1. [I can share them with people](#i-can-share-them-with-people)
+   2. [I can share them with myself in the future](#i-can-share-them-with-myself-in-the-future)
+   3. [The ramblings of my existence can end up in the same place](#the-ramblings-of-my-existence-can-end-up-in-the-same-place)
+3. [Why I like finding other people's gists](#why-i-like-finding-other-peoples-gists)
+   1. [Someone else has probably done what I want to do before](#someone-else-has-probably-done-what-i-want-to-do-before)
+4. [I could or should put things elsewhere (not on GitHub)](#i-could-or-should-put-things-elsewhere-not-on-github)
+5. [My gists, or "the gist-list"](#my-gists-or-the-gist-list)
+
+## What are gists?
+
 [GitHub Gists] are "some text on the Internet". Usually, people put code snippets or Markdown in them, and then can share a link to anyone. It's like [Pastebin] but without (explicit) ads. Here's [an example gist] and here's [the same on Pastebin].
 
 Gists can be used for blog posts, or just to share copied text, or to host a single-branch version controlled script or code snippet. They are also often used to host data which is automatically updated from elsewhere, and can be referenced as the most up-to-date version of that data, for example by ideas like <https://jsonresume.org/>.
@@ -40,11 +52,13 @@ The second group of people is really just one person, and they are "me in the fu
 
 I make a lot of random scripts. In another world, they would end up either buried in random repositories on GitHub, or buried in random folders on my computer or laptop. They would get lost.
 
-Gists make it easy to paste a script into, and then have all these 
+Gists make it easy to paste a script somewhere, and then find it later, as they are all (I'm sure much to GitHub's enjoyment) in the same place.
 
 ## Why I like finding other people's gists
 
-More than just being able to share my own code, I like gists because other people have the same idea!
+More than just being able to share my own code, I like gists because other people have the same ideas as me!
+
+### Someone else has probably done what I want to do before
 
 If I'd like to accomplish a small scripting task, understand something self-contained, or find a code snippet for a specific task, I often search for it on the web. Unfortunately, in our Lord's year 2024, pages and pages of whatever search I make are mostly AI garbage ([here][verge-ai] is an article I have not read to pretend to verify my point). One help here is independent search engines like [Marginalia Search] or [Wiby]. While they are fun for exploring a more indie version of the web, I also find adding `"site:gist.github.com"` to my web search often results in finding exactly what I want to do.
 
@@ -67,3 +81,13 @@ For example, here is a small list of gists from my Internet history that I've fo
 - [Make an issue on GitHub using API V3 and Python](https://gist.github.com/JeffPaine/3145490)
 - [how to print Avery labels with only a .csv and a web browser](https://gist.github.com/kgodard/5072573)
 - [how to make a Google Form → GitHub issue Google Apps Script](https://gist.github.com/bmcbride/62600e48274961819084)
+
+## I could or should put things elsewhere (not on GitHub)
+
+The existence of GitHub in the above has mainly been a sidenote. The main thing that excites me about gists is the collaborative nature of them. This is not something that GitHub must have control over, and indeed something that they probably *shouldn't* have control over.
+
+I've been reading recently a lot about self- or community-hosted alternatives to different things like Git servers (like [sourcehut](https://sourcehut.org/)) and, I use [Mastodon](https://joinmastodon.org/) (talking of self-hosting, I'd like to find an instance that's not [mastodon.social](https://mastodon.social/)) a lot.
+
+I could put my snippets on my website, or something more free. But, I haven't.
+
+## My gists, or "the gist-list"
