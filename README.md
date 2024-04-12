@@ -11,7 +11,7 @@ Markdown parsing is done client side using [zero-md](https://github.com/zerodevx
     ...
   <script
     type="module"
-    src="https://cdn.jsdelivr.net/gh/zerodevx/zero-md@2/dist/zero-md.min.js"
+    src="../zero-md.js"
   ></script>
   ...
 </head>
@@ -21,20 +21,6 @@ Markdown parsing is done client side using [zero-md](https://github.com/zerodevx
   ...
 </body>
 ```
-
-## Comments
-
-[giscus](https://giscus.app) is used for comments.
-
-![Screenshot of comment form](images/giscus.png)
-
-## Email Subscription
-
-<https://www.tinyletter.com/> is used for email subscriptions.
-
-Newsletter: <https://tinyletter.com/alifeee>
-
-App: <https://app.tinyletter.com/>
 
 ## RSS Feed
 

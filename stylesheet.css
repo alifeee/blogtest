@@ -67,6 +67,11 @@ main > hr {
   margin: 2rem 2rem;
 }
 
+#comments {
+  text-align: center;
+  margin-bottom: 5rem;
+}
+
 footer {
   text-align: center;
   font-size: 0.8em;

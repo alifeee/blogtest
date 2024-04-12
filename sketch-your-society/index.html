@@ -41,10 +41,7 @@
       href="https://fonts.googleapis.com/css?family=Josefin+Sans|Roboto"
     />
     <!-- zero-md: https://github.com/zerodevx/zero-md -->
-    <script
-      type="module"
-      src="https://cdn.jsdelivr.net/gh/zerodevx/zero-md@2/dist/zero-md.min.js"
-    ></script>
+    <script type="module" src="../zero-md.js"></script>
     <!-- alpinejs -->
     <script src="//unpkg.com/alpinejs" defer></script>
     <!-- htmx -->
@@ -95,26 +92,26 @@
       <hr />
 
       <section id="comments">
-        <script
-          src="https://giscus.app/client.js"
-          data-repo="alifeee/blog"
-          data-repo-id="R_kgDOJaqeLQ"
-          data-category="comments"
-          data-category-id="DIC_kwDOJaqeLc4CZQST"
-          data-mapping="og:title"
-          data-strict="1"
-          data-reactions-enabled="1"
-          data-emit-metadata="0"
-          data-input-position="top"
-          data-theme="light"
-          data-lang="en"
-          crossorigin="anonymous"
-          async
-        ></script>
+        <h2>Comments</h2>
+        <p>
+          Email me →
+          <a href="mailto:alifeee.web@outlook.com">alifeee.web@outlook.com</a>
+          :)
+        </p>
+        <p>
+          Message me on any social media →
+          <a href="https://linktr.ee/alifeee">https://linktr.ee/alifeee</a> :)
+        </p>
       </section>
 
       <section id="similar">
-        <h1>Similar posts</h1>
+        <h1>
+          Similar posts
+          <a
+            href="https://github.com/alifeee/blog?tab=readme-ov-file#similar-posts"
+            >(?)</a
+          >
+        </h1>
         <div hx-get="./similar.html" hx-trigger="load" hx-swap="afterend"></div>
       </section>
     </main>
