@@ -9,6 +9,38 @@
    1. [Someone else has probably done what I want to do before](#someone-else-has-probably-done-what-i-want-to-do-before)
 4. [I could or should put things elsewhere (not on GitHub)](#i-could-or-should-put-things-elsewhere-not-on-github)
 5. [My gists, or "the gist-list"](#my-gists-or-the-gist-list)
+   1. [**BLOG POSTS**](#blog-posts)
+      1. [how to start blogging](#how-to-start-blogging)
+      2. [a hat blog](#a-hat-blog)
+   2. [**JUST DATA**](#just-data)
+      1. [**DATA I MANUALLY MADE**](#data-i-manually-made)
+         1. [my spotify wrapped 2023](#my-spotify-wrapped-2023)
+         2. [a toki pona word list](#a-toki-pona-word-list)
+         3. [my vscode extension list](#my-vscode-extension-list)
+      2. [**DATA THAT'S AUTOMATICALLY UPDATED**](#data-thats-automatically-updated)
+         1. [my web bookmarks](#my-web-bookmarks)
+         2. [my json resume](#my-json-resume)
+   3. [**HOW-TOS**](#how-tos)
+      1. [**THINGS I WANTED TO DO MULTIPLE TIMES**](#things-i-wanted-to-do-multiple-times)
+         1. [how to generate and host a Factorio map](#how-to-generate-and-host-a-factorio-map)
+         2. [how to download data from Toggl's api](#how-to-download-data-from-toggls-api)
+         3. [reusable ffmpeg commands](#reusable-ffmpeg-commands)
+         4. [how to make bar charts in bash](#how-to-make-bar-charts-in-bash)
+         5. [how to make graphs in bash](#how-to-make-graphs-in-bash)
+      2. [**THINGS THAT OTHER PEOPLE COULD WANT TO DO**](#things-that-other-people-could-want-to-do)
+         1. [a script to remove all styles from an html file](#a-script-to-remove-all-styles-from-an-html-file)
+         2. [common RSS extensions](#common-rss-extensions)
+         3. [a script to combine Squarespace RSS feeeds](#a-script-to-combine-squarespace-rss-feeeds)
+         4. [a script to convert font files to css styles](#a-script-to-convert-font-files-to-css-styles)
+         5. [a script to convert gpl files to css styles](#a-script-to-convert-gpl-files-to-css-styles)
+      3. [**HOW TO SET UP THINGS ON A LINUX SERVER**](#how-to-set-up-things-on-a-linux-server)
+         1. [how to set up rsa encryption keys](#how-to-set-up-rsa-encryption-keys)
+         2. [how to set up nginx](#how-to-set-up-nginx)
+         3. [how to transfer folders over scp](#how-to-transfer-folders-over-scp)
+         4. [how to run a program as a service with systemd](#how-to-run-a-program-as-a-service-with-systemd)
+         5. [how to set up a mumble server](#how-to-set-up-a-mumble-server)
+         6. [how to install ruby and jekyll on linux](#how-to-install-ruby-and-jekyll-on-linux)
+         7. [how to set up ftp on linux](#how-to-set-up-ftp-on-linux)
 
 ## What are gists?
 
@@ -91,3 +123,141 @@ I've been reading recently a lot about self- or community-hosted alternatives to
 I could put my snippets on my website, or something more free. But, I haven't.
 
 ## My gists, or "the gist-list"
+
+The list is long. I keep comments brief. I have categorised them as to my whims.
+
+### **BLOG POSTS**
+
+#### [how to start blogging]
+
+```md
+# How to start blogging
+
+You might not think you should blog. I think you should.
+
+I like your thoughts! I want to be able to read them!
+
+Here are some other reasons: 
+
+- [todepond's thoughts](https://www.todepond.com/wikiblogarden/art/blog/)
+- [Max Böck's thoughts](https://mxb.dev/blog/seven-reasons-why-i-dont-write/)
+
+At its simplest, a blog is "text on the Internet". With this in mind, my immediate reccomendation is [bear.blog](#using-bearblog), as it is super simple to set up, and you have text on the Internet, with no ads, and no nonsense.
+
+Otherwise, here are some ways I know to share text on the Internet (listed in vague order of effort involved to set up/technical knowledge required to be learned).
+
+## create text on the internet and link to it from elsewhere
+
+for example on <https://gist.github.com>
+
+...
+```
+
+<figcaption>
+
+I created this for one person who asked me "how do I start a blog". Since I made it a gist, I have shared it with many people.
+
+</figcaption>
+
+#### [a hat blog]
+
+```md
+I love hats
+
+...
+```
+
+<figcaption>
+
+This is a blog about hats.
+
+</figcaption>
+
+### **JUST DATA**
+
+#### **DATA I MANUALLY MADE**
+
+##### [my spotify wrapped 2023]
+
+##### [a toki pona word list]
+
+##### [my vscode extension list]
+
+#### **DATA THAT'S AUTOMATICALLY UPDATED**
+
+##### [my web bookmarks]
+
+##### [my json resume]
+
+### **HOW-TOS**
+
+#### **THINGS I WANTED TO DO MULTIPLE TIMES**
+
+##### [how to generate and host a Factorio map]
+
+##### [how to download data from Toggl's api]
+
+##### [reusable ffmpeg commands]
+
+##### [how to make bar charts in bash]
+
+##### [how to make graphs in bash]
+
+#### **THINGS THAT OTHER PEOPLE COULD WANT TO DO**
+
+##### [a script to remove all styles from an html file]
+
+##### [common RSS extensions]
+
+##### [a script to combine Squarespace RSS feeeds]
+
+##### [a script to convert font files to css styles]
+
+##### [a script to convert gpl files to css styles]
+
+#### **HOW TO SET UP THINGS ON A LINUX SERVER**
+
+##### [how to set up rsa encryption keys]
+
+##### [how to set up nginx]
+
+##### [how to transfer folders over scp]
+
+##### [how to run a program as a service with systemd]
+
+
+##### [how to set up a mumble server]
+
+##### [how to install ruby and jekyll on linux]
+
+##### [how to set up ftp on linux]
+
+[how to start blogging]: https://gist.github.com/alifeee/c857bfb45bfd260a9b9dd9c45e4f7478
+[a hat blog]: https://gist.github.com/alifeee/48f83a302205772e1a911ac889ae6212
+
+[my spotify wrapped 2023]: https://gist.github.com/alifeee/075086b13fe5cec4c86d0f051973a960
+[a toki pona word list]: https://gist.github.com/alifeee/7afeac3587624d66d7b370fe23882252
+[my vscode extension list]: https://gist.github.com/alifeee/d46f1f41189b13bb44c2c32f84f69edc
+
+[my web bookmarks]: https://gist.github.com/alifeee/5d84396d0404a879bb41329ec5afa9d3
+[my json resume]: https://gist.github.com/alifeee/97f9ac1642b1c46cf66942c3f079a42f
+
+[how to generate and host a Factorio map]: https://gist.github.com/alifeee/fb16acc9b4cc8b6d52e4f3226cc10197
+[how to download data from Toggl's api]: https://gist.github.com/alifeee/5ccfdff391f1bfc894f6e21beb78996d
+[reusable ffmpeg commands]: https://gist.github.com/alifeee/9e968dbf9f380ab4b15cda8d05d2a89e
+[how to make bar charts in bash]: https://gist.github.com/alifeee/a6f14aad9caed6b8a861df0e2850aa10
+[how to make graphs in bash]: https://gist.github.com/alifeee/2e1ea8ad5290a553316e715f658f1fd7
+
+[a script to remove all styles from an html file]: https://gist.github.com/alifeee/75df204c2be3815806e1d4be47e54d08
+[common RSS extensions]: https://gist.github.com/alifeee/8342d9677c436e2353233f68f34cfe19
+[a script to combine Squarespace RSS feeeds]: https://gist.github.com/alifeee/2eb9ac2296a698dc8a05d4ed531d8d36
+[a script to convert font files to css styles]: https://gist.github.com/alifeee/8607c787a0c60684827b5f07bbb95a5d
+[a script to convert gpl files to css styles]: https://gist.github.com/alifeee/586b92e21f912dde7f74cd498b7cbb56
+
+[how to set up rsa encryption keys]: https://gist.github.com/alifeee/2f4be232f6b9c4b384f4c020a5bc10a1
+[how to set up nginx]: https://gist.github.com/alifeee/92defe5a02a2e1dd17cb517135e80ffe
+[how to transfer folders over scp]: https://gist.github.com/alifeee/4a6cead6cd3e79a6620100ea00de5e42
+[how to run a program as a service with systemd]: https://gist.github.com/alifeee/606ffd2cefaceeeff92a037e797e5458
+[how to set up a mumble server]: https://gist.github.com/alifeee/2b8831d503438ff147fb8df6c01858c4
+[how to install ruby and jekyll on linux]: https://gist.github.com/alifeee/829344ed02efb0952e81fc35c445df18
+[how to set up ftp on linux]: https://gist.github.com/alifeee/f11e7295659576c236869079a3105025
