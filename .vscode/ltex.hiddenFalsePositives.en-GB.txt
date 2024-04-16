@@ -50,3 +50,4 @@
 
 {"rule":"KIND_OF_A","sentence":"^\\QHowever, you can't use custom fonts, which was... kind of a killer for a font workshop.\\E$"}
 {"rule":"UPPERCASE_SENTENCE_START","sentence":"^\\Qpotrace was used to convert the bitmap images into SVG images, which were then imported into FontForge, where they could be resized and moved around to look good.\\E$"}
+{"rule":"ENGLISH_WORD_REPEAT_BEGINNING_RULE","sentence":"^\\QI put the command and generated list into a gist because I spent some time tinkering with \\E(?:Dummy|Ina|Jimmy-)[0-9]+\\Q to create the command, and I was proud of it.\\E$"}

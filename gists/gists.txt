@@ -9,44 +9,6 @@ types of gist
   - have I come back to it?
 - blog posts
 
-# BLOG POSTS
-
-How to blog
-Created for one person
-Shared to others
-
-Hat blog
-Example for the above
-https://gist.github.com/alifeee/48f83a302205772e1a911ac889ae6212
-
-# DATA
-
-## MANUALLY MADE
-
-Spotify Wrapped
-I just learnt TOML and I liked it, so I wanted to manually encode something into TOML for fun
-Spotify wrapped had just come out
-https://gist.github.com/alifeee/075086b13fe5cec4c86d0f051973a960
-
-VSCode extension list
-when I set this up, you could export your extensions in a nicely formatted JSON
-now you can't so this gist is pretty pointless
-https://gist.github.com/alifeee/d46f1f41189b13bb44c2c32f84f69edc
-
-toki pona words
-more fun with awk
-https://gist.github.com/alifeee/7afeac3587624d66d7b370fe23882252
-
-## AUTOMATICALLY UPDATED
-
-resume
-this is neat but I don't really use it - bespoke became better
-https://gist.github.com/alifeee/97f9ac1642b1c46cf66942c3f079a42f
-
-Web bookmarks
-Not really used. Just thought it would be nice to have "open data" version of alifeee.co.uk/bookmarks
-https://gist.github.com/alifeee/5d84396d0404a879bb41329ec5afa9d3
-
 # HOW-TO
 
 ## PROCESSES I WANTED TO REPEAT
