@@ -135,10 +135,12 @@ def main():
             print(
                 "num_tokens: ", n_tok := num_tokens_from_string(content, "cl100k_base")
             )
-            if n_tok > 8191:
-                raise ValueError(
-                    f"post {post.md_url} has {n_tok} tokens, which is too many"
+            while n_tok > 8191:
+                print(
+                    f"post {post.md_url} has {n_tok} tokens, which is too many. truncating..."
                 )
+                content = content[0:-100]
+                n_tok = num_tokens_from_string(content, "cl100k_base")
             embedding = generate_embedding(content)
             with open(cache_fname, "w", encoding="utf-8") as file:
                 file.write(str(embedding))
