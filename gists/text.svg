@@ -1,0 +1,918 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="370.39026mm"
+   height="842mm"
+   viewBox="0 0 370.39026 841.99999"
+   version="1.1"
+   id="svg5"
+   inkscape:version="1.1 (c68e22c387, 2021-05-23)"
+   sodipodi:docname="text.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview7"
+     pagecolor="#ffffff"
+     bordercolor="#999999"
+     borderopacity="1"
+     inkscape:pageshadow="0"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="0"
+     inkscape:document-units="mm"
+     showgrid="false"
+     inkscape:zoom="0.34698723"
+     inkscape:cx="783.89051"
+     inkscape:cy="2488.5642"
+     inkscape:window-width="1853"
+     inkscape:window-height="1056"
+     inkscape:window-x="59"
+     inkscape:window-y="440"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs2" />
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(21.977261,-90.172177)">
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12.7px;line-height:1.25;font-family:Consolas;-inkscape-font-specification:Consolas;text-align:start;text-anchor:start;white-space:pre;inline-size:192.342;stroke-width:0.264583"
+       x="54.113277"
+       y="79.301666"
+       id="text1882"
+       transform="translate(-76.024417,21.02803)"><tspan
+         x="54.113277"
+         y="79.301666"
+         id="tspan56486">cat &quot;$1&quot; | perl -0777pe 's|</tspan><tspan
+         x="54.113277"
+         y="95.176663"
+         id="tspan56488">&lt;link[^&gt;]*rel=&quot;stylesheet&quot;[</tspan><tspan
+         x="54.113277"
+         y="111.05166"
+         id="tspan56490">^&gt;]*/&gt;||gms' | perl -0777pe </tspan><tspan
+         x="54.113277"
+         y="126.92666"
+         id="tspan56492">'s|&lt;style&gt;.*?&lt;/style&gt;||gms' </tspan><tspan
+         x="54.113277"
+         y="142.80166"
+         id="tspan56494">| perl -0777pe 's|</tspan><tspan
+         x="54.113277"
+         y="158.67666"
+         id="tspan56496">style=&quot;[^&quot;]*&quot;||gms'</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:12.7px;line-height:1.25;font-family:sans-serif;text-align:start;text-anchor:start;white-space:pre;inline-size:169.712;stroke-width:0.264583"
+       x="151.09991"
+       y="195.99202"
+       id="text19340"
+       transform="translate(-173.07687,7.0093435)"><tspan
+         x="151.09991"
+         y="195.99202"
+         id="tspan56500"><tspan
+           style="font-family:Consolas;-inkscape-font-specification:Consolas"
+           id="tspan56498">awk -v prog=$1 -v </tspan></tspan><tspan
+         x="151.09991"
+         y="212.08406"
+         id="tspan56504"><tspan
+           style="font-family:Consolas;-inkscape-font-specification:Consolas"
+           id="tspan56502">TOTAL=$2 -v TOTSEG=$3 </tspan></tspan><tspan
+         x="151.09991"
+         y="228.1761"
+         id="tspan56508"><tspan
+           style="font-family:Consolas;-inkscape-font-specification:Consolas"
+           id="tspan56506">'BEGIN {
+</tspan></tspan><tspan
+         x="151.09991"
+         y="244.26814"
+         id="tspan56512"><tspan
+           style="font-family:Consolas;-inkscape-font-specification:Consolas"
+           id="tspan56510">    frac = prog / TOTAL;
+</tspan></tspan><tspan
+         x="151.09991"
+         y="260.36018"
+         id="tspan56516"><tspan
+           style="font-family:Consolas;-inkscape-font-specification:Consolas"
+           id="tspan56514">    segs = frac * </tspan></tspan><tspan
+         x="151.09991"
+         y="276.45222"
+         id="tspan56520"><tspan
+           style="font-family:Consolas;-inkscape-font-specification:Consolas"
+           id="tspan56518">TOTSEG;
+</tspan></tspan><tspan
+         x="151.09991"
+         y="292.54426"
+         id="tspan56524"><tspan
+           style="font-family:Consolas;-inkscape-font-specification:Consolas"
+           id="tspan56522">    segs_int = </tspan></tspan><tspan
+         x="151.09991"
+         y="308.6363"
+         id="tspan56528"><tspan
+           style="font-family:Consolas;-inkscape-font-specification:Consolas"
+           id="tspan56526">int(sprintf(&quot;%.0f&quot;, </tspan></tspan><tspan
+         x="151.09991"
+         y="324.72834"
+         id="tspan56532"><tspan
+           style="font-family:Consolas;-inkscape-font-specification:Consolas"
+           id="tspan56530">segs));
+</tspan></tspan><tspan
+         x="151.09991"
+         y="340.82039"
+         id="tspan56536"><tspan
+           style="font-family:Consolas;-inkscape-font-specification:Consolas"
+           id="tspan56534">    for (s=0; </tspan></tspan><tspan
+         x="151.09991"
+         y="356.91243"
+         id="tspan56540"><tspan
+           style="font-family:Consolas;-inkscape-font-specification:Consolas"
+           id="tspan56538">s&lt;segs_int; s++) {
+</tspan></tspan><tspan
+         x="151.09991"
+         y="373.00447"
+         id="tspan56544"><tspan
+           style="font-family:Consolas;-inkscape-font-specification:Consolas"
+           id="tspan56542">        printf &quot;%s&quot;, </tspan></tspan><tspan
+         x="151.09991"
+         y="389.09651"
+         id="tspan56548"><tspan
+           style="font-family:Consolas;-inkscape-font-specification:Consolas"
+           id="tspan56546">&quot;o&quot;;
+</tspan></tspan><tspan
+         x="151.09991"
+         y="405.18855"
+         id="tspan56552"><tspan
+           style="font-family:Consolas;-inkscape-font-specification:Consolas"
+           id="tspan56550">    }
+</tspan></tspan><tspan
+         x="151.09991"
+         y="421.28059"
+         id="tspan56556"><tspan
+           style="font-family:Consolas;-inkscape-font-specification:Consolas"
+           id="tspan56554">    for (s=0; s&lt;(TOTSEG </tspan></tspan><tspan
+         x="151.09991"
+         y="437.37263"
+         id="tspan56560"><tspan
+           style="font-family:Consolas;-inkscape-font-specification:Consolas"
+           id="tspan56558">- segs_int); s++) {
+</tspan></tspan><tspan
+         x="151.09991"
+         y="453.46467"
+         id="tspan56564"><tspan
+           style="font-family:Consolas;-inkscape-font-specification:Consolas"
+           id="tspan56562">        printf &quot;%s&quot;, </tspan></tspan><tspan
+         x="151.09991"
+         y="469.55671"
+         id="tspan56568"><tspan
+           style="font-family:Consolas;-inkscape-font-specification:Consolas"
+           id="tspan56566">&quot;-&quot;;
+</tspan></tspan><tspan
+         x="151.09991"
+         y="485.64875"
+         id="tspan56572"><tspan
+           style="font-family:Consolas;-inkscape-font-specification:Consolas"
+           id="tspan56570">    }
+</tspan></tspan><tspan
+         x="151.09991"
+         y="501.7408"
+         id="tspan56576"><tspan
+           style="font-family:Consolas;-inkscape-font-specification:Consolas"
+           id="tspan56574">}'</tspan></tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:12.7px;line-height:1.25;font-family:sans-serif;white-space:pre;inline-size:236.515;stroke-width:0.264583"
+       x="283.60883"
+       y="200.03589"
+       id="text22922"
+       transform="translate(-113.22785,-82.49458)"><tspan
+         x="283.60883"
+         y="200.03589"
+         id="tspan56582"><tspan
+           style="font-family:Consolas;-inkscape-font-specification:Consolas"
+           id="tspan56578">	</tspan><tspan
+           style="font-family:Consolas;-inkscape-font-specification:Consolas"
+           id="tspan56580">server {
+</tspan></tspan><tspan
+         x="283.60883"
+         y="216.12793"
+         id="tspan56590"><tspan
+           style="font-family:Consolas;-inkscape-font-specification:Consolas"
+           id="tspan56584">	</tspan><tspan
+           style="font-family:Consolas;-inkscape-font-specification:Consolas"
+           id="tspan56586">	</tspan><tspan
+           style="font-family:Consolas;-inkscape-font-specification:Consolas"
+           id="tspan56588">server_name </tspan></tspan><tspan
+         x="283.60883"
+         y="232.21997"
+         id="tspan56594"><tspan
+           style="font-family:Consolas;-inkscape-font-specification:Consolas"
+           id="tspan56592">server.alifeee.co.uk;
+</tspan></tspan><tspan
+         x="283.60883"
+         y="248.31201"
+         id="tspan56598"><tspan
+           style="font-family:Consolas;-inkscape-font-specification:Consolas"
+           id="tspan56596">
+</tspan></tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12.7px;line-height:1.25;font-family:Consolas;-inkscape-font-specification:Consolas;stroke-width:0.264583"
+       x="117.56318"
+       y="175.99467"
+       id="text43054"><tspan
+         sodipodi:role="line"
+         id="tspan43052"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Consolas;-inkscape-font-specification:Consolas;stroke-width:0.264583"
+         x="117.56318"
+         y="175.99467">		location / {</tspan><tspan
+         sodipodi:role="line"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Consolas;-inkscape-font-specification:Consolas;stroke-width:0.264583"
+         x="117.56318"
+         y="191.86967"
+         id="tspan43056">			root /var/www/server_homepage;</tspan><tspan
+         sodipodi:role="line"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Consolas;-inkscape-font-specification:Consolas;stroke-width:0.264583"
+         x="117.56318"
+         y="207.74467"
+         id="tspan43058">			try_files $uri $uri/ =404;</tspan><tspan
+         sodipodi:role="line"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Consolas;-inkscape-font-specification:Consolas;stroke-width:0.264583"
+         x="117.56318"
+         y="223.61967"
+         id="tspan43060">		}</tspan><tspan
+         sodipodi:role="line"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Consolas;-inkscape-font-specification:Consolas;stroke-width:0.264583"
+         x="117.56318"
+         y="239.49467"
+         id="tspan43062"></tspan><tspan
+         sodipodi:role="line"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Consolas;-inkscape-font-specification:Consolas;stroke-width:0.264583"
+         x="117.56318"
+         y="255.36967"
+         id="tspan43064"></tspan><tspan
+         sodipodi:role="line"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Consolas;-inkscape-font-specification:Consolas;stroke-width:0.264583"
+         x="117.56318"
+         y="271.24466"
+         id="tspan44560">		location /static {</tspan><tspan
+         sodipodi:role="line"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Consolas;-inkscape-font-specification:Consolas;stroke-width:0.264583"
+         x="117.56318"
+         y="287.11966"
+         id="tspan43066">			alias /var/www/static/;</tspan><tspan
+         sodipodi:role="line"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Consolas;-inkscape-font-specification:Consolas;stroke-width:0.264583"
+         x="117.56318"
+         y="302.99466"
+         id="tspan43068">			try_files $uri $uri/ =404;</tspan><tspan
+         sodipodi:role="line"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Consolas;-inkscape-font-specification:Consolas;stroke-width:0.264583"
+         x="117.56318"
+         y="318.86966"
+         id="tspan43070">		}</tspan><tspan
+         sodipodi:role="line"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Consolas;-inkscape-font-specification:Consolas;stroke-width:0.264583"
+         x="117.56318"
+         y="334.74466"
+         id="tspan43072"></tspan><tspan
+         sodipodi:role="line"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Consolas;-inkscape-font-specification:Consolas;stroke-width:0.264583"
+         x="117.56318"
+         y="350.61966"
+         id="tspan43074">		location /factorio {</tspan><tspan
+         sodipodi:role="line"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Consolas;-inkscape-font-specification:Consolas;stroke-width:0.264583"
+         x="117.56318"
+         y="366.49466"
+         id="tspan43076">			alias /var/www/factorio_map/;</tspan><tspan
+         sodipodi:role="line"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Consolas;-inkscape-font-specification:Consolas;stroke-width:0.264583"
+         x="117.56318"
+         y="382.36966"
+         id="tspan43078">			try_files $uri $uri/ =404;</tspan><tspan
+         sodipodi:role="line"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Consolas;-inkscape-font-specification:Consolas;stroke-width:0.264583"
+         x="117.56318"
+         y="398.24466"
+         id="tspan43080">		}</tspan><tspan
+         sodipodi:role="line"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Consolas;-inkscape-font-specification:Consolas;stroke-width:0.264583"
+         x="117.56318"
+         y="414.11966"
+         id="tspan43082"></tspan><tspan
+         sodipodi:role="line"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Consolas;-inkscape-font-specification:Consolas;stroke-width:0.264583"
+         x="117.56318"
+         y="429.99466"
+         id="tspan43084"></tspan><tspan
+         sodipodi:role="line"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Consolas;-inkscape-font-specification:Consolas;stroke-width:0.264583"
+         x="117.56318"
+         y="445.86966"
+         id="tspan44562">		location /bothies {</tspan><tspan
+         sodipodi:role="line"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Consolas;-inkscape-font-specification:Consolas;stroke-width:0.264583"
+         x="117.56318"
+         y="461.74466"
+         id="tspan43086">			alias /var/www/bothies/;</tspan><tspan
+         sodipodi:role="line"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Consolas;-inkscape-font-specification:Consolas;stroke-width:0.264583"
+         x="117.56318"
+         y="477.61966"
+         id="tspan43088">			try_files $uri $uri/ =404;</tspan><tspan
+         sodipodi:role="line"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Consolas;-inkscape-font-specification:Consolas;stroke-width:0.264583"
+         x="117.56318"
+         y="493.49466"
+         id="tspan43090">		}</tspan></text>
+    <g
+       id="g55200"
+       transform="translate(-123.5276,11.283383)">
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12.7px;line-height:1.25;font-family:Consolas;-inkscape-font-specification:Consolas;text-align:start;text-anchor:start;white-space:pre;inline-size:192.342;stroke-width:0.264583"
+         x="54.113277"
+         y="79.301666"
+         id="text1882-3"
+         transform="translate(-63.839656,441.83109)"><tspan
+           x="54.113277"
+           y="79.301666"
+           id="tspan56600">cat &quot;$1&quot; | perl -0777pe 's|</tspan><tspan
+           x="54.113277"
+           y="95.176663"
+           id="tspan56602">&lt;link[^&gt;]*rel=&quot;stylesheet&quot;[</tspan><tspan
+           x="54.113277"
+           y="111.05166"
+           id="tspan56604">^&gt;]*/&gt;||gms' | perl -0777pe </tspan><tspan
+           x="54.113277"
+           y="126.92666"
+           id="tspan56606">'s|&lt;style&gt;.*?&lt;/style&gt;||gms' </tspan><tspan
+           x="54.113277"
+           y="142.80166"
+           id="tspan56608">| perl -0777pe 's|</tspan><tspan
+           x="54.113277"
+           y="158.67666"
+           id="tspan56610">style=&quot;[^&quot;]*&quot;||gms'</tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-size:12.7px;line-height:1.25;font-family:sans-serif;text-align:start;text-anchor:start;white-space:pre;inline-size:169.712;stroke-width:0.264583"
+         x="151.09991"
+         y="195.99202"
+         id="text19340-4"
+         transform="translate(-160.89211,427.8124)"><tspan
+           x="151.09991"
+           y="195.99202"
+           id="tspan56614"><tspan
+             style="font-family:Consolas;-inkscape-font-specification:Consolas"
+             id="tspan56612">awk -v prog=$1 -v </tspan></tspan><tspan
+           x="151.09991"
+           y="212.08406"
+           id="tspan56618"><tspan
+             style="font-family:Consolas;-inkscape-font-specification:Consolas"
+             id="tspan56616">TOTAL=$2 -v TOTSEG=$3 </tspan></tspan><tspan
+           x="151.09991"
+           y="228.1761"
+           id="tspan56622"><tspan
+             style="font-family:Consolas;-inkscape-font-specification:Consolas"
+             id="tspan56620">'BEGIN {
+</tspan></tspan><tspan
+           x="151.09991"
+           y="244.26814"
+           id="tspan56626"><tspan
+             style="font-family:Consolas;-inkscape-font-specification:Consolas"
+             id="tspan56624">    frac = prog / TOTAL;
+</tspan></tspan><tspan
+           x="151.09991"
+           y="260.36018"
+           id="tspan56630"><tspan
+             style="font-family:Consolas;-inkscape-font-specification:Consolas"
+             id="tspan56628">    segs = frac * </tspan></tspan><tspan
+           x="151.09991"
+           y="276.45222"
+           id="tspan56634"><tspan
+             style="font-family:Consolas;-inkscape-font-specification:Consolas"
+             id="tspan56632">TOTSEG;
+</tspan></tspan><tspan
+           x="151.09991"
+           y="292.54426"
+           id="tspan56638"><tspan
+             style="font-family:Consolas;-inkscape-font-specification:Consolas"
+             id="tspan56636">    segs_int = </tspan></tspan><tspan
+           x="151.09991"
+           y="308.6363"
+           id="tspan56642"><tspan
+             style="font-family:Consolas;-inkscape-font-specification:Consolas"
+             id="tspan56640">int(sprintf(&quot;%.0f&quot;, </tspan></tspan><tspan
+           x="151.09991"
+           y="324.72834"
+           id="tspan56646"><tspan
+             style="font-family:Consolas;-inkscape-font-specification:Consolas"
+             id="tspan56644">segs));
+</tspan></tspan><tspan
+           x="151.09991"
+           y="340.82039"
+           id="tspan56650"><tspan
+             style="font-family:Consolas;-inkscape-font-specification:Consolas"
+             id="tspan56648">    for (s=0; </tspan></tspan><tspan
+           x="151.09991"
+           y="356.91243"
+           id="tspan56654"><tspan
+             style="font-family:Consolas;-inkscape-font-specification:Consolas"
+             id="tspan56652">s&lt;segs_int; s++) {
+</tspan></tspan><tspan
+           x="151.09991"
+           y="373.00447"
+           id="tspan56658"><tspan
+             style="font-family:Consolas;-inkscape-font-specification:Consolas"
+             id="tspan56656">        printf &quot;%s&quot;, </tspan></tspan><tspan
+           x="151.09991"
+           y="389.09651"
+           id="tspan56662"><tspan
+             style="font-family:Consolas;-inkscape-font-specification:Consolas"
+             id="tspan56660">&quot;o&quot;;
+</tspan></tspan><tspan
+           x="151.09991"
+           y="405.18855"
+           id="tspan56666"><tspan
+             style="font-family:Consolas;-inkscape-font-specification:Consolas"
+             id="tspan56664">    }
+</tspan></tspan><tspan
+           x="151.09991"
+           y="421.28059"
+           id="tspan56670"><tspan
+             style="font-family:Consolas;-inkscape-font-specification:Consolas"
+             id="tspan56668">    for (s=0; s&lt;(TOTSEG </tspan></tspan><tspan
+           x="151.09991"
+           y="437.37263"
+           id="tspan56674"><tspan
+             style="font-family:Consolas;-inkscape-font-specification:Consolas"
+             id="tspan56672">- segs_int); s++) {
+</tspan></tspan><tspan
+           x="151.09991"
+           y="453.46467"
+           id="tspan56678"><tspan
+             style="font-family:Consolas;-inkscape-font-specification:Consolas"
+             id="tspan56676">        printf &quot;%s&quot;, </tspan></tspan><tspan
+           x="151.09991"
+           y="469.55671"
+           id="tspan56682"><tspan
+             style="font-family:Consolas;-inkscape-font-specification:Consolas"
+             id="tspan56680">&quot;-&quot;;
+</tspan></tspan><tspan
+           x="151.09991"
+           y="485.64875"
+           id="tspan56686"><tspan
+             style="font-family:Consolas;-inkscape-font-specification:Consolas"
+             id="tspan56684">    }
+</tspan></tspan><tspan
+           x="151.09991"
+           y="501.7408"
+           id="tspan56690"><tspan
+             style="font-family:Consolas;-inkscape-font-specification:Consolas"
+             id="tspan56688">}'</tspan></tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-size:12.7px;line-height:1.25;font-family:sans-serif;white-space:pre;inline-size:236.515;stroke-width:0.264583"
+         x="283.60883"
+         y="200.03589"
+         id="text22922-5"
+         transform="translate(-101.04309,338.30848)"><tspan
+           x="283.60883"
+           y="200.03589"
+           id="tspan56696"><tspan
+             style="font-family:Consolas;-inkscape-font-specification:Consolas"
+             id="tspan56692">	</tspan><tspan
+             style="font-family:Consolas;-inkscape-font-specification:Consolas"
+             id="tspan56694">server {
+</tspan></tspan><tspan
+           x="283.60883"
+           y="216.12793"
+           id="tspan56704"><tspan
+             style="font-family:Consolas;-inkscape-font-specification:Consolas"
+             id="tspan56698">	</tspan><tspan
+             style="font-family:Consolas;-inkscape-font-specification:Consolas"
+             id="tspan56700">	</tspan><tspan
+             style="font-family:Consolas;-inkscape-font-specification:Consolas"
+             id="tspan56702">server_name </tspan></tspan><tspan
+           x="283.60883"
+           y="232.21997"
+           id="tspan56708"><tspan
+             style="font-family:Consolas;-inkscape-font-specification:Consolas"
+             id="tspan56706">server.alifeee.co.uk;
+</tspan></tspan><tspan
+           x="283.60883"
+           y="248.31201"
+           id="tspan56712"><tspan
+             style="font-family:Consolas;-inkscape-font-specification:Consolas"
+             id="tspan56710">
+</tspan></tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12.7px;line-height:1.25;font-family:Consolas;-inkscape-font-specification:Consolas;stroke-width:0.264583"
+         x="129.74794"
+         y="596.79773"
+         id="text43054-4"><tspan
+           sodipodi:role="line"
+           id="tspan43052-2"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Consolas;-inkscape-font-specification:Consolas;stroke-width:0.264583"
+           x="129.74794"
+           y="596.79773">		location / {</tspan><tspan
+           sodipodi:role="line"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Consolas;-inkscape-font-specification:Consolas;stroke-width:0.264583"
+           x="129.74794"
+           y="612.67273"
+           id="tspan43056-1">			root /var/www/server_homepage;</tspan><tspan
+           sodipodi:role="line"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Consolas;-inkscape-font-specification:Consolas;stroke-width:0.264583"
+           x="129.74794"
+           y="628.54773"
+           id="tspan43058-2">			try_files $uri $uri/ =404;</tspan><tspan
+           sodipodi:role="line"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Consolas;-inkscape-font-specification:Consolas;stroke-width:0.264583"
+           x="129.74794"
+           y="644.42273"
+           id="tspan43060-5">		}</tspan><tspan
+           sodipodi:role="line"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Consolas;-inkscape-font-specification:Consolas;stroke-width:0.264583"
+           x="129.74794"
+           y="660.29773"
+           id="tspan43062-8" /><tspan
+           sodipodi:role="line"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Consolas;-inkscape-font-specification:Consolas;stroke-width:0.264583"
+           x="129.74794"
+           y="676.17273"
+           id="tspan43064-0" /><tspan
+           sodipodi:role="line"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Consolas;-inkscape-font-specification:Consolas;stroke-width:0.264583"
+           x="129.74794"
+           y="692.04773"
+           id="tspan44560-7">		location /static {</tspan><tspan
+           sodipodi:role="line"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Consolas;-inkscape-font-specification:Consolas;stroke-width:0.264583"
+           x="129.74794"
+           y="707.92273"
+           id="tspan43066-4">			alias /var/www/static/;</tspan><tspan
+           sodipodi:role="line"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Consolas;-inkscape-font-specification:Consolas;stroke-width:0.264583"
+           x="129.74794"
+           y="723.79773"
+           id="tspan43068-7">			try_files $uri $uri/ =404;</tspan><tspan
+           sodipodi:role="line"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Consolas;-inkscape-font-specification:Consolas;stroke-width:0.264583"
+           x="129.74794"
+           y="739.67273"
+           id="tspan43070-2">		}</tspan><tspan
+           sodipodi:role="line"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Consolas;-inkscape-font-specification:Consolas;stroke-width:0.264583"
+           x="129.74794"
+           y="755.54773"
+           id="tspan43072-3" /><tspan
+           sodipodi:role="line"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Consolas;-inkscape-font-specification:Consolas;stroke-width:0.264583"
+           x="129.74794"
+           y="771.42273"
+           id="tspan43074-1">		location /factorio {</tspan><tspan
+           sodipodi:role="line"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Consolas;-inkscape-font-specification:Consolas;stroke-width:0.264583"
+           x="129.74794"
+           y="787.29773"
+           id="tspan43076-5">			alias /var/www/factorio_map/;</tspan><tspan
+           sodipodi:role="line"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Consolas;-inkscape-font-specification:Consolas;stroke-width:0.264583"
+           x="129.74794"
+           y="803.17273"
+           id="tspan43078-6">			try_files $uri $uri/ =404;</tspan><tspan
+           sodipodi:role="line"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Consolas;-inkscape-font-specification:Consolas;stroke-width:0.264583"
+           x="129.74794"
+           y="819.04773"
+           id="tspan43080-9">		}</tspan><tspan
+           sodipodi:role="line"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Consolas;-inkscape-font-specification:Consolas;stroke-width:0.264583"
+           x="129.74794"
+           y="834.92273"
+           id="tspan43082-7" /><tspan
+           sodipodi:role="line"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Consolas;-inkscape-font-specification:Consolas;stroke-width:0.264583"
+           x="129.74794"
+           y="850.79773"
+           id="tspan43084-3" /><tspan
+           sodipodi:role="line"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Consolas;-inkscape-font-specification:Consolas;stroke-width:0.264583"
+           x="129.74794"
+           y="866.67273"
+           id="tspan44562-7">		location /bothies {</tspan><tspan
+           sodipodi:role="line"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Consolas;-inkscape-font-specification:Consolas;stroke-width:0.264583"
+           x="129.74794"
+           y="882.54773"
+           id="tspan43086-3">			alias /var/www/bothies/;</tspan><tspan
+           sodipodi:role="line"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Consolas;-inkscape-font-specification:Consolas;stroke-width:0.264583"
+           x="129.74794"
+           y="898.42273"
+           id="tspan43088-1">			try_files $uri $uri/ =404;</tspan><tspan
+           sodipodi:role="line"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Consolas;-inkscape-font-specification:Consolas;stroke-width:0.264583"
+           x="129.74794"
+           y="914.29773"
+           id="tspan43090-8">		}</tspan></text>
+    </g>
+    <g
+       id="g55200-5"
+       transform="translate(252.39281,13.570938)">
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12.7px;line-height:1.25;font-family:Consolas;-inkscape-font-specification:Consolas;text-align:start;text-anchor:start;white-space:pre;inline-size:192.342;stroke-width:0.264583"
+         x="54.113277"
+         y="79.301666"
+         id="text1882-3-1"
+         transform="translate(-63.839656,441.83109)"><tspan
+           x="54.113277"
+           y="79.301666"
+           id="tspan56714">cat &quot;$1&quot; | perl -0777pe 's|</tspan><tspan
+           x="54.113277"
+           y="95.176663"
+           id="tspan56716">&lt;link[^&gt;]*rel=&quot;stylesheet&quot;[</tspan><tspan
+           x="54.113277"
+           y="111.05166"
+           id="tspan56718">^&gt;]*/&gt;||gms' | perl -0777pe </tspan><tspan
+           x="54.113277"
+           y="126.92666"
+           id="tspan56720">'s|&lt;style&gt;.*?&lt;/style&gt;||gms' </tspan><tspan
+           x="54.113277"
+           y="142.80166"
+           id="tspan56722">| perl -0777pe 's|</tspan><tspan
+           x="54.113277"
+           y="158.67666"
+           id="tspan56724">style=&quot;[^&quot;]*&quot;||gms'</tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-size:12.7px;line-height:1.25;font-family:sans-serif;text-align:start;text-anchor:start;white-space:pre;inline-size:169.712;stroke-width:0.264583"
+         x="151.09991"
+         y="195.99202"
+         id="text19340-4-8"
+         transform="translate(-160.89211,427.8124)"><tspan
+           x="151.09991"
+           y="195.99202"
+           id="tspan56728"><tspan
+             style="font-family:Consolas;-inkscape-font-specification:Consolas"
+             id="tspan56726">awk -v prog=$1 -v </tspan></tspan><tspan
+           x="151.09991"
+           y="212.08406"
+           id="tspan56732"><tspan
+             style="font-family:Consolas;-inkscape-font-specification:Consolas"
+             id="tspan56730">TOTAL=$2 -v TOTSEG=$3 </tspan></tspan><tspan
+           x="151.09991"
+           y="228.1761"
+           id="tspan56736"><tspan
+             style="font-family:Consolas;-inkscape-font-specification:Consolas"
+             id="tspan56734">'BEGIN {
+</tspan></tspan><tspan
+           x="151.09991"
+           y="244.26814"
+           id="tspan56740"><tspan
+             style="font-family:Consolas;-inkscape-font-specification:Consolas"
+             id="tspan56738">    frac = prog / TOTAL;
+</tspan></tspan><tspan
+           x="151.09991"
+           y="260.36018"
+           id="tspan56744"><tspan
+             style="font-family:Consolas;-inkscape-font-specification:Consolas"
+             id="tspan56742">    segs = frac * </tspan></tspan><tspan
+           x="151.09991"
+           y="276.45222"
+           id="tspan56748"><tspan
+             style="font-family:Consolas;-inkscape-font-specification:Consolas"
+             id="tspan56746">TOTSEG;
+</tspan></tspan><tspan
+           x="151.09991"
+           y="292.54426"
+           id="tspan56752"><tspan
+             style="font-family:Consolas;-inkscape-font-specification:Consolas"
+             id="tspan56750">    segs_int = </tspan></tspan><tspan
+           x="151.09991"
+           y="308.6363"
+           id="tspan56756"><tspan
+             style="font-family:Consolas;-inkscape-font-specification:Consolas"
+             id="tspan56754">int(sprintf(&quot;%.0f&quot;, </tspan></tspan><tspan
+           x="151.09991"
+           y="324.72834"
+           id="tspan56760"><tspan
+             style="font-family:Consolas;-inkscape-font-specification:Consolas"
+             id="tspan56758">segs));
+</tspan></tspan><tspan
+           x="151.09991"
+           y="340.82039"
+           id="tspan56764"><tspan
+             style="font-family:Consolas;-inkscape-font-specification:Consolas"
+             id="tspan56762">    for (s=0; </tspan></tspan><tspan
+           x="151.09991"
+           y="356.91243"
+           id="tspan56768"><tspan
+             style="font-family:Consolas;-inkscape-font-specification:Consolas"
+             id="tspan56766">s&lt;segs_int; s++) {
+</tspan></tspan><tspan
+           x="151.09991"
+           y="373.00447"
+           id="tspan56772"><tspan
+             style="font-family:Consolas;-inkscape-font-specification:Consolas"
+             id="tspan56770">        printf &quot;%s&quot;, </tspan></tspan><tspan
+           x="151.09991"
+           y="389.09651"
+           id="tspan56776"><tspan
+             style="font-family:Consolas;-inkscape-font-specification:Consolas"
+             id="tspan56774">&quot;o&quot;;
+</tspan></tspan><tspan
+           x="151.09991"
+           y="405.18855"
+           id="tspan56780"><tspan
+             style="font-family:Consolas;-inkscape-font-specification:Consolas"
+             id="tspan56778">    }
+</tspan></tspan><tspan
+           x="151.09991"
+           y="421.28059"
+           id="tspan56784"><tspan
+             style="font-family:Consolas;-inkscape-font-specification:Consolas"
+             id="tspan56782">    for (s=0; s&lt;(TOTSEG </tspan></tspan><tspan
+           x="151.09991"
+           y="437.37263"
+           id="tspan56788"><tspan
+             style="font-family:Consolas;-inkscape-font-specification:Consolas"
+             id="tspan56786">- segs_int); s++) {
+</tspan></tspan><tspan
+           x="151.09991"
+           y="453.46467"
+           id="tspan56792"><tspan
+             style="font-family:Consolas;-inkscape-font-specification:Consolas"
+             id="tspan56790">        printf &quot;%s&quot;, </tspan></tspan><tspan
+           x="151.09991"
+           y="469.55671"
+           id="tspan56796"><tspan
+             style="font-family:Consolas;-inkscape-font-specification:Consolas"
+             id="tspan56794">&quot;-&quot;;
+</tspan></tspan><tspan
+           x="151.09991"
+           y="485.64875"
+           id="tspan56800"><tspan
+             style="font-family:Consolas;-inkscape-font-specification:Consolas"
+             id="tspan56798">    }
+</tspan></tspan><tspan
+           x="151.09991"
+           y="501.7408"
+           id="tspan56804"><tspan
+             style="font-family:Consolas;-inkscape-font-specification:Consolas"
+             id="tspan56802">}'</tspan></tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-size:12.7px;line-height:1.25;font-family:sans-serif;white-space:pre;inline-size:236.515;stroke-width:0.264583"
+         x="283.60883"
+         y="200.03589"
+         id="text22922-5-9"
+         transform="translate(-101.04309,338.30848)"><tspan
+           x="283.60883"
+           y="200.03589"
+           id="tspan56810"><tspan
+             style="font-family:Consolas;-inkscape-font-specification:Consolas"
+             id="tspan56806">	</tspan><tspan
+             style="font-family:Consolas;-inkscape-font-specification:Consolas"
+             id="tspan56808">server {
+</tspan></tspan><tspan
+           x="283.60883"
+           y="216.12793"
+           id="tspan56818"><tspan
+             style="font-family:Consolas;-inkscape-font-specification:Consolas"
+             id="tspan56812">	</tspan><tspan
+             style="font-family:Consolas;-inkscape-font-specification:Consolas"
+             id="tspan56814">	</tspan><tspan
+             style="font-family:Consolas;-inkscape-font-specification:Consolas"
+             id="tspan56816">server_name </tspan></tspan><tspan
+           x="283.60883"
+           y="232.21997"
+           id="tspan56822"><tspan
+             style="font-family:Consolas;-inkscape-font-specification:Consolas"
+             id="tspan56820">server.alifeee.co.uk;
+</tspan></tspan><tspan
+           x="283.60883"
+           y="248.31201"
+           id="tspan56826"><tspan
+             style="font-family:Consolas;-inkscape-font-specification:Consolas"
+             id="tspan56824">
+</tspan></tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12.7px;line-height:1.25;font-family:Consolas;-inkscape-font-specification:Consolas;stroke-width:0.264583"
+         x="129.74794"
+         y="596.79773"
+         id="text43054-4-4"><tspan
+           sodipodi:role="line"
+           id="tspan43052-2-3"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Consolas;-inkscape-font-specification:Consolas;stroke-width:0.264583"
+           x="129.74794"
+           y="596.79773">		location / {</tspan><tspan
+           sodipodi:role="line"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Consolas;-inkscape-font-specification:Consolas;stroke-width:0.264583"
+           x="129.74794"
+           y="612.67273"
+           id="tspan43056-1-1">			root /var/www/server_homepage;</tspan><tspan
+           sodipodi:role="line"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Consolas;-inkscape-font-specification:Consolas;stroke-width:0.264583"
+           x="129.74794"
+           y="628.54773"
+           id="tspan43058-2-2">			try_files $uri $uri/ =404;</tspan><tspan
+           sodipodi:role="line"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Consolas;-inkscape-font-specification:Consolas;stroke-width:0.264583"
+           x="129.74794"
+           y="644.42273"
+           id="tspan43060-5-0">		}</tspan><tspan
+           sodipodi:role="line"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Consolas;-inkscape-font-specification:Consolas;stroke-width:0.264583"
+           x="129.74794"
+           y="660.29773"
+           id="tspan43062-8-8" /><tspan
+           sodipodi:role="line"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Consolas;-inkscape-font-specification:Consolas;stroke-width:0.264583"
+           x="129.74794"
+           y="676.17273"
+           id="tspan43064-0-3" /><tspan
+           sodipodi:role="line"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Consolas;-inkscape-font-specification:Consolas;stroke-width:0.264583"
+           x="129.74794"
+           y="692.04773"
+           id="tspan44560-7-9">		location /static {</tspan><tspan
+           sodipodi:role="line"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Consolas;-inkscape-font-specification:Consolas;stroke-width:0.264583"
+           x="129.74794"
+           y="707.92273"
+           id="tspan43066-4-1">			alias /var/www/static/;</tspan><tspan
+           sodipodi:role="line"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Consolas;-inkscape-font-specification:Consolas;stroke-width:0.264583"
+           x="129.74794"
+           y="723.79773"
+           id="tspan43068-7-0">			try_files $uri $uri/ =404;</tspan><tspan
+           sodipodi:role="line"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Consolas;-inkscape-font-specification:Consolas;stroke-width:0.264583"
+           x="129.74794"
+           y="739.67273"
+           id="tspan43070-2-6">		}</tspan><tspan
+           sodipodi:role="line"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Consolas;-inkscape-font-specification:Consolas;stroke-width:0.264583"
+           x="129.74794"
+           y="755.54773"
+           id="tspan43072-3-3" /><tspan
+           sodipodi:role="line"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Consolas;-inkscape-font-specification:Consolas;stroke-width:0.264583"
+           x="129.74794"
+           y="771.42273"
+           id="tspan43074-1-2">		location /factorio {</tspan><tspan
+           sodipodi:role="line"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Consolas;-inkscape-font-specification:Consolas;stroke-width:0.264583"
+           x="129.74794"
+           y="787.29773"
+           id="tspan43076-5-2">			alias /var/www/factorio_map/;</tspan><tspan
+           sodipodi:role="line"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Consolas;-inkscape-font-specification:Consolas;stroke-width:0.264583"
+           x="129.74794"
+           y="803.17273"
+           id="tspan43078-6-3">			try_files $uri $uri/ =404;</tspan><tspan
+           sodipodi:role="line"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Consolas;-inkscape-font-specification:Consolas;stroke-width:0.264583"
+           x="129.74794"
+           y="819.04773"
+           id="tspan43080-9-7">		}</tspan><tspan
+           sodipodi:role="line"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Consolas;-inkscape-font-specification:Consolas;stroke-width:0.264583"
+           x="129.74794"
+           y="834.92273"
+           id="tspan43082-7-2" /><tspan
+           sodipodi:role="line"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Consolas;-inkscape-font-specification:Consolas;stroke-width:0.264583"
+           x="129.74794"
+           y="850.79773"
+           id="tspan43084-3-4" /><tspan
+           sodipodi:role="line"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Consolas;-inkscape-font-specification:Consolas;stroke-width:0.264583"
+           x="129.74794"
+           y="866.67273"
+           id="tspan44562-7-4">		location /bothies {</tspan><tspan
+           sodipodi:role="line"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Consolas;-inkscape-font-specification:Consolas;stroke-width:0.264583"
+           x="129.74794"
+           y="882.54773"
+           id="tspan43086-3-4">			alias /var/www/bothies/;</tspan><tspan
+           sodipodi:role="line"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Consolas;-inkscape-font-specification:Consolas;stroke-width:0.264583"
+           x="129.74794"
+           y="898.42273"
+           id="tspan43088-1-6">			try_files $uri $uri/ =404;</tspan><tspan
+           sodipodi:role="line"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Consolas;-inkscape-font-specification:Consolas;stroke-width:0.264583"
+           x="129.74794"
+           y="914.29773"
+           id="tspan43090-8-0">		}</tspan></text>
+    </g>
+  </g>
+</svg>

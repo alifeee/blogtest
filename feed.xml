@@ -4,12 +4,29 @@
 
 <title>alifeee's blog</title>
 <link href='https://blog.alifeee.co.uk' rel='self' />
-<updated>2024-03-09T00:00:00+00:00</updated>
+<updated>2024-05-01T00:00:00+00:00</updated>
 <author>
   <name>alifeee</name>
 </author>
 <id>https://blog.alifeee.co.uk/</id>
 <icon>https://blog.alifeee.co.uk/og-image.png</icon>
+
+<entry>
+  <title>My GitHub Gists</title>
+  <link href='https://blog.alifeee.co.uk/gists' />
+  <id>https://blog.alifeee.co.uk//gists</id>
+  <updated>2024-05-01T00:00:00+00:00</updated>
+  <summary>Why I like (GitHub) gists and a short tour through ones I have created</summary>
+  <content type='html'>
+    <a href='https://blog.alifeee.co.uk/gists'>https://blog.alifeee.co.uk/gists</a>
+    <p>Why I like (GitHub) gists and a short tour through ones I have created</p>
+    <![CDATA[
+     <a href='https://blog.alifeee.co.uk/gists'>
+        <img alt='My GitHub Gists' src='https://blog.alifeee.co.uk/gists/og-image.png' />
+      </a>
+    ]]>
+  </content>
+</entry>
 
 <entry>
   <title>I ran a computer font-making workshop!</title>
