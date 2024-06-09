@@ -1,4 +1,4 @@
 #!/bin/bash
 # run all build scripts
 
-$(cd railcards && ./build.sh railcards.md)
+$(cd railcards && bash ./build.sh railcards.md)

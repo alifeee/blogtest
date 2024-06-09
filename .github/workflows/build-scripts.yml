@@ -34,12 +34,20 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements.txt
 
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 20.x
+          cache: "npm"
+      - name: Install marked for markdown -> html parsing
+        run: npm install -g marked
+
       - name: Verify header with Python
         run: |
           python ./utilities.py/header.py
 
       - name: Run md -> HTML build scripts
-        run: ./build.sh
+        run: bash ./build.sh
 
       - name: Make RSS Feed with Python
         run: |
