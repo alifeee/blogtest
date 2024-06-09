@@ -1,9 +1,13 @@
 #!/bin/bash
-# generate HTML and replace
+# generate HTML from markdown,
+#  then replace all lines between START_CONTENT and END_CONTENT with this HTML
+#  in the file INDEX_FILE
+# usage:
+#  ./build.sh content.md
 
 if [ -z $1 ]; then
   echo "need file to transform"
-  echo "usage: ./build.sh content.md > index.html"
+  echo "usage: ./build.sh content.md"
   exit 1
 fi
 
@@ -32,3 +36,4 @@ echo "${html}" >> $TEMP_FILE
 echo "${original_html}" | awk 'NR >= '"${end}"'' >> $TEMP_FILE
 
 cat $TEMP_FILE > $INDEX_FILE
+rm -f $TEMP_FILE
