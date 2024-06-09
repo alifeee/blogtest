@@ -8,6 +8,7 @@ if [ -z $1 ]; then
 fi
 
 INDEX_FILE="index.html"
+TEMP_FILE="index.html.temp"
 START_CONTENT="<!-- !!start content!! -->"
 END_CONTENT="<!-- !!end content!! -->"
 
@@ -19,6 +20,15 @@ html=$(marked -i $1)
 start=$(echo "${original_html}" | grep -n "${START_CONTENT}" | cut -d : -f1)
 end=$(echo "${original_html}" | grep -n "${END_CONTENT}" | cut -d : -f1)
 
-echo "${original_html}" | awk 'NR <= '"${start}"''
-echo "${html}"
-echo "${original_html}" | awk 'NR >= '"${end}"''
+if [ -z $start ] || [ -z $end ]; then
+  echo "could not find start/end content tags"
+  echo "start: <$start>, end: <$end>"
+  exit 1
+fi
+
+rm -f $TEMP_FILE
+echo "${original_html}" | awk 'NR <= '"${start}"'' >> $TEMP_FILE
+echo "${html}" >> $TEMP_FILE
+echo "${original_html}" | awk 'NR >= '"${end}"'' >> $TEMP_FILE
+
+cat $TEMP_FILE > $INDEX_FILE
