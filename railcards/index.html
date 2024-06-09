@@ -22,14 +22,37 @@
     <!-- styling -->
     <!-- favicon -->
     <link rel="icon" type="image/png" href="/favicon.png" />
-    <!-- stylesheets -->
+    <!-- external stylesheets -->
+    <!-- from https://cdn.jsdelivr.net/gh/sindresorhus/github-markdown-css@4/github-markdown.min.css -->
+    <link rel="stylesheet" href="/github-markdown.min.css" />
+    <!-- from https://cdn.jsdelivr.net/gh/PrismJS/prism@1/themes/prism.min.css -->
+    <link rel="stylesheet" href="/prism.min.css" />
+    <!-- my stylesheets -->
     <link rel="stylesheet" href="/stylesheet.css" />
     <link rel="stylesheet" href="/stylesheet_md.css" />
-    <!-- fonts -->
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css?family=Josefin+Sans|Roboto"
-    />
+    <!-- specific to this page styles -->
+    <style>
+      @font-face {
+        font-family: "OpenSans-Bold";
+        src: url("fonts/OpenSans-Bold.ttf");
+      }
+      @font-face {
+        font-family: "Inter-Regular";
+        src: url("fonts/Inter-Regular.ttf");
+      }
+
+      .markdown-body {
+        h1,
+        h2,
+        h3,
+        h4 {
+          font-family: "OpenSans-Bold", sans-serif;
+        }
+      }
+      .markdown-body {
+        font-family: "Inter-Regular", sans-serif;
+      }
+    </style>
 
     <!-- libraries -->
     <!-- zero-md: https://github.com/zerodevx/zero-md -->
@@ -57,7 +80,6 @@
     ></script>
 
     <!-- extra scripts -->
-    {{ scripts }}
   </head>
 
   <body>
@@ -73,9 +95,6 @@
     <main>
       <section id="content" class="markdown-body">
         <!-- !!start content!! -->
-        awihduiowahjd aw
-        <br />
-        aw awdwadwa
         <!-- !!end content!! -->
       </section>
       <hr />
