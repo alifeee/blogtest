@@ -234,6 +234,8 @@ flowchart TD
 
 This is a live rendered flowchart using [Mermaid]. [View full screen](./flowchart_mermaid.svg). [View online][mermaid online]. See above for footnotes.
 
+I hope this diagram still works when you are reading this. I couldn't easily get it to use local libraries, so it downloads lots of JavaScript from "not this website".
+
 </figcaption>
 
 ### The Britrail pass
