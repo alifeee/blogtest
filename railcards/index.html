@@ -52,6 +52,79 @@
       .markdown-body {
         font-family: "Inter-Regular", sans-serif;
       }
+
+      .pre-wrap {
+        white-space: pre-wrap; /* Since CSS 2.1 */
+        white-space: -moz-pre-wrap; /* Mozilla, since 1999 */
+        white-space: -pre-wrap; /* Opera 4-6 */
+        white-space: -o-pre-wrap; /* Opera 7 */
+        word-wrap: break-word; /* Internet Explorer 5.5+ */
+      }
+      #tocdiff {
+        color: #fff;
+        background-color: #1f1f1f;
+        white-space: pre-line;
+        del,
+        .del {
+          text-decoration: none;
+          background-color: #701414;
+          padding: 0 0.1rem;
+        }
+        ins,
+        .ins {
+          text-decoration: none;
+          background-color: #4c5b2b;
+          padding: 0 0.1rem;
+        }
+        .jump {
+          background-color: #6d4000;
+          color: #999;
+        }
+        .info {
+          color: #999;
+          margin: 0;
+        }
+      }
+
+      .markdown-body img.full-width-image {
+        max-height: unset;
+        max-width: unset;
+        --w-vw: 90vw;
+        --w-rem: 60rem;
+        --w: min(var(--w-vw), var(--w-rem));
+        /* min-width: 40rem; */
+        overflow-x: auto;
+        width: var(--w);
+        position: relative;
+        left: 50%;
+        right: 50%;
+        margin-left: calc(-1 * var(--w) / 2);
+        margin-right: calc(-1 * var(--w) / 2);
+      }
+
+      #railcard-ages {
+        display: grid;
+        grid-template-columns: repeat(18, auto);
+        grid-template-rows: repeat(3, auto);
+        text-align: center;
+        span {
+          display: block;
+          border-right: 1px solid #000;
+        }
+        span:nth-last-child(-n + 3) {
+          border-right: none;
+        }
+        .rc1625 {
+          grid-area: 2 / 2 / 2 / 13;
+          background-color: #4c5b2b;
+          color: #fff;
+        }
+        .rc2630 {
+          grid-area: 3 / 12 / 3 / 18;
+          background-color: #6d4000;
+          color: #fff;
+        }
+      }
     </style>
 
     <!-- libraries -->
