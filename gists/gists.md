@@ -1,5 +1,7 @@
 # Why I like (GitHub) gists and a short tour through ones I have created
 
+<word-count parent=".markdown-body"></word-count>
+
 I like sharing code and instructions. Thus, I like gists.
 
 1. [What are gists?](#what-are-gists)
