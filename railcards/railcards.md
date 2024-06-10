@@ -18,7 +18,7 @@ You can buy a 1-year 16-25 railcard up to the day before you turn 26, so you can
 
 Well, there is a 26-30 Railcard. So, it's pointless trying to game any systems if they are functionally the same.
 
-(spoilers: probably not)
+(spoilers: probably don't bother eking, just buy the 26-30)
 
 <!-- omit in toc -->
 ## Are the 16-25 and 26-30 railcards functionally the same?
